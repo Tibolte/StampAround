@@ -15,6 +15,8 @@
 		AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3FB1AE194FB69E00528258 /* STCategoriesViewController.xib */; };
 		AC4D0B911950D4AD00A0ABF6 /* STRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4D0B8F1950D4AD00A0ABF6 /* STRegisterViewController.m */; };
 		AC4D0B921950D4AD00A0ABF6 /* STRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4D0B901950D4AD00A0ABF6 /* STRegisterViewController.xib */; };
+		AC4D0B951950F23700A0ABF6 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4D0B941950F23700A0ABF6 /* STUtilities.m */; };
+		AC4D0B991950FB7100A0ABF6 /* DINEngschriftStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC4D0B981950FB7100A0ABF6 /* DINEngschriftStd.otf */; };
 		AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3916194DBCB200AE7590 /* STNetworkManager.m */; };
 		AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D391A194DCC2400AE7590 /* STLoginViewController.m */; };
 		AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6D391B194DCC2400AE7590 /* STLoginViewController.xib */; };
@@ -60,6 +62,9 @@
 		AC4D0B8E1950D4AD00A0ABF6 /* STRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STRegisterViewController.h; path = register/STRegisterViewController.h; sourceTree = "<group>"; };
 		AC4D0B8F1950D4AD00A0ABF6 /* STRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STRegisterViewController.m; path = register/STRegisterViewController.m; sourceTree = "<group>"; };
 		AC4D0B901950D4AD00A0ABF6 /* STRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STRegisterViewController.xib; path = register/STRegisterViewController.xib; sourceTree = "<group>"; };
+		AC4D0B931950F23700A0ABF6 /* STUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STUtilities.h; path = extra/STUtilities.h; sourceTree = "<group>"; };
+		AC4D0B941950F23700A0ABF6 /* STUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STUtilities.m; path = extra/STUtilities.m; sourceTree = "<group>"; };
+		AC4D0B981950FB7100A0ABF6 /* DINEngschriftStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DINEngschriftStd.otf; path = resources/fonts/DINEngschriftStd.otf; sourceTree = "<group>"; };
 		AC6D3915194DBCB200AE7590 /* STNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNetworkManager.h; path = managers/STNetworkManager.h; sourceTree = "<group>"; };
 		AC6D3916194DBCB200AE7590 /* STNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNetworkManager.m; path = managers/STNetworkManager.m; sourceTree = "<group>"; };
 		AC6D3919194DCC2400AE7590 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STLoginViewController.h; path = login/STLoginViewController.h; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 		AC3FB1A0194E491400528258 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				AC4D0B971950FB3900A0ABF6 /* fonts */,
 				AC3FB1A1194E491D00528258 /* images */,
 			);
 			name = resources;
@@ -150,6 +156,14 @@
 				AC4D0B901950D4AD00A0ABF6 /* STRegisterViewController.xib */,
 			);
 			name = register;
+			sourceTree = "<group>";
+		};
+		AC4D0B971950FB3900A0ABF6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC4D0B981950FB7100A0ABF6 /* DINEngschriftStd.otf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 		AC6D3914194DBC4800AE7590 /* managers */ = {
@@ -275,6 +289,8 @@
 			children = (
 				AC6D3924194DD81200AE7590 /* STMacros.h */,
 				AC3FB19C194E253700528258 /* STConstants.h */,
+				AC4D0B931950F23700A0ABF6 /* STUtilities.h */,
+				AC4D0B941950F23700A0ABF6 /* STUtilities.m */,
 			);
 			name = extra;
 			sourceTree = "<group>";
@@ -375,6 +391,7 @@
 				AC4D0B921950D4AD00A0ABF6 /* STRegisterViewController.xib in Resources */,
 				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
 				AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */,
+				AC4D0B991950FB7100A0ABF6 /* DINEngschriftStd.otf in Resources */,
 				AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */,
 				ACB76699194C801100925D2D /* InfoPlist.strings in Resources */,
 				ACB766A1194C801100925D2D /* Images.xcassets in Resources */,
@@ -433,6 +450,7 @@
 				AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */,
 				ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */,
 				AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */,
+				AC4D0B951950F23700A0ABF6 /* STUtilities.m in Sources */,
 				AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */,
 				AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */,
 				ACB7669B194C801100925D2D /* main.m in Sources */,

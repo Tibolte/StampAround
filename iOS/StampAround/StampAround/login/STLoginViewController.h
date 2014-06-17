@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "STNetworkManager.h"
+#import "STUtilities.h"
 #import <FacebookSDK.h>
 
 @interface STLoginViewController : UIViewController<STNetworkManagerDelegate, UIGestureRecognizerDelegate>

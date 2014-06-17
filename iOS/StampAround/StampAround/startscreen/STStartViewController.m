@@ -24,7 +24,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [[self view] setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xeef3ed)];
+    UIImageView *gradientBackground = [STUtilities imageViewWithFrame:[[self view] frame]
+                                                           beginColor:MY_UICOLOR_FROM_HEX_RGB(0xdbe9e9)
+                                                             endColor:MY_UICOLOR_FROM_HEX_RGB(0xfffde5)
+                                                                 type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
+    [[self view] addSubview:gradientBackground];
+    [[self view] sendSubviewToBack:gradientBackground];
     
     _currentProgress = 0.0;
     
@@ -38,6 +43,8 @@
     UILabel *lblLoading = [[UILabel alloc] initWithFrame:CGRectMake(_progressView.frame.origin.x + _progressView.frame.size.width + 10, 500, 100, 20)];
     [lblLoading setTextColor:MY_UICOLOR_FROM_HEX_RGB(0x39393b)];
     [lblLoading setText:@"Loading"];
+    [lblLoading setFont:[UIFont fontWithName:@"DINEngschriftStd" size:24.0f]];
+    [lblLoading sizeToFit];
 
     [[self view] addSubview:_progressView];
     [[self view] addSubview:lblLoading];

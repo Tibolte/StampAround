@@ -21,7 +21,14 @@
 {
     [super viewDidLoad];
     
-    [[self view] setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xeef3ed)];
+    //init GUI
+    
+    UIImageView *gradientBackground = [STUtilities imageViewWithFrame:[[self view] frame]
+                                                           beginColor:MY_UICOLOR_FROM_HEX_RGB(0xdbe9e9)
+                                                             endColor:MY_UICOLOR_FROM_HEX_RGB(0xfffde5)
+                                                                 type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
+    [[self view] addSubview:gradientBackground];
+    [[self view] sendSubviewToBack:gradientBackground];
     
     [self setViewItems];
     
