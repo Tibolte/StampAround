@@ -10,11 +10,16 @@
 
 #define KEY_USERNAME        @"memory_key_username"
 #define KEY_TOKEN           @"memory_key_token"
+#define KEY_SECRET           @"memory_key_secret"
+#define KEY_IMAGE_URL           @"memory_key_image_url"
+
 
 @interface STSessionManager()
 
 @property(nonatomic, strong) NSString *username;
 @property(nonatomic, strong) NSString *token;
+@property(nonatomic, strong) NSString *secret;
+@property(nonatomic, strong) NSString *imageUrl;
 
 @end
 
@@ -39,7 +44,11 @@
     return _token;
 }
 
--(void)saveCredentialsWithUsername:(NSString*)username token:(NSString*)token
+-(NSString*)secret{
+    return _secret;
+}
+
+-(void)saveCredentialsWithUsername:(NSString*)username token:(NSString*)token secret:(NSString*)secret
 {
     
     if(username){
@@ -48,9 +57,14 @@
     if(token){
         _token = token;
     }
+    if(secret){
+        _secret = secret;
+    }
     
     [[NSUserDefaults standardUserDefaults] setObject:_username forKey:KEY_USERNAME];
     [[NSUserDefaults standardUserDefaults] setObject:_token    forKey:KEY_TOKEN];
+    [[NSUserDefaults standardUserDefaults] setObject:_secret    forKey:KEY_SECRET];
+
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -71,6 +85,14 @@
     else{   //default value
         _token = @"";
     }
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:KEY_SECRET]){
+        _secret = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_SECRET];
+    }
+    else{   //default value
+        _secret = @"";
+    }
+
 
 }
 

@@ -25,6 +25,9 @@
 +(id)managerWithDelegate:(id)delegate;
 
 - (void)requestAuthenticate:(NSString *)username password:(NSString *)password;
+- (void)requestRegisterFacebook:(NSDictionary*)postDict;
+- (void)requestRegisterNormal:(NSDictionary*)postDict;
+- (void)requestSessionValid:(NSString *)token secret:(NSString *)secret;
 
 @end
 

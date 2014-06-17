@@ -10,8 +10,9 @@
 #import <OJFSegmentedProgressView.h>
 #import <FacebookSDK.h>
 #import "STSessionManager.h"
+#import "STNetworkManager.h"
 
-@interface STStartViewController : UIViewController
+@interface STStartViewController : UIViewController<STNetworkManagerDelegate>
 
 @end
 

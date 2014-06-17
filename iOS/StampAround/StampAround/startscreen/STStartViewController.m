@@ -73,7 +73,17 @@
     {
         [_timer invalidate];
         
-        if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        if([[[STSessionManager manager] token] length]!=0  && [[[STSessionManager manager] secret] length]!=0 )
+        {
+            //send request for validity
+            [[STNetworkManager managerWithDelegate:self] requestSessionValid:[[STSessionManager manager] token] secret:[[STSessionManager manager] secret]];
+        }
+        else
+        {
+            [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
+        }
+        
+        /*if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
             
             //open session also
             [MY_APP_DELEGATE openFbSession];
@@ -90,8 +100,38 @@
             {
                 [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
             }
-        }
+        }*/
+        
+        //TODO: send accesstoken and accesssecret to backend to check for session validity
     }
+}
+
+#pragma mark - Network Delegate
+
+
+-(void)downloadResponse:(id)responseObject message:(NSString *)message{
+    
+    NSLog(@"%@", responseObject);
+    NSLog(@"%@", message);
+    
+    
+    [[STSessionManager manager] saveCredentialsWithUsername:[responseObject objectForKey:@"email"] token:[responseObject objectForKey:@"accessToken"] secret:[responseObject objectForKey:@"secret"]];
+    
+    [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+}
+
+-(void)downloadFailureCode:(int)errCode message:(NSString *)message{
+    
+    NSLog(@"error %@", message);
+    
+    /*if (FBSession.activeSession.isOpen) {
+        [MY_APP_DELEGATE closeSession];
+    }*/
+    
+    [[STSessionManager manager] saveCredentialsWithUsername:@"" token:@"" secret:@""];
+    
+    [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
+    
 }
 
 

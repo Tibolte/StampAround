@@ -32,6 +32,7 @@ NSString *const FBSessionStateChangedNotification =
     _startViewController = nil;
     _loginViewController = nil;
     _categoriesViewController = nil;
+    _registerViewController = nil;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -87,6 +88,14 @@ NSString *const FBSessionStateChangedNotification =
             }
             [_loginViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
             [_startViewController presentViewController:_loginViewController animated:YES completion:nil];
+            //[_window setRootViewController:_loginViewController];
+            break;
+        case SCREEN_REGISTER:
+            if(!_registerViewController)
+            {
+                _registerViewController = [[STRegisterViewController alloc] init];
+            }
+            [_window setRootViewController:_registerViewController];
             break;
         case SCREEN_CATEGORIES:
             if(!_categoriesViewController)
@@ -198,7 +207,7 @@ NSString *const FBSessionStateChangedNotification =
         [self closeSession];
     }
     
-    [[STSessionManager manager] saveCredentialsWithUsername:@"" token:@""];
+    [[STSessionManager manager] saveCredentialsWithUsername:@"" token:@"" secret:@""];
     [self clearControllers];
     
     [self switchToScreen:SCREEN_START];

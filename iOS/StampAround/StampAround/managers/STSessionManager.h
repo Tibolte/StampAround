@@ -14,7 +14,8 @@
 
 -(NSString*)username;
 -(NSString*)token;
+-(NSString*)secret;
 
--(void)saveCredentialsWithUsername:(NSString*)username token:(NSString*)token;
+-(void)saveCredentialsWithUsername:(NSString*)username token:(NSString*)token secret:(NSString*)secret;
 
 @end

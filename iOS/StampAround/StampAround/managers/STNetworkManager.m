@@ -69,7 +69,7 @@
         
         else //get error and display it to app
         {
-            
+            [_delegate downloadFailureCode:[[responseObject objectForKey:@"status"] intValue] message:[responseObject objectForKey:@"message"]];
         }
         
     };
@@ -80,6 +80,8 @@
         
         //connection error (no network) //freeze app?
     };
+    
+    [manager setRequestSerializer:[AFJSONRequestSerializer serializer]];
     
     NSString *fullUrl = [NSString stringWithFormat:@"%@%@",URL_BASE,restUrl];
     NSLog(@"url: %@",fullUrl);
@@ -96,6 +98,27 @@
 - (void)requestAuthenticate:(NSString *)username password:(NSString *)password
 {
     NSString *restUrl       = [NSString stringWithFormat:URL_AUTHENTICATE,username,password];
+    
+    [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
+}
+
+- (void)requestRegisterFacebook:(NSDictionary*)postDict
+{
+    NSString *restUrl = URL_REGISTER_FB;
+    
+    [self unifiedRequest:restUrl method:METHOD_POST dict:postDict];
+}
+
+- (void)requestRegisterNormal:(NSDictionary*)postDict
+{
+    NSString *restUrl = URL_REGISTER;
+    
+    [self unifiedRequest:restUrl method:METHOD_POST dict:postDict];
+}
+
+- (void)requestSessionValid:(NSString *)token secret:(NSString *)secret
+{
+    NSString *restUrl       = [NSString stringWithFormat:URL_SESSION_VALID,token,secret];
     
     [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
 }

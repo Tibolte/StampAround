@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "STStartViewController.h"
 #import "STLoginViewController.h"
+#import "STLoginViewController.h"
+#import "STRegisterViewController.h"
 #import "STCategoriesViewController.h"
 #import "STSessionManager.h"
 #import <FacebookSDK.h>
@@ -21,6 +23,7 @@ extern NSString *const FBSessionStateChangedNotification;
 
 @property(nonatomic, strong) STStartViewController *startViewController;
 @property(nonatomic, strong) STLoginViewController *loginViewController;
+@property(nonatomic, strong) STRegisterViewController *registerViewController;
 @property(nonatomic, strong) STCategoriesViewController *categoriesViewController;
 
 @property (strong, nonatomic) NSString *loggedInUserID;
@@ -38,6 +41,7 @@ extern NSString *const FBSessionStateChangedNotification;
 //start screens
 #define SCREEN_START            0
 #define SCREEN_LOGIN            1
+#define SCREEN_REGISTER         2
 
-#define SCREEN_CATEGORIES       2
+#define SCREEN_CATEGORIES       3
 

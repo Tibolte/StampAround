@@ -77,11 +77,9 @@
                  action:@selector(doLogin)
        forControlEvents:UIControlEventTouchUpInside];
     
-    
     [self.view addSubview:_usernameView];
     [self.view addSubview:_passwordView];
-    [self.view addSubview:_sendButtonView];
-    
+    [self.view addSubview:_sendButtonView];    
     
     //GESTURE - Dismiss the keyboard when tapped on the controller's view
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
@@ -100,7 +98,7 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
-    [[STSessionManager manager] saveCredentialsWithUsername:[responseObject objectForKey:@"email"] token:[responseObject objectForKey:@"accessToken"]];
+    [[STSessionManager manager] saveCredentialsWithUsername:[responseObject objectForKey:@"email"] token:[responseObject objectForKey:@"accessToken"] secret:[responseObject objectForKey:@"accessSecret"]];
     
     [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
 }
@@ -109,6 +107,8 @@
     
     
     //TODO: delete token??
+    
+    NSLog(@"error %@", message);
 }
 
 
@@ -169,6 +169,21 @@
                  NSLog(@"facebookId: %@", facebookId);
                  NSLog(@"email: %@", email);
                  NSLog(@"imageUrl: %@", imageUrl);
+                 
+                 NSLog(@"access token: %@", FBSession.activeSession.accessTokenData.accessToken);
+                 
+                 NSDictionary *postDict = @{@"facebookId": facebookId,
+                                            @"facebookToken": FBSession.activeSession.accessTokenData.accessToken,
+                                            @"firstName": firstName,
+                                            @"lastName" : lastName,
+                                            @"email" : email,
+                                            @"imageUrl" : imageUrl,
+                                            @"secret" : @"3744a7b11dd1183658c2381c30617fcb"
+                                        
+                                          };
+                 
+                 //register then
+                 [[STNetworkManager managerWithDelegate:self] requestRegisterFacebook:postDict];
 
              }
          }];
@@ -177,6 +192,10 @@
     } else {
         [_lblFb setText:@"Connect with Facebook"];
     }
+}
+
+- (IBAction)btnRegisterClicked:(id)sender {
+        [MY_APP_DELEGATE switchToScreen:SCREEN_REGISTER];
 }
 
 - (void)didReceiveMemoryWarning
