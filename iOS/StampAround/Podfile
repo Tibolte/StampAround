@@ -1,0 +1,3 @@
+pod "AFNetworking", "~> 2.0"
+pod 'OJFSegmentedProgressView', '~> 0.0.1'
+pod "Facebook-iOS-SDK"

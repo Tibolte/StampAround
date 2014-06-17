@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D96A18E243F450BB7E3FE19 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5574AE2FA0C34C55A8F962DA /* libPods.a */; };
+		AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3FB19E194E303A00528258 /* STSessionManager.m */; };
+		AC3FB1A4194E496C00528258 /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3FB1A2194E496C00528258 /* fb_login.png */; };
+		AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3FB1A3194E496C00528258 /* fb_login@2x.png */; };
+		AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3FB1AD194FB69E00528258 /* STCategoriesViewController.m */; };
+		AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3FB1AE194FB69E00528258 /* STCategoriesViewController.xib */; };
+		AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3916194DBCB200AE7590 /* STNetworkManager.m */; };
+		AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D391A194DCC2400AE7590 /* STLoginViewController.m */; };
+		AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6D391B194DCC2400AE7590 /* STLoginViewController.xib */; };
+		AC6D3923194DD75600AE7590 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3922194DD75600AE7590 /* STAppDelegate.m */; };
+		AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */; };
+		AC6D3929194DFA3D00AE7590 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */; };
+		ACB7668F194C801000925D2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB7668E194C801000925D2D /* Foundation.framework */; };
+		ACB76691194C801000925D2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB76690194C801000925D2D /* CoreGraphics.framework */; };
+		ACB76693194C801000925D2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB76692194C801000925D2D /* UIKit.framework */; };
+		ACB76699194C801100925D2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACB76697194C801100925D2D /* InfoPlist.strings */; };
+		ACB7669B194C801100925D2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB7669A194C801100925D2D /* main.m */; };
+		ACB766A1194C801100925D2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB766A0194C801100925D2D /* Images.xcassets */; };
+		ACB766A8194C801100925D2D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB766A7194C801100925D2D /* XCTest.framework */; };
+		ACB766A9194C801100925D2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB7668E194C801000925D2D /* Foundation.framework */; };
+		ACB766AA194C801100925D2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB76692194C801000925D2D /* UIKit.framework */; };
+		ACB766B2194C801100925D2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACB766B0194C801100925D2D /* InfoPlist.strings */; };
+		ACB766B4194C801100925D2D /* StampAroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB766B3194C801100925D2D /* StampAroundTests.m */; };
+		ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB766C1194C8A3B00925D2D /* STStartViewController.m */; };
+		ACB766C4194C8A3B00925D2D /* STStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB766C2194C8A3B00925D2D /* STStartViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACB766AB194C801100925D2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACB76683194C801000925D2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACB7668A194C801000925D2D;
+			remoteInfo = StampAround;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5574AE2FA0C34C55A8F962DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EBA073928054A5C9716E2E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AC3FB19C194E253700528258 /* STConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STConstants.h; path = extra/STConstants.h; sourceTree = "<group>"; };
+		AC3FB19D194E303A00528258 /* STSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STSessionManager.h; path = managers/STSessionManager.h; sourceTree = "<group>"; };
+		AC3FB19E194E303A00528258 /* STSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STSessionManager.m; path = managers/STSessionManager.m; sourceTree = "<group>"; };
+		AC3FB1A2194E496C00528258 /* fb_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fb_login.png; path = resources/images/fb_login.png; sourceTree = "<group>"; };
+		AC3FB1A3194E496C00528258 /* fb_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb_login@2x.png"; path = "resources/images/fb_login@2x.png"; sourceTree = "<group>"; };
+		AC3FB1AC194FB69E00528258 /* STCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCategoriesViewController.h; path = categoriesscreen/STCategoriesViewController.h; sourceTree = "<group>"; };
+		AC3FB1AD194FB69E00528258 /* STCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCategoriesViewController.m; path = categoriesscreen/STCategoriesViewController.m; sourceTree = "<group>"; };
+		AC3FB1AE194FB69E00528258 /* STCategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STCategoriesViewController.xib; path = categoriesscreen/STCategoriesViewController.xib; sourceTree = "<group>"; };
+		AC6D3915194DBCB200AE7590 /* STNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNetworkManager.h; path = managers/STNetworkManager.h; sourceTree = "<group>"; };
+		AC6D3916194DBCB200AE7590 /* STNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNetworkManager.m; path = managers/STNetworkManager.m; sourceTree = "<group>"; };
+		AC6D3919194DCC2400AE7590 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STLoginViewController.h; path = login/STLoginViewController.h; sourceTree = "<group>"; };
+		AC6D391A194DCC2400AE7590 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STLoginViewController.m; path = login/STLoginViewController.m; sourceTree = "<group>"; };
+		AC6D391B194DCC2400AE7590 /* STLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STLoginViewController.xib; path = login/STLoginViewController.xib; sourceTree = "<group>"; };
+		AC6D3921194DD75600AE7590 /* STAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STAppDelegate.h; path = appdelegate/STAppDelegate.h; sourceTree = "<group>"; };
+		AC6D3922194DD75600AE7590 /* STAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STAppDelegate.m; path = appdelegate/STAppDelegate.m; sourceTree = "<group>"; };
+		AC6D3924194DD81200AE7590 /* STMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STMacros.h; path = extra/STMacros.h; sourceTree = "<group>"; };
+		AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = demoVideo.mp4; path = assets/demoVideo.mp4; sourceTree = "<group>"; };
+		AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ACB7668B194C801000925D2D /* StampAround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampAround.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB7668E194C801000925D2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACB76690194C801000925D2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ACB76692194C801000925D2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ACB76696194C801100925D2D /* StampAround-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StampAround-Info.plist"; sourceTree = "<group>"; };
+		ACB76698194C801100925D2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACB7669A194C801100925D2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACB7669C194C801100925D2D /* StampAround-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StampAround-Prefix.pch"; sourceTree = "<group>"; };
+		ACB766A0194C801100925D2D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ACB766A6194C801100925D2D /* StampAroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StampAroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB766A7194C801100925D2D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ACB766AF194C801100925D2D /* StampAroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StampAroundTests-Info.plist"; sourceTree = "<group>"; };
+		ACB766B1194C801100925D2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACB766B3194C801100925D2D /* StampAroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StampAroundTests.m; sourceTree = "<group>"; };
+		ACB766C0194C8A3B00925D2D /* STStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStartViewController.h; path = startscreen/STStartViewController.h; sourceTree = "<group>"; };
+		ACB766C1194C8A3B00925D2D /* STStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStartViewController.m; path = startscreen/STStartViewController.m; sourceTree = "<group>"; };
+		ACB766C2194C8A3B00925D2D /* STStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStartViewController.xib; path = startscreen/STStartViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACB76688194C801000925D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6D3929194DFA3D00AE7590 /* AVFoundation.framework in Frameworks */,
+				ACB76691194C801000925D2D /* CoreGraphics.framework in Frameworks */,
+				ACB76693194C801000925D2D /* UIKit.framework in Frameworks */,
+				ACB7668F194C801000925D2D /* Foundation.framework in Frameworks */,
+				8D96A18E243F450BB7E3FE19 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB766A3194C801100925D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB766A8194C801100925D2D /* XCTest.framework in Frameworks */,
+				ACB766AA194C801100925D2D /* UIKit.framework in Frameworks */,
+				ACB766A9194C801100925D2D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC3FB1A0194E491400528258 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC3FB1A1194E491D00528258 /* images */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		AC3FB1A1194E491D00528258 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AC3FB1A2194E496C00528258 /* fb_login.png */,
+				AC3FB1A3194E496C00528258 /* fb_login@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		AC3FB1A6194FB5CE00528258 /* categories screen */ = {
+			isa = PBXGroup;
+			children = (
+				AC3FB1AC194FB69E00528258 /* STCategoriesViewController.h */,
+				AC3FB1AD194FB69E00528258 /* STCategoriesViewController.m */,
+				AC3FB1AE194FB69E00528258 /* STCategoriesViewController.xib */,
+			);
+			name = "categories screen";
+			sourceTree = "<group>";
+		};
+		AC6D3914194DBC4800AE7590 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D3915194DBCB200AE7590 /* STNetworkManager.h */,
+				AC6D3916194DBCB200AE7590 /* STNetworkManager.m */,
+				AC3FB19D194E303A00528258 /* STSessionManager.h */,
+				AC3FB19E194E303A00528258 /* STSessionManager.m */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		AC6D3918194DCBDC00AE7590 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D3919194DCC2400AE7590 /* STLoginViewController.h */,
+				AC6D391A194DCC2400AE7590 /* STLoginViewController.m */,
+				AC6D391B194DCC2400AE7590 /* STLoginViewController.xib */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		AC6D3920194DD6FC00AE7590 /* app delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D3921194DD75600AE7590 /* STAppDelegate.h */,
+				AC6D3922194DD75600AE7590 /* STAppDelegate.m */,
+			);
+			name = "app delegate";
+			sourceTree = "<group>";
+		};
+		AC6D3925194DF93000AE7590 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		ACB76682194C801000925D2D = {
+			isa = PBXGroup;
+			children = (
+				ACB76694194C801000925D2D /* StampAround */,
+				ACB766AD194C801100925D2D /* StampAroundTests */,
+				ACB7668D194C801000925D2D /* Frameworks */,
+				ACB7668C194C801000925D2D /* Products */,
+				7EBA073928054A5C9716E2E0 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		ACB7668C194C801000925D2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACB7668B194C801000925D2D /* StampAround.app */,
+				ACB766A6194C801100925D2D /* StampAroundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACB7668D194C801000925D2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */,
+				ACB7668E194C801000925D2D /* Foundation.framework */,
+				ACB76690194C801000925D2D /* CoreGraphics.framework */,
+				ACB76692194C801000925D2D /* UIKit.framework */,
+				ACB766A7194C801100925D2D /* XCTest.framework */,
+				5574AE2FA0C34C55A8F962DA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACB76694194C801000925D2D /* StampAround */ = {
+			isa = PBXGroup;
+			children = (
+				AC3FB1A6194FB5CE00528258 /* categories screen */,
+				AC3FB1A0194E491400528258 /* resources */,
+				AC6D3925194DF93000AE7590 /* assets */,
+				AC6D3920194DD6FC00AE7590 /* app delegate */,
+				AC6D3918194DCBDC00AE7590 /* login */,
+				AC6D3914194DBC4800AE7590 /* managers */,
+				ACB766BF194C892C00925D2D /* start screen */,
+				ACB766BD194C880500925D2D /* extra */,
+				ACB766A0194C801100925D2D /* Images.xcassets */,
+				ACB76695194C801100925D2D /* Supporting Files */,
+			);
+			path = StampAround;
+			sourceTree = "<group>";
+		};
+		ACB76695194C801100925D2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACB76696194C801100925D2D /* StampAround-Info.plist */,
+				ACB76697194C801100925D2D /* InfoPlist.strings */,
+				ACB7669A194C801100925D2D /* main.m */,
+				ACB7669C194C801100925D2D /* StampAround-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACB766AD194C801100925D2D /* StampAroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACB766B3194C801100925D2D /* StampAroundTests.m */,
+				ACB766AE194C801100925D2D /* Supporting Files */,
+			);
+			path = StampAroundTests;
+			sourceTree = "<group>";
+		};
+		ACB766AE194C801100925D2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACB766AF194C801100925D2D /* StampAroundTests-Info.plist */,
+				ACB766B0194C801100925D2D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACB766BD194C880500925D2D /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D3924194DD81200AE7590 /* STMacros.h */,
+				AC3FB19C194E253700528258 /* STConstants.h */,
+			);
+			name = extra;
+			sourceTree = "<group>";
+		};
+		ACB766BF194C892C00925D2D /* start screen */ = {
+			isa = PBXGroup;
+			children = (
+				ACB766C0194C8A3B00925D2D /* STStartViewController.h */,
+				ACB766C1194C8A3B00925D2D /* STStartViewController.m */,
+				ACB766C2194C8A3B00925D2D /* STStartViewController.xib */,
+			);
+			name = "start screen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACB7668A194C801000925D2D /* StampAround */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB766B7194C801100925D2D /* Build configuration list for PBXNativeTarget "StampAround" */;
+			buildPhases = (
+				AEEF2EC1F1994C3B8C01AE27 /* Check Pods Manifest.lock */,
+				ACB76687194C801000925D2D /* Sources */,
+				ACB76688194C801000925D2D /* Frameworks */,
+				ACB76689194C801000925D2D /* Resources */,
+				0B81A9E34DA946229E305D78 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StampAround;
+			productName = StampAround;
+			productReference = ACB7668B194C801000925D2D /* StampAround.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACB766A5194C801100925D2D /* StampAroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB766BA194C801100925D2D /* Build configuration list for PBXNativeTarget "StampAroundTests" */;
+			buildPhases = (
+				ACB766A2194C801100925D2D /* Sources */,
+				ACB766A3194C801100925D2D /* Frameworks */,
+				ACB766A4194C801100925D2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACB766AC194C801100925D2D /* PBXTargetDependency */,
+			);
+			name = StampAroundTests;
+			productName = StampAroundTests;
+			productReference = ACB766A6194C801100925D2D /* StampAroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACB76683194C801000925D2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = StampAround;
+				TargetAttributes = {
+					ACB7668A194C801000925D2D = {
+						DevelopmentTeam = 842GBVPPFC;
+					};
+					ACB766A5194C801100925D2D = {
+						TestTargetID = ACB7668A194C801000925D2D;
+					};
+				};
+			};
+			buildConfigurationList = ACB76686194C801000925D2D /* Build configuration list for PBXProject "StampAround" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ACB76682194C801000925D2D;
+			productRefGroup = ACB7668C194C801000925D2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACB7668A194C801000925D2D /* StampAround */,
+				ACB766A5194C801100925D2D /* StampAroundTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACB76689194C801000925D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB766C4194C8A3B00925D2D /* STStartViewController.xib in Resources */,
+				AC3FB1A4194E496C00528258 /* fb_login.png in Resources */,
+				AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */,
+				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
+				AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */,
+				AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */,
+				ACB76699194C801100925D2D /* InfoPlist.strings in Resources */,
+				ACB766A1194C801100925D2D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB766A4194C801100925D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB766B2194C801100925D2D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B81A9E34DA946229E305D78 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEEF2EC1F1994C3B8C01AE27 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACB76687194C801000925D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */,
+				ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */,
+				AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */,
+				AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */,
+				AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */,
+				ACB7669B194C801100925D2D /* main.m in Sources */,
+				AC6D3923194DD75600AE7590 /* STAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB766A2194C801100925D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB766B4194C801100925D2D /* StampAroundTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACB766AC194C801100925D2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACB7668A194C801000925D2D /* StampAround */;
+			targetProxy = ACB766AB194C801100925D2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACB76697194C801100925D2D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB76698194C801100925D2D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ACB766B0194C801100925D2D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB766B1194C801100925D2D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACB766B5194C801100925D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ACB766B6194C801100925D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACB766B8194C801100925D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EBA073928054A5C9716E2E0 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StampAround/StampAround-Prefix.pch";
+				INFOPLIST_FILE = "StampAround/StampAround-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ACB766B9194C801100925D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EBA073928054A5C9716E2E0 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StampAround/StampAround-Prefix.pch";
+				INFOPLIST_FILE = "StampAround/StampAround-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ACB766BB194C801100925D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StampAround.app/StampAround";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StampAround/StampAround-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StampAroundTests/StampAroundTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ACB766BC194C801100925D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StampAround.app/StampAround";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StampAround/StampAround-Prefix.pch";
+				INFOPLIST_FILE = "StampAroundTests/StampAroundTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACB76686194C801000925D2D /* Build configuration list for PBXProject "StampAround" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB766B5194C801100925D2D /* Debug */,
+				ACB766B6194C801100925D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB766B7194C801100925D2D /* Build configuration list for PBXNativeTarget "StampAround" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB766B8194C801100925D2D /* Debug */,
+				ACB766B9194C801100925D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB766BA194C801100925D2D /* Build configuration list for PBXNativeTarget "StampAroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB766BB194C801100925D2D /* Debug */,
+				ACB766BC194C801100925D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACB76683194C801000925D2D /* Project object */;
+}
