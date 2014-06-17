@@ -152,7 +152,27 @@
  */
 - (void)sessionStateChanged:(NSNotification*)notification {
     if (FBSession.activeSession.isOpen) {
-        //[_lblFb setText:@"Logout"];
+        
+        [[FBRequest requestForMe] startWithCompletionHandler:
+         ^(FBRequestConnection *connection,
+           NSDictionary<FBGraphUser> *user,
+           NSError *error) {
+             if (!error) {
+                 NSString *firstName = user.first_name;
+                 NSString *lastName = user.last_name;
+                 NSString *facebookId = user.id;
+                 NSString *email = [user objectForKey:@"email"];
+                 NSString *imageUrl = [[NSString alloc] initWithFormat: @"http://graph.facebook.com/%@/picture?type=large", facebookId];
+                 
+                 NSLog(@"first name: %@", firstName);
+                 NSLog(@"lastName: %@", lastName);
+                 NSLog(@"facebookId: %@", facebookId);
+                 NSLog(@"email: %@", email);
+                 NSLog(@"imageUrl: %@", imageUrl);
+
+             }
+         }];
+        
         [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
     } else {
         [_lblFb setText:@"Connect with Facebook"];

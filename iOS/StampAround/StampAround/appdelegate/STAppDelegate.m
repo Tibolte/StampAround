@@ -153,7 +153,9 @@ NSString *const FBSessionStateChangedNotification =
  * Opens a Facebook session and optionally shows the login UX.
  */
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
-    return [FBSession openActiveSessionWithReadPermissions:nil
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"email", nil];
+    
+    return [FBSession openActiveSessionWithReadPermissions:permissions
                                               allowLoginUI:allowLoginUI
                                          completionHandler:^(FBSession *session,
                                                              FBSessionState state,
