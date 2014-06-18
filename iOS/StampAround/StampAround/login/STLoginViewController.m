@@ -62,28 +62,37 @@
     [_usernameView setBackgroundColor:[UIColor whiteColor]];
     [_passwordView  setBackgroundColor:[UIColor whiteColor]];
     
-    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(60, 10, 150, 30)];
+    //rounded corners
+    UIBezierPath *maskPathUsername = [UIBezierPath bezierPathWithRoundedRect:_usernameView.bounds
+                                                   byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
+                                                         cornerRadii:CGSizeMake(5.0f, 5.0f)];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = _usernameView.bounds;
+    maskLayer.path = maskPathUsername.CGPath;
+    _usernameView.layer.mask = maskLayer;
+
+    UIBezierPath *maskPathPassword = [UIBezierPath bezierPathWithRoundedRect:_passwordView.bounds
+                                                           byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
+                                                                 cornerRadii:CGSizeMake(5.0f, 5.0f)];
+    
+    CAShapeLayer *maskLayerPassword = [CAShapeLayer layer];
+    maskLayerPassword.frame = _passwordView.bounds;
+    maskLayerPassword.path = maskPathPassword.CGPath;
+    _passwordView.layer.mask = maskLayerPassword;
+
+
+    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 10, 150, 30)];
     usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     usernameTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [_usernameView addSubview:usernameTf];
     
-    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(60, 10, 150, 30)];
+    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 10, 150, 30)];
     passwordTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     passwordTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [_passwordView addSubview:passwordTf];
     
-    //_sendButtonView = [[UIView alloc] initWithFrame:CGRectMake(35, 370, 250, 50)];
-    //_sendButtonView.backgroundColor = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:0.7];
-    
     [_btnLogin initWithType:ST_BUTTON_TYPE_ORANGE string:@"LOGIN"];
-    
-    //BUTTON
-    //UIButton * sendButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _sendButtonView.frame.size.width, _sendButtonView.frame.size.height)];
-    //[sendButton setTitle:@"LOGIN" forState:UIControlStateNormal];
-    //[sendButton setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xeef3ed) forState:UIControlStateNormal];
-    //[sendButton setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0x858688)];
-    
-    //[_sendButtonView addSubview:sendButton];
     
     [_btnLogin addTarget:self
                  action:@selector(doLogin)

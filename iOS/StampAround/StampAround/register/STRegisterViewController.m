@@ -36,7 +36,7 @@
                                };
     
     //register then
-    [[STNetworkManager managerWithDelegate:self] requestRegisterNormal:postDict];
+    //[[STNetworkManager managerWithDelegate:self] requestRegisterNormal:postDict];
 }
 
 - (void)didReceiveMemoryWarning
