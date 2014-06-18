@@ -10,14 +10,16 @@
 #import "STNetworkManager.h"
 #import "STUtilities.h"
 #import "STButton.h"
+#import "TSMessage.h"
 #import <FacebookSDK.h>
 
-@interface STLoginViewController : UIViewController<STNetworkManagerDelegate, UIGestureRecognizerDelegate>
+@interface STLoginViewController : UIViewController<STNetworkManagerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) UIView *usernameView;
 @property (strong, nonatomic) UIView *passwordView;
 @property (weak, nonatomic) IBOutlet UILabel *lblWelcome;
 @property (weak, nonatomic) IBOutlet STButton *btnLogin;
 @property (weak, nonatomic) IBOutlet STButton *btnFacebook;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

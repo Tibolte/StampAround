@@ -34,13 +34,16 @@
     _currentProgress = 0.0;
     
     _progressView = [[OJFSegmentedProgressView alloc] initWithNumberOfSegments:16];
-    [_progressView setFrame:CGRectMake(70, 500, 100, 20)];
+    if(MY_IS_SCREENHEIGHT_568)
+        [_progressView setFrame:CGRectMake(70, 500, 100, 20)];
+    else
+        [_progressView setFrame:CGRectMake(70, 400, 100, 20)];
     [_progressView setTrackTintColor:MY_UICOLOR_FROM_HEX_RGB(0x858688)];
     [_progressView setProgressTintColor:MY_UICOLOR_FROM_HEX_RGB(0xf76228)];
     [_progressView setSegmentSeparatorSize:3.0];
     [_progressView setProgress:_currentProgress];
     
-    UILabel *lblLoading = [[UILabel alloc] initWithFrame:CGRectMake(_progressView.frame.origin.x + _progressView.frame.size.width + 10, 500, 100, 20)];
+    UILabel *lblLoading = [[UILabel alloc] initWithFrame:CGRectMake(_progressView.frame.origin.x + _progressView.frame.size.width + 10, _progressView.frame.origin.y, 100, 20)];
     [lblLoading setTextColor:MY_UICOLOR_FROM_HEX_RGB(0x39393b)];
     [lblLoading setText:@"Loading"];
     [lblLoading setFont:[UIFont fontWithName:@"DINEngschriftStd" size:24.0f]];
@@ -90,26 +93,6 @@
             [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
         }
         
-        /*if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
-            
-            //open session also
-            [MY_APP_DELEGATE openFbSession];
-            
-            //valid session, allow to go to category screen
-            [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
-        } else {
-            //then check for user token, else present login screen
-            if([[[STSessionManager manager] token] length]!=0)
-            {
-                [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
-            }
-            else
-            {
-                [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
-            }
-        }*/
-        
-        //TODO: send accesstoken and accesssecret to backend to check for session validity
     }
 }
 

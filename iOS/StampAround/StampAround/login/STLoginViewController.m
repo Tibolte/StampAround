@@ -82,16 +82,23 @@
     _passwordView.layer.mask = maskLayerPassword;
 
 
-    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 13, 150, 30)];
+    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _usernameView.frame.size.width, _usernameView.frame.size.height)];
     usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     usernameTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [usernameTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    usernameTf.delegate = self;
+    [usernameTf setKeyboardType:UIKeyboardTypeEmailAddress];
+    usernameTf.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    usernameTf.textAlignment = UITextAlignmentCenter;
     [_usernameView addSubview:usernameTf];
     
-    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 13, 150, 30)];
+    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _passwordView.frame.size.width, _passwordView.frame.size.height)];
     passwordTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     passwordTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [passwordTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    passwordTf.delegate = self;
+    [passwordTf setSecureTextEntry:YES];
+    passwordTf.textAlignment = UITextAlignmentCenter;
     [_passwordView addSubview:passwordTf];
     
     [_btnLogin initWithType:ST_BUTTON_TYPE_ORANGE string:@"LOGIN"];
@@ -106,9 +113,9 @@
                   action:@selector(fbClicked)
         forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:_usernameView];
-    [self.view addSubview:_passwordView];
-    [self.view addSubview:_btnLogin];
+    [_scrollView addSubview:_usernameView];
+    [_scrollView addSubview:_passwordView];
+    [_scrollView addSubview:_btnLogin];
     
     //GESTURE - Dismiss the keyboard when tapped on the controller's view
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
@@ -132,10 +139,11 @@
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
-    
     //TODO: delete token??
     
     NSLog(@"error %@", message);
+    
+    [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
 }
 
 
@@ -145,13 +153,84 @@
 {
     [usernameTf resignFirstResponder];
     [passwordTf resignFirstResponder];
+    
+    [_scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
 }
 
 #pragma mark - Miscellaneous
 
 -(void)doLogin
 {
-    [[STNetworkManager managerWithDelegate:self] requestAuthenticate:@"adam@hundaskra.is" password:@"1234"];
+    if([[usernameTf text] length] == 0)
+    {
+        NSLog(@"username empty");
+        [usernameTf becomeFirstResponder];
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Missing username!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        return;
+    }
+    
+    if([[passwordTf text] length] == 0)
+    {
+        NSLog(@"password empty");
+        [passwordTf becomeFirstResponder];
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Missing password!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        return;
+    }
+    
+    if(![STUtilities isMailAddressValid:[usernameTf text]])
+    {
+        NSLog(@"email address invalid");
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Email address invalid!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+    
+        [usernameTf becomeFirstResponder];
+
+        return;
+    }
+    
+    //test: @"adam@hundaskra.is", @"1234"
+    [[STNetworkManager managerWithDelegate:self] requestAuthenticate:[usernameTf text] password:[passwordTf text]];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"textFieldDidBeginEditing");
+    
+    //TODO: move
+    
+    if (textField == usernameTf) {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 20.0) animated:YES];
+        else
+            [_scrollView setContentOffset:CGPointMake(0.0, 110.0) animated:YES];
+    } else if (textField == passwordTf) {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 20.0) animated:YES];
+        else
+            [_scrollView setContentOffset:CGPointMake(0.0, 110.0) animated:YES];
+    }
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if(textField == usernameTf)
+    {
+        [passwordTf becomeFirstResponder];
+    }
+    else if(textField == passwordTf)
+    {
+        //login
+        NSLog(@"do login");
+        [self doLogin];
+    }
+    
+    return YES;
 }
 
 #pragma mark - Facebook
