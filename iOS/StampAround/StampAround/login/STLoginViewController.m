@@ -43,7 +43,6 @@
     // UI. However, since this is not user intitiated, do not show the login UX.
     [MY_APP_DELEGATE openSessionWithAllowLoginUI:NO];
     
-    //[[STNetworkManager managerWithDelegate:self] requestAuthenticate:@"adam@hundaskra.is" password:@"1234"];
 }
 
 - (void)viewDidUnload
@@ -53,8 +52,12 @@
 
 - (void)setViewItems
 {
-    _usernameView = [[UIView alloc] initWithFrame:CGRectMake(35, 245, 250, 50)];
-    _passwordView = [[UIView alloc] initWithFrame:CGRectMake(35, 300, 250, 50)];
+    
+    [_lblWelcome setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xec8d71)];
+    [_lblWelcome setFont:[UIFont fontWithName:@"DINEngschriftStd" size:40.0f]];
+    
+    _usernameView = [[UIView alloc] initWithFrame:CGRectMake(35, 200, 250, 50)];
+    _passwordView = [[UIView alloc] initWithFrame:CGRectMake(35, 260, 250, 50)];
     
     [_usernameView setBackgroundColor:[UIColor whiteColor]];
     [_passwordView  setBackgroundColor:[UIColor whiteColor]];
@@ -69,24 +72,26 @@
     passwordTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [_passwordView addSubview:passwordTf];
     
-    _sendButtonView = [[UIView alloc] initWithFrame:CGRectMake(35, 370, 250, 50)];
-    _sendButtonView.backgroundColor = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:0.7];
+    //_sendButtonView = [[UIView alloc] initWithFrame:CGRectMake(35, 370, 250, 50)];
+    //_sendButtonView.backgroundColor = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:0.7];
+    
+    [_btnLogin initWithType:ST_BUTTON_TYPE_ORANGE string:@"LOGIN"];
     
     //BUTTON
-    UIButton * sendButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _sendButtonView.frame.size.width, _sendButtonView.frame.size.height)];
-    [sendButton setTitle:@"LOGIN" forState:UIControlStateNormal];
-    [sendButton setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xeef3ed) forState:UIControlStateNormal];
-    [sendButton setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0x858688)];
+    //UIButton * sendButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _sendButtonView.frame.size.width, _sendButtonView.frame.size.height)];
+    //[sendButton setTitle:@"LOGIN" forState:UIControlStateNormal];
+    //[sendButton setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xeef3ed) forState:UIControlStateNormal];
+    //[sendButton setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0x858688)];
     
-    [_sendButtonView addSubview:sendButton];
+    //[_sendButtonView addSubview:sendButton];
     
-    [sendButton addTarget:self
+    [_btnLogin addTarget:self
                  action:@selector(doLogin)
        forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_usernameView];
     [self.view addSubview:_passwordView];
-    [self.view addSubview:_sendButtonView];    
+    [self.view addSubview:_btnLogin];
     
     //GESTURE - Dismiss the keyboard when tapped on the controller's view
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
@@ -94,7 +99,7 @@
     tap.delegate = self;
     
     UITapGestureRecognizer *singleTap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(fbClicked)];
-    [_fbView addGestureRecognizer:singleTap];
+    //[_fbView addGestureRecognizer:singleTap];
 }
 
 #pragma mark - Network Delegate
@@ -197,7 +202,7 @@
         
         [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
     } else {
-        [_lblFb setText:@"Connect with Facebook"];
+        //[_lblFb setText:@"Connect with Facebook"];
     }
 }
 

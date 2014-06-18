@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9655F5A6-1086-4645-A458-89E84533C2A9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StampAround</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EA460BE4-8BA7-4733-8D3B-F6161C60553E</key>
+		<string>https://github.com/Tibolte/StampAround.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/StampAround/StampAround.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EA460BE4-8BA7-4733-8D3B-F6161C60553E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Tibolte/StampAround.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA460BE4-8BA7-4733-8D3B-F6161C60553E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA460BE4-8BA7-4733-8D3B-F6161C60553E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StampAround</string>
+		</dict>
+	</array>
+</dict>
+</plist>

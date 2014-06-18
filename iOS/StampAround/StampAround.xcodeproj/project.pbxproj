@@ -36,6 +36,8 @@
 		ACB766B4194C801100925D2D /* StampAroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB766B3194C801100925D2D /* StampAroundTests.m */; };
 		ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB766C1194C8A3B00925D2D /* STStartViewController.m */; };
 		ACB766C4194C8A3B00925D2D /* STStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB766C2194C8A3B00925D2D /* STStartViewController.xib */; };
+		ACD358E21951042600D04B35 /* STButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD358E11951042600D04B35 /* STButton.m */; };
+		ACE7E80219510EA600CE87A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE7E80119510EA600CE87A8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		ACB766C0194C8A3B00925D2D /* STStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStartViewController.h; path = startscreen/STStartViewController.h; sourceTree = "<group>"; };
 		ACB766C1194C8A3B00925D2D /* STStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStartViewController.m; path = startscreen/STStartViewController.m; sourceTree = "<group>"; };
 		ACB766C2194C8A3B00925D2D /* STStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStartViewController.xib; path = startscreen/STStartViewController.xib; sourceTree = "<group>"; };
+		ACD358E01951042600D04B35 /* STButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STButton.h; path = customelements/STButton.h; sourceTree = "<group>"; };
+		ACD358E11951042600D04B35 /* STButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STButton.m; path = customelements/STButton.m; sourceTree = "<group>"; };
+		ACE7E80119510EA600CE87A8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE7E80219510EA600CE87A8 /* QuartzCore.framework in Frameworks */,
 				AC6D3929194DFA3D00AE7590 /* AVFoundation.framework in Frameworks */,
 				ACB76691194C801000925D2D /* CoreGraphics.framework in Frameworks */,
 				ACB76693194C801000925D2D /* UIKit.framework in Frameworks */,
@@ -227,6 +233,7 @@
 		ACB7668D194C801000925D2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7E80119510EA600CE87A8 /* QuartzCore.framework */,
 				AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */,
 				ACB7668E194C801000925D2D /* Foundation.framework */,
 				ACB76690194C801000925D2D /* CoreGraphics.framework */,
@@ -240,6 +247,7 @@
 		ACB76694194C801000925D2D /* StampAround */ = {
 			isa = PBXGroup;
 			children = (
+				ACD358DF195103F100D04B35 /* custom elements */,
 				AC4D0B881950D42200A0ABF6 /* register */,
 				AC3FB1A6194FB5CE00528258 /* categories screen */,
 				AC3FB1A0194E491400528258 /* resources */,
@@ -303,6 +311,15 @@
 				ACB766C2194C8A3B00925D2D /* STStartViewController.xib */,
 			);
 			name = "start screen";
+			sourceTree = "<group>";
+		};
+		ACD358DF195103F100D04B35 /* custom elements */ = {
+			isa = PBXGroup;
+			children = (
+				ACD358E01951042600D04B35 /* STButton.h */,
+				ACD358E11951042600D04B35 /* STButton.m */,
+			);
+			name = "custom elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +471,7 @@
 				AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */,
 				AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */,
 				ACB7669B194C801100925D2D /* main.m in Sources */,
+				ACD358E21951042600D04B35 /* STButton.m in Sources */,
 				AC6D3923194DD75600AE7590 /* STAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "STNetworkManager.h"
 #import "STUtilities.h"
+#import "STButton.h"
 #import <FacebookSDK.h>
 
 @interface STLoginViewController : UIViewController<STNetworkManagerDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UIView *usernameView;
 @property (strong, nonatomic) UIView *passwordView;
-@property (strong, nonatomic) UIView *sendButtonView;
-@property (weak, nonatomic) IBOutlet UIView *fbView;
-@property (weak, nonatomic) IBOutlet UILabel *lblFb;
+@property (weak, nonatomic) IBOutlet UILabel *lblWelcome;
+@property (weak, nonatomic) IBOutlet STButton *btnLogin;
 
 @end
