@@ -82,21 +82,29 @@
     _passwordView.layer.mask = maskLayerPassword;
 
 
-    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 10, 150, 30)];
+    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 13, 150, 30)];
     usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     usernameTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
+    [usernameTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
     [_usernameView addSubview:usernameTf];
     
-    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 10, 150, 30)];
+    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(90, 13, 150, 30)];
     passwordTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     passwordTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
+    [passwordTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
     [_passwordView addSubview:passwordTf];
     
     [_btnLogin initWithType:ST_BUTTON_TYPE_ORANGE string:@"LOGIN"];
     
+    [_btnFacebook initWithType:ST_BUTTON_TYPE_FB string:@""];
+    
     [_btnLogin addTarget:self
                  action:@selector(doLogin)
        forControlEvents:UIControlEventTouchUpInside];
+    
+    [_btnFacebook addTarget:self
+                  action:@selector(fbClicked)
+        forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_usernameView];
     [self.view addSubview:_passwordView];
@@ -106,9 +114,6 @@
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     tap.delegate = self;
-    
-    UITapGestureRecognizer *singleTap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(fbClicked)];
-    //[_fbView addGestureRecognizer:singleTap];
 }
 
 #pragma mark - Network Delegate
@@ -159,13 +164,13 @@
     
     // If the user is authenticated, log out when the button is clicked.
     // If the user is not authenticated, log in when the button is clicked.
-    if (FBSession.activeSession.isOpen) {
+    /*if (FBSession.activeSession.isOpen) {
         [MY_APP_DELEGATE closeSession];
     } else {
         // The user has initiated a login, so call the openSession method
         // and show the login UX if necessary.
         [MY_APP_DELEGATE openSessionWithAllowLoginUI:YES];
-    }
+    }*/
 }
 
 /*

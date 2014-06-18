@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D96A18E243F450BB7E3FE19 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5574AE2FA0C34C55A8F962DA /* libPods.a */; };
+		AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC35C2CB1951207E00CD0828 /* facebook_logo.png */; };
+		AC35C2CE1951207E00CD0828 /* facebook_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC35C2CC1951207E00CD0828 /* facebook_logo@2x.png */; };
 		AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3FB19E194E303A00528258 /* STSessionManager.m */; };
 		AC3FB1A4194E496C00528258 /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3FB1A2194E496C00528258 /* fb_login.png */; };
 		AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3FB1A3194E496C00528258 /* fb_login@2x.png */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		5574AE2FA0C34C55A8F962DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBA073928054A5C9716E2E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AC35C2CB1951207E00CD0828 /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook_logo.png; path = resources/images/facebook_logo.png; sourceTree = "<group>"; };
+		AC35C2CC1951207E00CD0828 /* facebook_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook_logo@2x.png"; path = "resources/images/facebook_logo@2x.png"; sourceTree = "<group>"; };
 		AC3FB19C194E253700528258 /* STConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STConstants.h; path = extra/STConstants.h; sourceTree = "<group>"; };
 		AC3FB19D194E303A00528258 /* STSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STSessionManager.h; path = managers/STSessionManager.h; sourceTree = "<group>"; };
 		AC3FB19E194E303A00528258 /* STSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STSessionManager.m; path = managers/STSessionManager.m; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		AC3FB1A1194E491D00528258 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AC35C2CB1951207E00CD0828 /* facebook_logo.png */,
+				AC35C2CC1951207E00CD0828 /* facebook_logo@2x.png */,
 				AC3FB1A2194E496C00528258 /* fb_login.png */,
 				AC3FB1A3194E496C00528258 /* fb_login@2x.png */,
 			);
@@ -405,8 +411,10 @@
 				ACB766C4194C8A3B00925D2D /* STStartViewController.xib in Resources */,
 				AC3FB1A4194E496C00528258 /* fb_login.png in Resources */,
 				AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */,
+				AC35C2CE1951207E00CD0828 /* facebook_logo@2x.png in Resources */,
 				AC4D0B921950D4AD00A0ABF6 /* STRegisterViewController.xib in Resources */,
 				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
+				AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */,
 				AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */,
 				AC4D0B991950FB7100A0ABF6 /* DINEngschriftStd.otf in Resources */,
 				AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */,

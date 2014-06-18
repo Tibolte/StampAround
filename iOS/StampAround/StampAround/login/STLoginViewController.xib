@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STLoginViewController">
             <connections>
+                <outlet property="btnFacebook" destination="UTZ-ib-hLV" id="w0u-qr-ohg"/>
                 <outlet property="btnLogin" destination="6F3-mE-TMb" id="YDF-no-TFw"/>
                 <outlet property="lblWelcome" destination="unC-6q-7kD" id="OcP-bb-CBi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,10 +37,17 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6F3-mE-TMb" customClass="STButton">
-                    <rect key="frame" x="35" y="327" width="150" height="45"/>
+                    <rect key="frame" x="35" y="327" width="180" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="Button">
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UTZ-ib-hLV" customClass="STButton">
+                    <rect key="frame" x="233" y="327" width="52" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>

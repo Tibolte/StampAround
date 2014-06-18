@@ -17,5 +17,6 @@
 @end
 
 #define ST_BUTTON_TYPE_ORANGE        0
+#define ST_BUTTON_TYPE_FB            1
 
 #define kButtonFontSize 22
