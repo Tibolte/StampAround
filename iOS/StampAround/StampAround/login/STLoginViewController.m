@@ -126,7 +126,8 @@
     
     [[STSessionManager manager] saveCredentialsWithUsername:[responseObject objectForKey:@"email"] token:[responseObject objectForKey:@"accessToken"] secret:[responseObject objectForKey:@"accessSecret"]];
     
-    [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+    //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+    [self dismissAndPresentCategories];
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
@@ -164,13 +165,13 @@
     
     // If the user is authenticated, log out when the button is clicked.
     // If the user is not authenticated, log in when the button is clicked.
-    /*if (FBSession.activeSession.isOpen) {
+    if (FBSession.activeSession.isOpen) {
         [MY_APP_DELEGATE closeSession];
     } else {
         // The user has initiated a login, so call the openSession method
         // and show the login UX if necessary.
         [MY_APP_DELEGATE openSessionWithAllowLoginUI:YES];
-    }*/
+    }
 }
 
 /*
@@ -214,10 +215,20 @@
              }
          }];
         
-        [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+        //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+         
+         [self dismissAndPresentCategories];
     } else {
         //[_lblFb setText:@"Connect with Facebook"];
     }
+}
+
+- (void)dismissAndPresentCategories
+{
+    [self dismissViewControllerAnimated:NO completion:
+     ^{
+         [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+     }];
 }
 
 - (IBAction)btnRegisterClicked:(id)sender {
