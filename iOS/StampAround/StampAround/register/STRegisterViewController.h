@@ -9,6 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "STNetworkManager.h"
 
-@interface STRegisterViewController : UIViewController<STNetworkManagerDelegate>
+@interface STRegisterViewController : UIViewController<STNetworkManagerDelegate, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *nameView;
+@property (weak, nonatomic) IBOutlet UITextField *nameEdit;
+@property (weak, nonatomic) IBOutlet UIView *mailView;
+@property (weak, nonatomic) IBOutlet UITextField *mailEdit;
+@property (weak, nonatomic) IBOutlet UIView *confirmMailView;
+@property (weak, nonatomic) IBOutlet UITextField *confirmMailEdit;
+@property (weak, nonatomic) IBOutlet UIView *passView;
+@property (weak, nonatomic) IBOutlet UITextField *passEdit;
+@property (weak, nonatomic) IBOutlet UIView *confirmPassView;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPassEdit;
+@property (weak, nonatomic) IBOutlet STButton *btnRegister;
 @end
