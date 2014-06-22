@@ -300,18 +300,20 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
-    /*MY_DELAY_MAIN_QUEUE(0.6, ^{ //delay for controller change
-        
-    });*/
+    [self dismissViewControllerAnimated:YES completion:nil];
     
-    [TSMessage showNotificationInViewController:self title:@"Success" subtitle:message type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
+    MY_DELAY_MAIN_QUEUE(0.6, ^{ //delay for controller change
+        
+            [TSMessage showNotificationInViewController:[MY_APP_DELEGATE loginViewController] title:@"Success" subtitle:@"Registration successful" type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
+    });
+
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     NSLog(@"error %@", message);
     
-    [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
+    [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
 }
 
 - (IBAction)closeRegister:(id)sender {
