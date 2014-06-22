@@ -36,17 +36,6 @@
     [[self view] sendSubviewToBack:gradientBackground];
     
     [self setViewItems];
-
-    
-    NSDictionary *postDict = @{@"name" : @"Tibo",
-                               @"email" : @"tibo@gmail.com",
-                               @"password" : @"1234",
-                               @"secret" : @"3744a7b11dd1183658c2381c30617fcb"
-                    
-                               };
-    
-    //register then
-    //[[STNetworkManager managerWithDelegate:self] requestRegisterNormal:postDict];
 }
 
 - (void)setViewItems
@@ -300,7 +289,7 @@
                                @"secret" : APP_SECRET
                                };
     
-    
+    [[STNetworkManager managerWithDelegate:self] requestRegisterNormal:postDict];
 }
 
 #pragma mark - Network Delegate
@@ -310,15 +299,23 @@
     
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
+    
+    /*MY_DELAY_MAIN_QUEUE(0.6, ^{ //delay for controller change
+        
+    });*/
+    
+    [TSMessage showNotificationInViewController:self title:@"Success" subtitle:message type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     NSLog(@"error %@", message);
+    
+    [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
 }
 
 - (IBAction)closeRegister:(id)sender {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -25,6 +25,7 @@ extern NSString *const FBSessionStateChangedNotification;
 @property(nonatomic, strong) STLoginViewController *loginViewController;
 @property(nonatomic, strong) STRegisterViewController *registerViewController;
 @property(nonatomic, strong) STCategoriesViewController *categoriesViewController;
+@property(nonatomic, strong) UINavigationController *navigationController;
 
 @property (strong, nonatomic) NSString *loggedInUserID;
 @property (strong, nonatomic) FBSession *loggedInSession;

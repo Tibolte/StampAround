@@ -83,7 +83,7 @@
 
 
     usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _usernameView.frame.size.width, _usernameView.frame.size.height)];
-    usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
+    usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     usernameTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [usernameTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
     usernameTf.delegate = self;
@@ -292,9 +292,9 @@
              }
          }];
         
-        //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+        [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
          
-         [self dismissAndPresentCategories];
+        //[self dismissAndPresentCategories];
     } else {
         //[_lblFb setText:@"Connect with Facebook"];
     }
@@ -302,10 +302,12 @@
 
 - (void)dismissAndPresentCategories
 {
-    [self dismissViewControllerAnimated:NO completion:
+    /*[self dismissViewControllerAnimated:NO completion:
      ^{
          [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
-     }];
+     }];*/
+    
+    [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
 }
 
 - (IBAction)btnRegisterClicked:(id)sender {

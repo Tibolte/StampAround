@@ -86,16 +86,23 @@ NSString *const FBSessionStateChangedNotification =
             {
                 _loginViewController = [[STLoginViewController alloc] init];
             }
-            [_loginViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
-            [_startViewController presentViewController:_loginViewController animated:YES completion:nil];
+            //[_loginViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+            //[_startViewController presentViewController:_loginViewController animated:YES completion:nil];
             //[_window setRootViewController:_loginViewController];
+            _window.rootViewController = nil;
+            _navigationController = [[UINavigationController alloc] initWithRootViewController:_loginViewController];
+            _window.rootViewController = _navigationController;
+            
+            [[_loginViewController navigationController] setNavigationBarHidden:YES];
             break;
         case SCREEN_REGISTER:
             if(!_registerViewController)
             {
                 _registerViewController = [[STRegisterViewController alloc] init];
             }
-            [_window setRootViewController:_registerViewController];
+            //[_window setRootViewController:_registerViewController];
+            [_registerViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+            [_loginViewController presentViewController:_registerViewController animated:YES completion:nil];
             break;
         case SCREEN_CATEGORIES:
             if(!_categoriesViewController)
@@ -103,9 +110,26 @@ NSString *const FBSessionStateChangedNotification =
                 _categoriesViewController = [[STCategoriesViewController alloc] init];
             }
             
-            [[_categoriesViewController navigationController] setNavigationBarHidden:YES];
+            //[[_categoriesViewController navigationController] setNavigationBarHidden:YES];
+            //[_window setRootViewController:_categoriesViewController];
             
-            [_window setRootViewController:_categoriesViewController];
+            /*if(!_navigationController)
+            {
+                _window.rootViewController = nil;
+                _navigationController = [[UINavigationController alloc] initWithRootViewController:_categoriesViewController];
+                _window.rootViewController = _navigationController;
+                
+            }
+            else
+            {
+                [_navigationController pushViewController:_categoriesViewController animated:YES];
+            }*/
+            
+            _window.rootViewController = nil;
+            _navigationController = [[UINavigationController alloc] initWithRootViewController:_categoriesViewController];
+            _window.rootViewController = _navigationController;
+            
+            [[_categoriesViewController navigationController] setNavigationBarHidden:YES];
             break;
     }
 }
