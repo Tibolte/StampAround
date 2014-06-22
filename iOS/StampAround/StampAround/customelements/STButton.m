@@ -46,24 +46,24 @@
 
         case ST_BUTTON_TYPE_ORANGE:
             background = [STUtilities imageViewWithFrame:frame
-                                              beginColor:MY_UICOLOR_FROM_HEX_RGB(0xd86947)
-                                                endColor:MY_UICOLOR_FROM_HEX_RGB(0xe48e73)
+                                              beginColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)
+                                                endColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)
                                                     type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
             backgroundTouch = [STUtilities imageViewWithFrame:frame
-                                                   beginColor:MY_UICOLOR_FROM_HEX_RGB(0xbb5b3d)
-                                                     endColor:MY_UICOLOR_FROM_HEX_RGB(0xc17861)
+                                                   beginColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)
+                                                     endColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)
                                                          type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
             [[self titleLabel] setFont:[UIFont fontWithName:@"DINEngschriftStd" size:kButtonFontSize]];
             break;
             
         case ST_BUTTON_TYPE_FB:
             background = [STUtilities imageViewWithFrame:frame
-                                              beginColor:MY_UICOLOR_FROM_HEX_RGB(0x2c6099)
-                                                endColor:MY_UICOLOR_FROM_HEX_RGB(0x1269ad)
+                                              beginColor:MY_UICOLOR_FROM_HEX_RGB(0x00313e)
+                                                endColor:MY_UICOLOR_FROM_HEX_RGB(0x00313e)
                                                     type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
             backgroundTouch = [STUtilities imageViewWithFrame:frame
-                                                   beginColor:MY_UICOLOR_FROM_HEX_RGB(0x1f446c)
-                                                     endColor:MY_UICOLOR_FROM_HEX_RGB(0x0e5186)
+                                                   beginColor:MY_UICOLOR_FROM_HEX_RGB(0x00313e)
+                                                     endColor:MY_UICOLOR_FROM_HEX_RGB(0x00313e)
                                                          type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
             [[self titleLabel] setFont:[UIFont fontWithName:@"DINEngschriftStd" size:kButtonFontSize]];
             

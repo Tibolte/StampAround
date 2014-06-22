@@ -46,8 +46,15 @@
     UILabel *lblLoading = [[UILabel alloc] initWithFrame:CGRectMake(_progressView.frame.origin.x + _progressView.frame.size.width + 10, _progressView.frame.origin.y, 100, 20)];
     [lblLoading setTextColor:MY_UICOLOR_FROM_HEX_RGB(0x39393b)];
     [lblLoading setText:@"Loading"];
+    [lblLoading setBackgroundColor:[UIColor clearColor]];
     [lblLoading setFont:[UIFont fontWithName:@"DINEngschriftStd" size:24.0f]];
     [lblLoading sizeToFit];
+    
+    [_lblStp setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
+    [_lblStp setFont:[UIFont fontWithName:@"DINEngschriftStd" size:35.0f]];
+    
+    [_lblCity setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
+    [_lblCity setFont:[UIFont fontWithName:@"DINEngschriftStd" size:25.0f]];
 
     [[self view] addSubview:_progressView];
     [[self view] addSubview:lblLoading];

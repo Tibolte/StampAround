@@ -14,6 +14,9 @@
 
 @interface STStartViewController : UIViewController<STNetworkManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
+@property (weak, nonatomic) IBOutlet UILabel *lblStp;
+@property (weak, nonatomic) IBOutlet UILabel *lblCity;
 @end
 
 #define REFRESH_INTERVAL        0.15 

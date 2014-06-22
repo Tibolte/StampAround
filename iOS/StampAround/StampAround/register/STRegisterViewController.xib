@@ -104,11 +104,12 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ErR-dL-lxT">
-                            <rect key="frame" x="35" y="520" width="67" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ErR-dL-lxT">
+                            <rect key="frame" x="35" y="530" width="67" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Cancel">
-                                <color key="titleColor" red="0.92549019610000005" green="0.55294117649999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="1" green="0.41568627450980389" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>

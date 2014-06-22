@@ -24,8 +24,8 @@
     //init GUI
     
     UIImageView *gradientBackground = [STUtilities imageViewWithFrame:[[self view] frame]
-                                                           beginColor:MY_UICOLOR_FROM_HEX_RGB(0xdbe9e9)
-                                                             endColor:MY_UICOLOR_FROM_HEX_RGB(0xfffde5)
+                                                           beginColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f8f1)
+                                                             endColor:MY_UICOLOR_FROM_HEX_RGB(0xf4efea)
                                                                  type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
     [[self view] addSubview:gradientBackground];
     [[self view] sendSubviewToBack:gradientBackground];
@@ -53,23 +53,52 @@
 - (void)setViewItems
 {
     
-    [_lblWelcome setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xec8d71)];
-    [_lblWelcome setFont:[UIFont fontWithName:@"DINEngschriftStd" size:40.0f]];
+    [_lblWelcome setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
+    [_lblWelcome setFont:[UIFont fontWithName:@"DINEngschriftStd" size:35.0f]];
     
-    _usernameView = [[UIView alloc] initWithFrame:CGRectMake(35, 200, 250, 50)];
-    _passwordView = [[UIView alloc] initWithFrame:CGRectMake(35, 260, 250, 50)];
+    [_lblCity setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
+    [_lblCity setFont:[UIFont fontWithName:@"DINEngschriftStd" size:25.0f]];
+    
+    if(MY_IS_SCREENHEIGHT_568)
+    {
+        _usernameView = [[UIView alloc] initWithFrame:CGRectMake(35, 320, 250, 50)];
+        _passwordView = [[UIView alloc] initWithFrame:CGRectMake(35, 380, 250, 50)];
+        
+        //+120
+        _btnLogin.frame = CGRectMake(35, 445, 180, 45);
+        _btnFacebook.frame = CGRectMake(233, 445, 52, 45);
+        
+        //img + lbels
+        _imgLogo.frame = CGRectMake(101, 70, 119, 136);
+        _lblWelcome.frame = CGRectMake(0, 230, 320, 40);
+        _lblCity.frame = CGRectMake(0, 270, 320, 33);
+        
+        _btnRegister.frame = CGRectMake(66, 520, 189, 30);
+    }
+    else
+    {
+        _usernameView = [[UIView alloc] initWithFrame:CGRectMake(35, 240, 250, 50)];
+        _passwordView = [[UIView alloc] initWithFrame:CGRectMake(35, 300, 250, 50)];
+        
+        _btnLogin.frame = CGRectMake(35, 365, 180, 45);
+        _btnFacebook.frame = CGRectMake(233, 365, 52, 45);
+    }
     
     [_usernameView setBackgroundColor:[UIColor whiteColor]];
     [_passwordView  setBackgroundColor:[UIColor whiteColor]];
+    
     
     //rounded corners
     UIBezierPath *maskPathUsername = [UIBezierPath bezierPathWithRoundedRect:_usernameView.bounds
                                                    byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
                                                          cornerRadii:CGSizeMake(5.0f, 5.0f)];
+
     
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.frame = _usernameView.bounds;
     maskLayer.path = maskPathUsername.CGPath;
+    //[maskLayer setStrokeColor:[UIColor blackColor].CGColor];
+    //[maskLayer setLineWidth:2.0f];
     _usernameView.layer.mask = maskLayer;
 
     UIBezierPath *maskPathPassword = [UIBezierPath bezierPathWithRoundedRect:_passwordView.bounds
@@ -82,23 +111,29 @@
     _passwordView.layer.mask = maskLayerPassword;
 
 
-    usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _usernameView.frame.size.width, _usernameView.frame.size.height)];
+    if(MY_IS_IOS6)
+        usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 18, _usernameView.frame.size.width, _usernameView.frame.size.height)];
+    else
+        usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _usernameView.frame.size.width, _usernameView.frame.size.height)];
     usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     usernameTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [usernameTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
     usernameTf.delegate = self;
     [usernameTf setKeyboardType:UIKeyboardTypeEmailAddress];
     usernameTf.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    usernameTf.textAlignment = UITextAlignmentCenter;
+    usernameTf.textAlignment = NSTextAlignmentCenter;
     [_usernameView addSubview:usernameTf];
     
-    passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _passwordView.frame.size.width, _passwordView.frame.size.height)];
+    if(MY_IS_IOS6)
+        passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 18, _passwordView.frame.size.width, _passwordView.frame.size.height)];
+    else
+        passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _passwordView.frame.size.width, _passwordView.frame.size.height)];
     passwordTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     passwordTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
     [passwordTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
     passwordTf.delegate = self;
     [passwordTf setSecureTextEntry:YES];
-    passwordTf.textAlignment = UITextAlignmentCenter;
+    passwordTf.textAlignment = NSTextAlignmentCenter;
     [_passwordView addSubview:passwordTf];
     
     [_btnLogin initWithType:ST_BUTTON_TYPE_ORANGE string:@"LOGIN"];
@@ -133,8 +168,7 @@
     
     [[STSessionManager manager] saveCredentialsWithUsername:[responseObject objectForKey:@"email"] token:[responseObject objectForKey:@"accessToken"] secret:[responseObject objectForKey:@"accessSecret"]];
     
-    //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
-    [self dismissAndPresentCategories];
+    [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
@@ -203,14 +237,14 @@
     
     if (textField == usernameTf) {
         if(MY_IS_SCREENHEIGHT_568)
-            [_scrollView setContentOffset:CGPointMake(0.0, 20.0) animated:YES];
+            [_scrollView setContentOffset:CGPointMake(0.0, 150.0) animated:YES];
         else
-            [_scrollView setContentOffset:CGPointMake(0.0, 110.0) animated:YES];
+            [_scrollView setContentOffset:CGPointMake(0.0, 150.0) animated:YES];
     } else if (textField == passwordTf) {
         if(MY_IS_SCREENHEIGHT_568)
-            [_scrollView setContentOffset:CGPointMake(0.0, 20.0) animated:YES];
+            [_scrollView setContentOffset:CGPointMake(0.0, 150.0) animated:YES];
         else
-            [_scrollView setContentOffset:CGPointMake(0.0, 110.0) animated:YES];
+            [_scrollView setContentOffset:CGPointMake(0.0, 150.0) animated:YES];
     }
     
 }
@@ -294,23 +328,12 @@
         
         [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
          
-        //[self dismissAndPresentCategories];
     } else {
         //[_lblFb setText:@"Connect with Facebook"];
     }
 }
 
-- (void)dismissAndPresentCategories
-{
-    /*[self dismissViewControllerAnimated:NO completion:
-     ^{
-         [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
-     }];*/
-    
-    [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
-}
-
-- (IBAction)btnRegisterClicked:(id)sender {
+- (IBAction)registerClicked:(id)sender {
         [MY_APP_DELEGATE switchToScreen:SCREEN_REGISTER];
 }
 

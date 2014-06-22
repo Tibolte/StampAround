@@ -17,9 +17,12 @@
 
 @property (strong, nonatomic) UIView *usernameView;
 @property (strong, nonatomic) UIView *passwordView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
 @property (weak, nonatomic) IBOutlet UILabel *lblWelcome;
+@property (weak, nonatomic) IBOutlet UILabel *lblCity;
 @property (weak, nonatomic) IBOutlet STButton *btnLogin;
 @property (weak, nonatomic) IBOutlet STButton *btnFacebook;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *btnRegister;
 
 @end

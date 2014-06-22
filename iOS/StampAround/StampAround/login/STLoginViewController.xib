@@ -9,6 +9,9 @@
             <connections>
                 <outlet property="btnFacebook" destination="UTZ-ib-hLV" id="w0u-qr-ohg"/>
                 <outlet property="btnLogin" destination="6F3-mE-TMb" id="YDF-no-TFw"/>
+                <outlet property="btnRegister" destination="oCM-4z-vqz" id="taH-SS-wv4"/>
+                <outlet property="imgLogo" destination="GW8-Vb-jW6" id="uGS-Wy-L1W"/>
+                <outlet property="lblCity" destination="mbo-Qw-SsP" id="wgW-Hw-Oli"/>
                 <outlet property="lblWelcome" destination="unC-6q-7kD" id="OcP-bb-CBi"/>
                 <outlet property="scrollView" destination="RDb-Ct-rVB" id="J0V-Ie-3YP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -19,23 +22,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oCM-4z-vqz">
-                    <rect key="frame" x="65" y="482" width="189" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <state key="normal" title="New user? Register now">
-                        <color key="titleColor" red="0.92549019607843142" green="0.55294117647058827" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnRegisterClicked:" destination="-1" eventType="touchUpInside" id="mWc-yG-TmD"/>
-                    </connections>
-                </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="RDb-Ct-rVB">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="unC-6q-7kD">
-                            <rect key="frame" x="0.0" y="75" width="320" height="76"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stamp Around" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="unC-6q-7kD">
+                            <rect key="frame" x="0.0" y="170" width="320" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -56,6 +48,28 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RVK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mbo-Qw-SsP">
+                            <rect key="frame" x="0.0" y="210" width="320" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_login.png" id="GW8-Vb-jW6">
+                            <rect key="frame" x="101" y="30" width="119" height="136"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oCM-4z-vqz">
+                            <rect key="frame" x="66" y="430" width="189" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="New user? Register now">
+                                <color key="titleColor" red="1" green="0.41568627450980389" blue="0.33725490196078434" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="registerClicked:" destination="-1" eventType="touchUpInside" id="Q3X-0L-TC5"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </scrollView>
             </subviews>
@@ -64,4 +78,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo_login.png" width="155" height="178"/>
+    </resources>
 </document>

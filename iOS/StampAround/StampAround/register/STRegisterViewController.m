@@ -29,8 +29,8 @@
     // Do any additional setup after loading the view from its nib.
     
     UIImageView *gradientBackground = [STUtilities imageViewWithFrame:[[self view] frame]
-                                                           beginColor:MY_UICOLOR_FROM_HEX_RGB(0xdbe9e9)
-                                                             endColor:MY_UICOLOR_FROM_HEX_RGB(0xfffde5)
+                                                           beginColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f8f1)
+                                                             endColor:MY_UICOLOR_FROM_HEX_RGB(0xf4efea)
                                                                  type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
     [[self view] addSubview:gradientBackground];
     [[self view] sendSubviewToBack:gradientBackground];
