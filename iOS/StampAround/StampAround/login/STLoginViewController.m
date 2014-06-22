@@ -157,7 +157,7 @@
     [_scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
 }
 
-#pragma mark - Miscellaneous
+#pragma mark - Login function
 
 -(void)doLogin
 {
@@ -200,8 +200,6 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     NSLog(@"textFieldDidBeginEditing");
-    
-    //TODO: move
     
     if (textField == usernameTf) {
         if(MY_IS_SCREENHEIGHT_568)

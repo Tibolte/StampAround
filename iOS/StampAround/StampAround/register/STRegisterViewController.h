@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "STNetworkManager.h"
 
-@interface STRegisterViewController : UIViewController<STNetworkManagerDelegate, UITextFieldDelegate>
+@interface STRegisterViewController : UIViewController<STNetworkManagerDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *nameView;
 @property (weak, nonatomic) IBOutlet UITextField *nameEdit;
@@ -22,4 +22,5 @@
 @property (weak, nonatomic) IBOutlet UIView *confirmPassView;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPassEdit;
 @property (weak, nonatomic) IBOutlet STButton *btnRegister;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end

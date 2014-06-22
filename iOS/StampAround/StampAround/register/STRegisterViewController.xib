@@ -18,6 +18,7 @@
                 <outlet property="nameView" destination="tND-HY-DCf" id="n1t-Xq-6Lz"/>
                 <outlet property="passEdit" destination="zrs-iW-bOu" id="oOy-nP-peD"/>
                 <outlet property="passView" destination="K3q-bY-vFZ" id="pIk-yc-T7c"/>
+                <outlet property="scrollView" destination="sUk-d3-3CZ" id="PXl-sj-Scx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +32,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="tND-HY-DCf">
-                            <rect key="frame" x="35" y="100" width="250" height="50"/>
+                            <rect key="frame" x="35" y="60" width="250" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" id="0T2-L5-QH1">
@@ -44,7 +45,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="FSF-qK-5nL">
-                            <rect key="frame" x="35" y="160" width="250" height="50"/>
+                            <rect key="frame" x="35" y="120" width="250" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="center" minimumFontSize="17" id="PO5-WD-Tb5">
@@ -57,20 +58,20 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="Phb-do-0QY">
-                            <rect key="frame" x="35" y="220" width="250" height="50"/>
+                            <rect key="frame" x="35" y="180" width="250" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm e-mail" textAlignment="center" minimumFontSize="17" id="cLd-9h-2Ax">
                                     <rect key="frame" x="0.0" y="3" width="250" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="K3q-bY-vFZ">
-                            <rect key="frame" x="35" y="280" width="250" height="50"/>
+                            <rect key="frame" x="35" y="240" width="250" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" id="zrs-iW-bOu">
@@ -83,7 +84,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="Uze-3z-hwQ">
-                            <rect key="frame" x="35" y="340" width="250" height="50"/>
+                            <rect key="frame" x="35" y="300" width="250" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="center" minimumFontSize="17" id="rhJ-KA-uFU">
@@ -96,12 +97,23 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WDI-bu-L74" customClass="STButton">
-                            <rect key="frame" x="35" y="400" width="250" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="35" y="370" width="250" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ErR-dL-lxT">
+                            <rect key="frame" x="35" y="520" width="67" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.92549019610000005" green="0.55294117649999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeRegister:" destination="-1" eventType="touchUpInside" id="rtO-kL-Ks3"/>
+                            </connections>
                         </button>
                     </subviews>
                 </scrollView>

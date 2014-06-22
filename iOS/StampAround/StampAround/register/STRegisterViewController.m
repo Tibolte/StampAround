@@ -42,7 +42,7 @@
                                @"email" : @"tibo@gmail.com",
                                @"password" : @"1234",
                                @"secret" : @"3744a7b11dd1183658c2381c30617fcb"
-                               
+                    
                                };
     
     //register then
@@ -124,6 +124,16 @@
     [_confirmPassEdit setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
     [_confirmPassEdit setSecureTextEntry:YES];
     _confirmPassEdit.delegate = self;
+    
+    [_btnRegister initWithType:ST_BUTTON_TYPE_ORANGE string:@"REGISTER"];
+    [_btnRegister addTarget:self
+                  action:@selector(doRegister)
+        forControlEvents:UIControlEventTouchUpInside];
+    
+    //GESTURE - Dismiss the keyboard when tapped on the controller's view
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    tap.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,12 +147,160 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     NSLog(@"textFieldDidBeginEditing");
     
-    //TODO: move
+    if (textField == _confirmPassEdit) {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 80.0) animated:YES];
+        else
+            [_scrollView setContentOffset:CGPointMake(0.0, 160.0) animated:YES];
+    }
+    else if(textField == _passEdit)
+    {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 80.0) animated:YES];
+        else
+            [_scrollView setContentOffset:CGPointMake(0.0, 160.0) animated:YES];
+    }
+    else if(textField == _confirmMailEdit)
+    {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 80.0) animated:YES];
+        else
+            [_scrollView setContentOffset:CGPointMake(0.0, 160.0) animated:YES];
+    }
+    else if (textField == _mailEdit) {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 80.0) animated:YES];
+        else
+             [_scrollView setContentOffset:CGPointMake(0.0, 100.0) animated:YES];
+    }
+    else if (textField == _nameEdit) {
+        if(MY_IS_SCREENHEIGHT_568)
+            [_scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+        else
+            [_scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
+    if(textField == _nameEdit)
+    {
+        [_mailEdit becomeFirstResponder];
+    }
+    else if(textField == _mailEdit)
+    {
+        [_confirmMailEdit becomeFirstResponder];
+    }
+    else if(textField == _confirmMailEdit)
+    {
+        [_passEdit becomeFirstResponder];
+    }
+    else if(textField == _passEdit)
+    {
+        [_confirmPassEdit becomeFirstResponder];
+    }
+    else if(textField == _confirmPassEdit)
+    {
+        //TODO: register
+        
+        NSLog(@"do register");
+        [self doRegister];
+    }
+    
     return YES;
+}
+
+#pragma mark - Miscellaneous
+
+-(void) dismissKeyboard
+{
+    [_nameEdit resignFirstResponder];
+    [_mailEdit resignFirstResponder];
+    [_confirmMailEdit resignFirstResponder];
+    [_passEdit resignFirstResponder];
+    [_confirmPassEdit resignFirstResponder];
+
+    [_scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+}
+
+#pragma mark - Register function
+
+-(void)doRegister
+{
+    [self dismissKeyboard];
+
+    if([[_nameEdit text] length] == 0)
+    {
+        NSLog(@"username empty");
+        [_nameEdit becomeFirstResponder];
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Missing username!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        return;
+    }
+    
+    if([[_mailEdit text] length] == 0)
+    {
+        NSLog(@"e-mail empty");
+        [_mailEdit becomeFirstResponder];
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Missing e-mail!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        return;
+    }
+    
+    if([[_passEdit text] length] == 0)
+    {
+        NSLog(@"password empty");
+        [_passEdit becomeFirstResponder];
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Missing password!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        return;
+    }
+
+    if(![STUtilities isMailAddressValid:[_mailEdit text]])
+    {
+        NSLog(@"email address invalid");
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Email address invalid!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        [_mailEdit becomeFirstResponder];
+        
+        return;
+    }
+
+    //matches
+
+    if(![[_mailEdit text] isEqualToString:[_confirmMailEdit text] ])
+    {
+        NSLog(@"email addresses do not match");
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Email addresses do not match!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        [_mailEdit becomeFirstResponder];
+        
+        return;
+    }
+    
+    if(![[_passEdit text] isEqualToString:[_confirmPassEdit text] ])
+    {
+        NSLog(@"Passwords do not match");
+        
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Passwords do not match!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        
+        [_passEdit becomeFirstResponder];
+        
+        return;
+    }
+    
+    NSDictionary *postDict = @{@"name" : [_nameEdit text],
+                               @"email" : [_mailEdit text],
+                               @"password" : [_passEdit text],
+                               @"secret" : APP_SECRET
+                               };
+    
+    
 }
 
 #pragma mark - Network Delegate
@@ -157,6 +315,10 @@
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     NSLog(@"error %@", message);
+}
+
+- (IBAction)closeRegister:(id)sender {
+    [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
 }
 
 @end

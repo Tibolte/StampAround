@@ -12,8 +12,10 @@
 // NETWORK COMMUNICATION:
 #define URL_BASE            @"http://api.stampy.adamenvy.com/"
 #define URL_AUTHENTICATE    @"user/authenticate?user=%@&pass=%@"
-#define URL_SESSION_VALID     @"user/session/valid?token=%@&secret=%@"
+#define URL_SESSION_VALID   @"user/session/valid?token=%@&secret=%@"
 #define URL_REGISTER_FB     @"user/register/facebook"
-#define URL_REGISTER    @"user/register/normal"
+#define URL_REGISTER        @"user/register/normal"
+
+#define APP_SECRET          @"3744a7b11dd1183658c2381c30617fcb"
 
 #endif

@@ -10,8 +10,8 @@
 
 #define KEY_USERNAME        @"memory_key_username"
 #define KEY_TOKEN           @"memory_key_token"
-#define KEY_SECRET           @"memory_key_secret"
-#define KEY_IMAGE_URL           @"memory_key_image_url"
+#define KEY_SECRET          @"memory_key_secret"
+#define KEY_IMAGE_URL       @"memory_key_image_url"
 
 
 @interface STSessionManager()
