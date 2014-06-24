@@ -23,4 +23,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *confirmPassEdit;
 @property (weak, nonatomic) IBOutlet STButton *btnRegister;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 @end

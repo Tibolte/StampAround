@@ -53,7 +53,7 @@
                                                    beginColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)
                                                      endColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)
                                                          type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
-            [[self titleLabel] setFont:[UIFont fontWithName:@"DINEngschriftStd" size:kButtonFontSize]];
+            [[self titleLabel] setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:kButtonFontSize]];
             break;
             
         case ST_BUTTON_TYPE_FB:
@@ -65,7 +65,7 @@
                                                    beginColor:MY_UICOLOR_FROM_HEX_RGB(0x00313e)
                                                      endColor:MY_UICOLOR_FROM_HEX_RGB(0x00313e)
                                                          type:STUTILITIES_TYPE_TOP_TO_BOTTOM];
-            [[self titleLabel] setFont:[UIFont fontWithName:@"DINEngschriftStd" size:kButtonFontSize]];
+            [[self titleLabel] setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:kButtonFontSize]];
             
             //create an image
             UIImage *fbImage = [UIImage imageNamed:@"facebook_logo.png"];

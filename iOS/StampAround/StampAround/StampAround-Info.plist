@@ -37,6 +37,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>DINEngschriftStd.otf</string>
+		<string>DINNextRoundedLTPro-Bold.otf</string>
+		<string>DINNextRoundedLTPro-Medium.otf</string>
+		<string>DINNextRoundedLTPro-Light.otf</string>
+		<string>DINNextRoundedLTPro-Regular.otf</string>
 	</array>
 </dict>
 </plist>

@@ -54,10 +54,10 @@
 {
     
     [_lblWelcome setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
-    [_lblWelcome setFont:[UIFont fontWithName:@"DINEngschriftStd" size:35.0f]];
+    [_lblWelcome setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:30.0f]];
     
     [_lblCity setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
-    [_lblCity setFont:[UIFont fontWithName:@"DINEngschriftStd" size:25.0f]];
+    [_lblCity setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Regular" size:20.0f]];
     
     if(MY_IS_SCREENHEIGHT_568)
     {
@@ -117,7 +117,7 @@
         usernameTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _usernameView.frame.size.width, _usernameView.frame.size.height)];
     usernameTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     usernameTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [usernameTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [usernameTf setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     usernameTf.delegate = self;
     [usernameTf setKeyboardType:UIKeyboardTypeEmailAddress];
     usernameTf.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -130,7 +130,7 @@
         passwordTf = [[UITextField alloc]initWithFrame:CGRectMake(0, 3, _passwordView.frame.size.width, _passwordView.frame.size.height)];
     passwordTf.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     passwordTf.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [passwordTf setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [passwordTf setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     passwordTf.delegate = self;
     [passwordTf setSecureTextEntry:YES];
     passwordTf.textAlignment = NSTextAlignmentCenter;
@@ -139,6 +139,8 @@
     [_btnLogin initWithType:ST_BUTTON_TYPE_ORANGE string:@"LOGIN"];
     
     [_btnFacebook initWithType:ST_BUTTON_TYPE_FB string:@""];
+    
+    _btnRegister.titleLabel.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:18.0f];
     
     [_btnLogin addTarget:self
                  action:@selector(doLogin)

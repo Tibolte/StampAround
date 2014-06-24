@@ -89,28 +89,28 @@
     
     _nameEdit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     _nameEdit.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [_nameEdit setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [_nameEdit setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     _nameEdit.delegate = self;
     
     _mailEdit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     _mailEdit.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [_mailEdit setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [_mailEdit setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     _mailEdit.delegate = self;
     
     _confirmMailEdit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Confirm e-mail" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     _confirmMailEdit.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [_confirmMailEdit setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [_confirmMailEdit setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     _confirmMailEdit.delegate = self;
     
     _passEdit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     _passEdit.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [_passEdit setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [_passEdit setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     [_passEdit setSecureTextEntry:YES];
     _passEdit.delegate = self;
     
     _confirmPassEdit.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Confirm password" attributes:@{NSForegroundColorAttributeName: MY_UICOLOR_FROM_HEX_RGB(0x858688)}];
     _confirmPassEdit.textColor = MY_UICOLOR_FROM_HEX_RGB(0x858688);
-    [_confirmPassEdit setFont:[UIFont fontWithName:@"DINEngschriftStd" size:20.0f]];
+    [_confirmPassEdit setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f]];
     [_confirmPassEdit setSecureTextEntry:YES];
     _confirmPassEdit.delegate = self;
     
@@ -118,6 +118,8 @@
     [_btnRegister addTarget:self
                   action:@selector(doRegister)
         forControlEvents:UIControlEventTouchUpInside];
+    
+    _btnCancel.titleLabel.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f];
     
     //GESTURE - Dismiss the keyboard when tapped on the controller's view
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];

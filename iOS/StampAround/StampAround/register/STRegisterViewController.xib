@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STRegisterViewController">
             <connections>
+                <outlet property="btnCancel" destination="ErR-dL-lxT" id="lcs-3q-yJ8"/>
                 <outlet property="btnRegister" destination="WDI-bu-L74" id="Rsa-r1-DWl"/>
                 <outlet property="confirmMailEdit" destination="cLd-9h-2Ax" id="hYf-Bs-s5C"/>
                 <outlet property="confirmMailView" destination="Phb-do-0QY" id="gSm-3Y-458"/>
@@ -105,7 +106,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ErR-dL-lxT">
-                            <rect key="frame" x="35" y="530" width="67" height="30"/>
+                            <rect key="frame" x="33" y="530" width="67" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Cancel">
