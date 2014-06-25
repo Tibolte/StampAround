@@ -76,7 +76,10 @@
     
     
     blckFailure = ^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         [self showError:error];
+        
+        [_delegate downloadFailureCode:-1 message:@"Connection error"];
         
         //connection error (no network) //freeze app?
     };

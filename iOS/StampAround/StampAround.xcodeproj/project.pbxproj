@@ -22,13 +22,14 @@
 		AC4D0B911950D4AD00A0ABF6 /* STRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4D0B8F1950D4AD00A0ABF6 /* STRegisterViewController.m */; };
 		AC4D0B921950D4AD00A0ABF6 /* STRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4D0B901950D4AD00A0ABF6 /* STRegisterViewController.xib */; };
 		AC4D0B951950F23700A0ABF6 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4D0B941950F23700A0ABF6 /* STUtilities.m */; };
-		AC4D0B991950FB7100A0ABF6 /* DINEngschriftStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC4D0B981950FB7100A0ABF6 /* DINEngschriftStd.otf */; };
 		AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3916194DBCB200AE7590 /* STNetworkManager.m */; };
 		AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D391A194DCC2400AE7590 /* STLoginViewController.m */; };
 		AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6D391B194DCC2400AE7590 /* STLoginViewController.xib */; };
 		AC6D3923194DD75600AE7590 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3922194DD75600AE7590 /* STAppDelegate.m */; };
 		AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */; };
 		AC6D3929194DFA3D00AE7590 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */; };
+		ACB1CA65195AF0C600F18C24 /* STBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1CA64195AF0C600F18C24 /* STBottomBar.m */; };
+		ACB1CA67195AF0F000F18C24 /* STBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1CA66195AF0F000F18C24 /* STBottomBar.xib */; };
 		ACB7668F194C801000925D2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB7668E194C801000925D2D /* Foundation.framework */; };
 		ACB76691194C801000925D2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB76690194C801000925D2D /* CoreGraphics.framework */; };
 		ACB76693194C801000925D2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB76692194C801000925D2D /* UIKit.framework */; };
@@ -82,7 +83,6 @@
 		AC4D0B901950D4AD00A0ABF6 /* STRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STRegisterViewController.xib; path = register/STRegisterViewController.xib; sourceTree = "<group>"; };
 		AC4D0B931950F23700A0ABF6 /* STUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STUtilities.h; path = extra/STUtilities.h; sourceTree = "<group>"; };
 		AC4D0B941950F23700A0ABF6 /* STUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STUtilities.m; path = extra/STUtilities.m; sourceTree = "<group>"; };
-		AC4D0B981950FB7100A0ABF6 /* DINEngschriftStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DINEngschriftStd.otf; path = resources/fonts/DINEngschriftStd.otf; sourceTree = "<group>"; };
 		AC6D3915194DBCB200AE7590 /* STNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNetworkManager.h; path = managers/STNetworkManager.h; sourceTree = "<group>"; };
 		AC6D3916194DBCB200AE7590 /* STNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNetworkManager.m; path = managers/STNetworkManager.m; sourceTree = "<group>"; };
 		AC6D3919194DCC2400AE7590 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STLoginViewController.h; path = login/STLoginViewController.h; sourceTree = "<group>"; };
@@ -93,6 +93,9 @@
 		AC6D3924194DD81200AE7590 /* STMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STMacros.h; path = extra/STMacros.h; sourceTree = "<group>"; };
 		AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = demoVideo.mp4; path = assets/demoVideo.mp4; sourceTree = "<group>"; };
 		AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ACB1CA63195AF0C600F18C24 /* STBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBottomBar.h; path = customelements/STBottomBar.h; sourceTree = "<group>"; };
+		ACB1CA64195AF0C600F18C24 /* STBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBottomBar.m; path = customelements/STBottomBar.m; sourceTree = "<group>"; };
+		ACB1CA66195AF0F000F18C24 /* STBottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STBottomBar.xib; path = customelements/STBottomBar.xib; sourceTree = "<group>"; };
 		ACB7668B194C801000925D2D /* StampAround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampAround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB7668E194C801000925D2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ACB76690194C801000925D2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,7 +200,6 @@
 				ACC172C41959C54300279F41 /* DINNextRoundedLTPro-Light.otf */,
 				ACC172C51959C54300279F41 /* DINNextRoundedLTPro-Medium.otf */,
 				ACC172C61959C54300279F41 /* DINNextRoundedLTPro-Regular.otf */,
-				AC4D0B981950FB7100A0ABF6 /* DINEngschriftStd.otf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -240,6 +242,29 @@
 			name = assets;
 			sourceTree = "<group>";
 		};
+		ACB1CA60195AE7C100F18C24 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1CA62195AE7FD00F18C24 /* my cards */,
+				ACB1CA61195AE7F200F18C24 /* map */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		ACB1CA61195AE7F200F18C24 /* map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		ACB1CA62195AE7FD00F18C24 /* my cards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "my cards";
+			sourceTree = "<group>";
+		};
 		ACB76682194C801000925D2D = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +302,7 @@
 		ACB76694194C801000925D2D /* StampAround */ = {
 			isa = PBXGroup;
 			children = (
+				ACB1CA60195AE7C100F18C24 /* main */,
 				ACD358DF195103F100D04B35 /* custom elements */,
 				AC4D0B881950D42200A0ABF6 /* register */,
 				AC3FB1A6194FB5CE00528258 /* categories screen */,
@@ -348,6 +374,9 @@
 			children = (
 				ACD358E01951042600D04B35 /* STButton.h */,
 				ACD358E11951042600D04B35 /* STButton.m */,
+				ACB1CA63195AF0C600F18C24 /* STBottomBar.h */,
+				ACB1CA64195AF0C600F18C24 /* STBottomBar.m */,
+				ACB1CA66195AF0F000F18C24 /* STBottomBar.xib */,
 			);
 			name = "custom elements";
 			sourceTree = "<group>";
@@ -433,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB766C4194C8A3B00925D2D /* STStartViewController.xib in Resources */,
+				ACB1CA67195AF0F000F18C24 /* STBottomBar.xib in Resources */,
 				AC3FB1A4194E496C00528258 /* fb_login.png in Resources */,
 				ACC172C91959C54300279F41 /* DINNextRoundedLTPro-Medium.otf in Resources */,
 				AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */,
@@ -445,7 +475,6 @@
 				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
 				AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */,
 				AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */,
-				AC4D0B991950FB7100A0ABF6 /* DINEngschriftStd.otf in Resources */,
 				AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */,
 				AC0ED70A1957923F00D0A63E /* logo_start@2x.png in Resources */,
 				AC0ED70519577CEA00D0A63E /* logo_login.png in Resources */,
@@ -504,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4D0B911950D4AD00A0ABF6 /* STRegisterViewController.m in Sources */,
+				ACB1CA65195AF0C600F18C24 /* STBottomBar.m in Sources */,
 				AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */,
 				ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */,
 				AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */,

@@ -97,7 +97,8 @@
         }
         else
         {
-            [MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
+            //[MY_APP_DELEGATE switchToScreen:SCREEN_LOGIN];
+            [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
         }
         
     }

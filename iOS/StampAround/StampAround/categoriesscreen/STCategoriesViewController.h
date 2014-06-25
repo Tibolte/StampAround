@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STBottomBar.h"
 
-@interface STCategoriesViewController : UIViewController
+@interface STCategoriesViewController : UIViewController<STBottomBarProtocol>
 
+@property (weak, nonatomic) IBOutlet STBottomBar *bottomBar;
 @end
