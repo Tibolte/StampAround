@@ -44,6 +44,26 @@
     [horizontalLine2 setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0x002f3b)];
     [self.view addSubview:horizontalLine2];
     
+    STButton *buttonRestaurant = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [buttonRestaurant initWithType:ST_BUTTON_TYPE_GRID string:@"restaurants"];
+    buttonRestaurant.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)/5.0f);
+    [self.view addSubview:buttonRestaurant];
+    
+    STButton *buttonCafe = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [buttonCafe initWithType:ST_BUTTON_TYPE_GRID string:@"café"];
+    buttonCafe.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)/5.0f);
+    [self.view addSubview:buttonCafe];
+    
+    STButton *buttonDrinks = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 85, 130)];
+    [buttonDrinks initWithType:ST_BUTTON_TYPE_GRID string:@"drinks"];
+    buttonDrinks.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)*(2.6f/5.0f));
+    [self.view addSubview:buttonDrinks];
+    
+    STButton *buttonGroom = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 80, 120)];
+    [buttonGroom initWithType:ST_BUTTON_TYPE_GRID string:@"groom"];
+    buttonGroom.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)*(2.6f/5.0f));
+    [self.view addSubview:buttonGroom];
+    
     [self.view bringSubviewToFront:_bottomBar];
     
 }

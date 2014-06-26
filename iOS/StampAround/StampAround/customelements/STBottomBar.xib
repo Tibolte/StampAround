@@ -18,12 +18,6 @@
                     <state key="normal" title="map">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.41568627450000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="1" green="0.41568627450980389" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
                     <connections>
                         <action selector="btnMapClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="6pc-dP-6sl"/>
                     </connections>
@@ -35,12 +29,6 @@
                     <state key="normal" title="stamp">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.41568627450000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="1" green="0.41568627450000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
                     <connections>
                         <action selector="btnStampClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="eXN-G9-Cmx"/>
                     </connections>
@@ -51,12 +39,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="my cards">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.41568627450000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="1" green="0.41568627450000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnMyCardsClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="rRo-RP-ILT"/>

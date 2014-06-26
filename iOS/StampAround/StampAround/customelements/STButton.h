@@ -18,5 +18,8 @@
 
 #define ST_BUTTON_TYPE_ORANGE        0
 #define ST_BUTTON_TYPE_FB            1
+#define ST_BUTTON_TYPE_GRID          2
 
 #define kButtonFontSize 22
+#define kButtonGridFontSize 18
+

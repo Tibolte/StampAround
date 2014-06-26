@@ -75,6 +75,18 @@
     _btnMap.titleLabel.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:17.0f];
     _btnStamp.titleLabel.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:17.0f];
     _btnMyCards.titleLabel.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:17.0f];
+    
+    [_btnMap setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_btnMap setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57)  forState:UIControlStateHighlighted];
+    [_btnMap setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57) forState:UIControlStateSelected];
+    
+    [_btnStamp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_btnStamp setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57)  forState:UIControlStateHighlighted];
+    [_btnStamp setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57) forState:UIControlStateSelected];
+    
+    [_btnMyCards setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_btnMyCards setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57)  forState:UIControlStateHighlighted];
+    [_btnMyCards setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57) forState:UIControlStateSelected];
 }
 
 /*
