@@ -21,5 +21,7 @@
 #define ST_BUTTON_TYPE_GRID          2
 
 #define kButtonFontSize 22
-#define kButtonGridFontSize 18
+#define kButtonGridFontSizeBig 16
+#define kButtonGridFontSizeSmall 12
+
 

@@ -88,8 +88,6 @@
             
         case ST_BUTTON_TYPE_GRID: {
             
-            [self setTitleEdgeInsets:UIEdgeInsetsMake(40.0f, 0.0f, 0.0f, 0.0f)];
-            
             if([label isEqualToString:@"restaurants"])
             {
                 background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_restaurant_blue.png"]];
@@ -115,11 +113,31 @@
                 background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_groom_blue.png"]];
                 
                 backgroundTouch = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_groom_pink.png"]];
+            }
+            else if([label isEqualToString:@"entertainment"])
+            {
+                background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_entertainment_blue.png"]];
                 
-                [self setTitleEdgeInsets:UIEdgeInsetsMake(50.0f, 0.0f, 0.0f, 0.0f)];
+                backgroundTouch = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_entertainment_pink.png"]];
+            }
+            else if([label isEqualToString:@"offers"])
+            {
+                background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_offers_blue.png"]];
+                
+                backgroundTouch = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_offers_pink.png"]];
             }
             
-            [[self titleLabel] setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:kButtonGridFontSize]];
+            if(MY_IS_SCREENHEIGHT_568)
+            {
+                [self setTitleEdgeInsets:UIEdgeInsetsMake(58.0f, 0.0f, 0.0f, 0.0f)];
+                [[self titleLabel] setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:kButtonGridFontSizeBig]];
+            }
+            else
+            {
+                [self setTitleEdgeInsets:UIEdgeInsetsMake(45.0f, 0.0f, 0.0f, 0.0f)];
+                
+                [[self titleLabel] setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:kButtonGridFontSizeSmall]];
+            }
             
             [self setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a57)  forState:UIControlStateHighlighted];
             [self setTitleColor:MY_UICOLOR_FROM_HEX_RGB(0x002f3b) forState:UIControlStateNormal];

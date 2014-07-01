@@ -32,7 +32,7 @@
     CGRect screenFrame = [[UIScreen mainScreen] bounds];
     
     //draw line
-    UIView *verticalLine = [[UIView alloc] initWithFrame:CGRectMake(screenFrame.size.width/2.0f, 0, 1.0f, screenFrame.size.height - _bottomBar.frame.size.height)];
+    UIView *verticalLine = [[UIView alloc] initWithFrame:CGRectMake(screenFrame.size.width/2.0f, 0, 1.0f, screenFrame.size.height)];
     [verticalLine setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0x002f3b)];
     [self.view addSubview:verticalLine];
     
@@ -44,25 +44,45 @@
     [horizontalLine2 setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0x002f3b)];
     [self.view addSubview:horizontalLine2];
     
-    STButton *buttonRestaurant = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    CGRect btnGridFrame;
+    if(MY_IS_SCREENHEIGHT_568)
+    {
+        btnGridFrame = CGRectMake(0, 0, 104, 130);
+    }
+    else
+    {
+        btnGridFrame = CGRectMake(0, 0, 80, 100);
+    }
+    
+    STButton *buttonRestaurant = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonRestaurant initWithType:ST_BUTTON_TYPE_GRID string:@"restaurants"];
-    buttonRestaurant.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)/5.0f);
+    buttonRestaurant.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)/6.0f);
     [self.view addSubview:buttonRestaurant];
     
-    STButton *buttonCafe = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    STButton *buttonCafe = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonCafe initWithType:ST_BUTTON_TYPE_GRID string:@"café"];
-    buttonCafe.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)/5.0f);
+    buttonCafe.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)/6.0f);
     [self.view addSubview:buttonCafe];
     
-    STButton *buttonDrinks = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 85, 130)];
+    STButton *buttonDrinks = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonDrinks initWithType:ST_BUTTON_TYPE_GRID string:@"drinks"];
-    buttonDrinks.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)*(2.6f/5.0f));
+    buttonDrinks.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)*(3.0f/6.0f));
     [self.view addSubview:buttonDrinks];
     
-    STButton *buttonGroom = [[STButton alloc] initWithFrame:CGRectMake(0, 0, 80, 120)];
+    STButton *buttonEntertainment = [[STButton alloc] initWithFrame:btnGridFrame];
+    [buttonEntertainment initWithType:ST_BUTTON_TYPE_GRID string:@"entertainment"];
+    buttonEntertainment.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)*(5.0f/6.0f));
+    [self.view addSubview:buttonEntertainment];
+    
+    STButton *buttonGroom = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonGroom initWithType:ST_BUTTON_TYPE_GRID string:@"groom"];
-    buttonGroom.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)*(2.6f/5.0f));
+    buttonGroom.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)*(3.0f/6.0f));
     [self.view addSubview:buttonGroom];
+    
+    STButton *buttonOffers = [[STButton alloc] initWithFrame:btnGridFrame];
+    [buttonOffers initWithType:ST_BUTTON_TYPE_GRID string:@"offers"];
+    buttonOffers.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)*(5.0f/6.0f));
+    [self.view addSubview:buttonOffers];
     
     [self.view bringSubviewToFront:_bottomBar];
     

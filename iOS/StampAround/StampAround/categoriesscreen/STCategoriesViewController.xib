@@ -33,8 +33,8 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" id="Nha-ZI-Zzt" customClass="STBottomBar">
-                    <rect key="frame" x="0.0" y="508" width="320" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <rect key="frame" x="0.0" y="509" width="320" height="60"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
             </subviews>

@@ -39,7 +39,7 @@
     else
         [_progressView setFrame:CGRectMake(70, 400, 100, 20)];
     [_progressView setTrackTintColor:MY_UICOLOR_FROM_HEX_RGB(0x858688)];
-    [_progressView setProgressTintColor:MY_UICOLOR_FROM_HEX_RGB(0xf76228)];
+    [_progressView setProgressTintColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
     [_progressView setSegmentSeparatorSize:3.0];
     [_progressView setProgress:_currentProgress];
     
