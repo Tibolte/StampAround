@@ -12,6 +12,7 @@
 #import "STLoginViewController.h"
 #import "STRegisterViewController.h"
 #import "STCategoriesViewController.h"
+#import "STStampCardViewController.h"
 #import "STSessionManager.h"
 #import <FacebookSDK.h>
 
@@ -25,6 +26,7 @@ extern NSString *const FBSessionStateChangedNotification;
 @property(nonatomic, strong) STLoginViewController *loginViewController;
 @property(nonatomic, strong) STRegisterViewController *registerViewController;
 @property(nonatomic, strong) STCategoriesViewController *categoriesViewController;
+@property(nonatomic, strong) STStampCardViewController *stampCardViewController;
 @property(nonatomic, strong) UINavigationController *navigationController;
 
 @property (strong, nonatomic) NSString *loggedInUserID;
@@ -45,4 +47,6 @@ extern NSString *const FBSessionStateChangedNotification;
 #define SCREEN_REGISTER         2
 
 #define SCREEN_CATEGORIES       3
+#define SCREEN_STAMP_CARD       4
+
 

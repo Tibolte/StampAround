@@ -110,26 +110,25 @@ NSString *const FBSessionStateChangedNotification =
                 _categoriesViewController = [[STCategoriesViewController alloc] init];
             }
             
-            //[[_categoriesViewController navigationController] setNavigationBarHidden:YES];
-            //[_window setRootViewController:_categoriesViewController];
-            
-            /*if(!_navigationController)
-            {
-                _window.rootViewController = nil;
-                _navigationController = [[UINavigationController alloc] initWithRootViewController:_categoriesViewController];
-                _window.rootViewController = _navigationController;
-                
-            }
-            else
-            {
-                [_navigationController pushViewController:_categoriesViewController animated:YES];
-            }*/
-            
             _window.rootViewController = nil;
             _navigationController = [[UINavigationController alloc] initWithRootViewController:_categoriesViewController];
             _window.rootViewController = _navigationController;
             
             [[_categoriesViewController navigationController] setNavigationBarHidden:YES];
+            break;
+            
+        case SCREEN_STAMP_CARD:
+            
+            if(!_stampCardViewController)
+            {
+                _stampCardViewController = [[STStampCardViewController alloc] init];
+            }
+            
+            if(_navigationController)
+            {
+                [_navigationController pushViewController:_stampCardViewController animated:NO];
+            }
+            
             break;
     }
 }

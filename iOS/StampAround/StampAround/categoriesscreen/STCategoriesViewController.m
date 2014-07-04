@@ -59,6 +59,10 @@
     buttonRestaurant.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)/6.0f);
     [self.view addSubview:buttonRestaurant];
     
+    [buttonRestaurant addTarget:self
+                  action:@selector(showRestaurants)
+        forControlEvents:UIControlEventTouchUpInside];
+    
     STButton *buttonCafe = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonCafe initWithType:ST_BUTTON_TYPE_GRID string:@"café"];
     buttonCafe.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)/6.0f);
@@ -109,6 +113,13 @@
 - (void)myCardsClicked
 {
     
+}
+
+#pragma mark - ST Buttons click actions
+
+- (void)showRestaurants
+{
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STAMP_CARD];
 }
 
 - (IBAction)logout:(id)sender {

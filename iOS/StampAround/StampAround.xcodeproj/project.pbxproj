@@ -12,6 +12,14 @@
 		AC0ED70619577CEA00D0A63E /* logo_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70419577CEA00D0A63E /* logo_login@2x.png */; };
 		AC0ED7091957923F00D0A63E /* logo_start.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED7071957923F00D0A63E /* logo_start.png */; };
 		AC0ED70A1957923F00D0A63E /* logo_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED7081957923F00D0A63E /* logo_start@2x.png */; };
+		AC300A741966075E00BA8336 /* STStampCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC300A721966075E00BA8336 /* STStampCardViewController.m */; };
+		AC300A751966075E00BA8336 /* STStampCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC300A731966075E00BA8336 /* STStampCardViewController.xib */; };
+		AC300A7A196614D100BA8336 /* icon_stamp_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A76196614D100BA8336 /* icon_stamp_transparent.png */; };
+		AC300A7B196614D100BA8336 /* icon_stamp_transparent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A77196614D100BA8336 /* icon_stamp_transparent@2x.png */; };
+		AC300A7C196614D100BA8336 /* icon_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A78196614D100BA8336 /* icon_stamp.png */; };
+		AC300A7D196614D100BA8336 /* icon_stamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A79196614D100BA8336 /* icon_stamp@2x.png */; };
+		AC300A801966291E00BA8336 /* icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A7E1966291E00BA8336 /* icon_info.png */; };
+		AC300A811966291E00BA8336 /* icon_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A7F1966291E00BA8336 /* icon_info@2x.png */; };
 		AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC35C2CB1951207E00CD0828 /* facebook_logo.png */; };
 		AC35C2CE1951207E00CD0828 /* facebook_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC35C2CC1951207E00CD0828 /* facebook_logo@2x.png */; };
 		AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3FB19E194E303A00528258 /* STSessionManager.m */; };
@@ -92,6 +100,15 @@
 		AC0ED70419577CEA00D0A63E /* logo_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_login@2x.png"; path = "resources/images/logo_login@2x.png"; sourceTree = "<group>"; };
 		AC0ED7071957923F00D0A63E /* logo_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_start.png; path = resources/images/logo_start.png; sourceTree = "<group>"; };
 		AC0ED7081957923F00D0A63E /* logo_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_start@2x.png"; path = "resources/images/logo_start@2x.png"; sourceTree = "<group>"; };
+		AC300A711966075E00BA8336 /* STStampCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStampCardViewController.h; path = stampcard/STStampCardViewController.h; sourceTree = "<group>"; };
+		AC300A721966075E00BA8336 /* STStampCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStampCardViewController.m; path = stampcard/STStampCardViewController.m; sourceTree = "<group>"; };
+		AC300A731966075E00BA8336 /* STStampCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStampCardViewController.xib; path = stampcard/STStampCardViewController.xib; sourceTree = "<group>"; };
+		AC300A76196614D100BA8336 /* icon_stamp_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_stamp_transparent.png; path = resources/images/icon_stamp_transparent.png; sourceTree = "<group>"; };
+		AC300A77196614D100BA8336 /* icon_stamp_transparent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_stamp_transparent@2x.png"; path = "resources/images/icon_stamp_transparent@2x.png"; sourceTree = "<group>"; };
+		AC300A78196614D100BA8336 /* icon_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_stamp.png; path = resources/images/icon_stamp.png; sourceTree = "<group>"; };
+		AC300A79196614D100BA8336 /* icon_stamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_stamp@2x.png"; path = "resources/images/icon_stamp@2x.png"; sourceTree = "<group>"; };
+		AC300A7E1966291E00BA8336 /* icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_info.png; path = resources/images/icon_info.png; sourceTree = "<group>"; };
+		AC300A7F1966291E00BA8336 /* icon_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_info@2x.png"; path = "resources/images/icon_info@2x.png"; sourceTree = "<group>"; };
 		AC35C2CB1951207E00CD0828 /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook_logo.png; path = resources/images/facebook_logo.png; sourceTree = "<group>"; };
 		AC35C2CC1951207E00CD0828 /* facebook_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook_logo@2x.png"; path = "resources/images/facebook_logo@2x.png"; sourceTree = "<group>"; };
 		AC3FB19C194E253700528258 /* STConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STConstants.h; path = extra/STConstants.h; sourceTree = "<group>"; };
@@ -197,6 +214,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC300A701966070700BA8336 /* stamp card */ = {
+			isa = PBXGroup;
+			children = (
+				AC300A711966075E00BA8336 /* STStampCardViewController.h */,
+				AC300A721966075E00BA8336 /* STStampCardViewController.m */,
+				AC300A731966075E00BA8336 /* STStampCardViewController.xib */,
+			);
+			name = "stamp card";
+			sourceTree = "<group>";
+		};
 		AC3FB1A0194E491400528258 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +236,12 @@
 		AC3FB1A1194E491D00528258 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AC300A7E1966291E00BA8336 /* icon_info.png */,
+				AC300A7F1966291E00BA8336 /* icon_info@2x.png */,
+				AC300A76196614D100BA8336 /* icon_stamp_transparent.png */,
+				AC300A77196614D100BA8336 /* icon_stamp_transparent@2x.png */,
+				AC300A78196614D100BA8336 /* icon_stamp.png */,
+				AC300A79196614D100BA8336 /* icon_stamp@2x.png */,
 				AC48DC64196379680046659E /* icon_offers_pink.png */,
 				AC48DC65196379680046659E /* icon_offers_pink@2x.png */,
 				AC48DC60196378FD0046659E /* icon_offers_blue.png */,
@@ -374,6 +407,7 @@
 		ACB76694194C801000925D2D /* StampAround */ = {
 			isa = PBXGroup;
 			children = (
+				AC300A701966070700BA8336 /* stamp card */,
 				ACB1CA60195AE7C100F18C24 /* main */,
 				ACD358DF195103F100D04B35 /* custom elements */,
 				AC4D0B881950D42200A0ABF6 /* register */,
@@ -542,10 +576,13 @@
 				ACB1CA8E195C66B500F18C24 /* icon_groom_pink.png in Resources */,
 				ACC172C91959C54300279F41 /* DINNextRoundedLTPro-Medium.otf in Resources */,
 				ACB1CA7F195C557600F18C24 /* icon_cafe_pink@2x.png in Resources */,
+				AC300A811966291E00BA8336 /* icon_info@2x.png in Resources */,
+				AC300A7D196614D100BA8336 /* icon_stamp@2x.png in Resources */,
 				AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */,
 				AC35C2CE1951207E00CD0828 /* facebook_logo@2x.png in Resources */,
 				AC0ED7091957923F00D0A63E /* logo_start.png in Resources */,
 				AC48DC5E19636C180046659E /* icon_entertainment_pink.png in Resources */,
+				AC300A751966075E00BA8336 /* STStampCardViewController.xib in Resources */,
 				AC4D0B921950D4AD00A0ABF6 /* STRegisterViewController.xib in Resources */,
 				AC48DC67196379680046659E /* icon_offers_pink@2x.png in Resources */,
 				ACC172C71959C54300279F41 /* DINNextRoundedLTPro-Bold.otf in Resources */,
@@ -555,11 +592,14 @@
 				ACB1CA8F195C66B500F18C24 /* icon_groom_pink@2x.png in Resources */,
 				ACC172C81959C54300279F41 /* DINNextRoundedLTPro-Light.otf in Resources */,
 				AC0ED70619577CEA00D0A63E /* logo_login@2x.png in Resources */,
+				AC300A7B196614D100BA8336 /* icon_stamp_transparent@2x.png in Resources */,
+				AC300A7A196614D100BA8336 /* icon_stamp_transparent.png in Resources */,
 				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
 				AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */,
 				AC48DC5A196369F20046659E /* icon_entertainment_blue.png in Resources */,
 				AC48DC5B196369F20046659E /* icon_entertainment_blue@2x.png in Resources */,
 				AC48DC62196378FD0046659E /* icon_offers_blue.png in Resources */,
+				AC300A7C196614D100BA8336 /* icon_stamp.png in Resources */,
 				AC48DC66196379680046659E /* icon_offers_pink.png in Resources */,
 				ACB1CA8C195C66B500F18C24 /* icon_groom_blue.png in Resources */,
 				ACB1CA85195C5B7200F18C24 /* icon_drinks_blue@2x.png in Resources */,
@@ -574,6 +614,7 @@
 				ACC172CA1959C54300279F41 /* DINNextRoundedLTPro-Regular.otf in Resources */,
 				ACB1CA86195C5B7200F18C24 /* icon_drinks_pink.png in Resources */,
 				ACB76699194C801100925D2D /* InfoPlist.strings in Resources */,
+				AC300A801966291E00BA8336 /* icon_info.png in Resources */,
 				ACB1CA75195C4D1500F18C24 /* icon_restaurant_blue@2x.png in Resources */,
 				ACB1CA7D195C557600F18C24 /* icon_cafe_blue@2x.png in Resources */,
 				ACB766A1194C801100925D2D /* Images.xcassets in Resources */,
@@ -631,6 +672,7 @@
 				AC4D0B911950D4AD00A0ABF6 /* STRegisterViewController.m in Sources */,
 				ACB1CA65195AF0C600F18C24 /* STBottomBar.m in Sources */,
 				AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */,
+				AC300A741966075E00BA8336 /* STStampCardViewController.m in Sources */,
 				ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */,
 				AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */,
 				AC4D0B951950F23700A0ABF6 /* STUtilities.m in Sources */,
