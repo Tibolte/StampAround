@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STStampCardViewController">
             <connections>
                 <outlet property="bottomBar" destination="2iP-Qa-RqB" id="Qml-tv-gGB"/>
+                <outlet property="imgStamp1" destination="PAc-Rj-rr8" id="FaD-7p-Ug0"/>
+                <outlet property="imgStamp2" destination="CUO-Ip-Shf" id="gKC-8D-4Pp"/>
+                <outlet property="imgStamp3" destination="ID3-WC-Ils" id="Z6Z-gu-HYV"/>
+                <outlet property="imgStamp4" destination="79r-OM-awz" id="lSi-NJ-dbH"/>
+                <outlet property="imgStamp5" destination="Gk7-0H-avH" id="qsp-nO-ggc"/>
+                <outlet property="imgStamp6" destination="PeO-v6-glf" id="E6a-uS-mUW"/>
+                <outlet property="imgStamp7" destination="f8I-v3-ATd" id="qIm-Gt-zeB"/>
+                <outlet property="imgStamp8" destination="sxl-Pw-L4j" id="fs8-3y-ZRX"/>
+                <outlet property="imgStamp9" destination="l7O-Ui-rWo" id="7MM-hQ-faT"/>
                 <outlet property="lblAddress" destination="D0i-1l-FCb" id="RfE-n2-h92"/>
                 <outlet property="lblName" destination="Aw7-89-Ya0" id="VIv-hq-d6K"/>
                 <outlet property="lblPhone" destination="hLB-2A-qY6" id="F11-Se-yEk"/>
@@ -54,7 +63,7 @@
                                     <rect key="frame" x="13" y="10" width="65" height="75"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_stamp.png" id="PAc-Rj-rr8">
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_stamp.png" id="PAc-Rj-rr8">
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="75"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
