@@ -64,7 +64,7 @@
 #define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 3
 #define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 15
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 0
+#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 1
 
 // HexColors
 #define COCOAPODS_POD_AVAILABLE_HexColors
@@ -77,6 +77,12 @@
 #define COCOAPODS_VERSION_MAJOR_OJFSegmentedProgressView 0
 #define COCOAPODS_VERSION_MINOR_OJFSegmentedProgressView 0
 #define COCOAPODS_VERSION_PATCH_OJFSegmentedProgressView 1
+
+// TGDrawSvgPathView
+#define COCOAPODS_POD_AVAILABLE_TGDrawSvgPathView
+#define COCOAPODS_VERSION_MAJOR_TGDrawSvgPathView 1
+#define COCOAPODS_VERSION_MINOR_TGDrawSvgPathView 0
+#define COCOAPODS_VERSION_PATCH_TGDrawSvgPathView 2
 
 // TSMessages
 #define COCOAPODS_POD_AVAILABLE_TSMessages

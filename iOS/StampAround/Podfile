@@ -3,3 +3,4 @@ pod 'OJFSegmentedProgressView', '~> 0.0.1'
 pod "Facebook-iOS-SDK"
 pod 'TSMessages'
 pod 'CDZQRScanningViewController'
+pod 'TGDrawSvgPathView'

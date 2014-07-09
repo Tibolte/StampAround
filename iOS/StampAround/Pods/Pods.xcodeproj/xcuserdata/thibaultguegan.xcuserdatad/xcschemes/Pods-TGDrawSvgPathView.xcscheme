@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50EEECB9B75F4E20BCEA3CBF"
-               BuildableName = "libPods-HexColors.a"
-               BlueprintName = "Pods-HexColors"
+               BlueprintIdentifier = "A9BB9D953EC54E72B82C917E"
+               BuildableName = "libPods-TGDrawSvgPathView.a"
+               BlueprintName = "Pods-TGDrawSvgPathView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

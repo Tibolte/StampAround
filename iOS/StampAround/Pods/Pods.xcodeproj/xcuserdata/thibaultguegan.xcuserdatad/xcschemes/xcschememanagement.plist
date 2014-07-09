@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TGDrawSvgPathView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>199A9E9B856F4F12B67497C7</key>
+		<key>0BDC726D15A0430EB6C64340</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2CD0AE4576144FBDB1481A5C</key>
+		<key>433DF93B682C48218F166917</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33D687F03166439D8D78BE1D</key>
+		<key>461BC86C483C42468432DBD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E03DC95EB4D41C8AE197978</key>
+		<key>50EEECB9B75F4E20BCEA3CBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>48A29E83A72D44A082A1C722</key>
+		<key>9CEA313800904F98A6B31035</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>858FD64CAB2B4D708B39915A</key>
+		<key>A717B962688F473C829FCA3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85D36571F67F45A0BA031315</key>
+		<key>A9BB9D953EC54E72B82C917E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EECB0C04E7BC46418CD601F2</key>
+		<key>B0AE5DBE6BCC49AE83DCF422</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C66FFB11A604405D82C58938</key>
 		<dict>
 			<key>primary</key>
 			<true/>
