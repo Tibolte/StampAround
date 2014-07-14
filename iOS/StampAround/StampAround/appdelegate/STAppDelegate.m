@@ -126,7 +126,7 @@ NSString *const FBSessionStateChangedNotification =
             
             if(_navigationController)
             {
-                [_navigationController pushViewController:_stampCardViewController animated:NO];
+                [_navigationController pushViewController:_stampCardViewController animated:YES];
             }
             
             break;

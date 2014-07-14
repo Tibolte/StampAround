@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "STBottomBar.h"
 #import <CDZQRScanningViewController.h>
+#import <AudioToolbox/AudioServices.h>
 
 @interface STStampCardViewController : UIViewController<STBottomBarProtocol>
 

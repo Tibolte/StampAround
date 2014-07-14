@@ -120,6 +120,8 @@
 - (void)showRestaurants
 {
     [MY_APP_DELEGATE switchToScreen:SCREEN_STAMP_CARD];
+    
+    //[self bounce:0.5 button:_buttonRestaurant];
 }
 
 - (IBAction)logout:(id)sender {

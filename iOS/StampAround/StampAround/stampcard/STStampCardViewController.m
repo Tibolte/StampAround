@@ -106,9 +106,27 @@
     {
         i++;
 
-        if([img isHidden])
+        if([img alpha] == 0)
         {
-            [img setHidden:FALSE];
+            [UIView animateWithDuration:0.1 animations:^{img.alpha = 1.0;}];
+            
+            img.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+            
+            CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+            bounceAnimation.values = [NSArray arrayWithObjects:
+                                      [NSNumber numberWithFloat:0.5],
+                                      [NSNumber numberWithFloat:1.1],
+                                      [NSNumber numberWithFloat:0.8],
+                                      [NSNumber numberWithFloat:1.0], nil];
+            bounceAnimation.duration = 0.3;
+            bounceAnimation.removedOnCompletion = NO;
+            [img.layer addAnimation:bounceAnimation forKey:@"bounce"];
+            
+            img.layer.transform = CATransform3DIdentity;
+            
+            //vibrate
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
             break;
         }
     }
@@ -117,7 +135,8 @@
     {
         for(UIImageView *img in _imgArray)
         {
-            [img setHidden:TRUE];
+            //[self setHiddenAnimated:NO view:img];
+            [img setAlpha:0];
         }
         
         [TSMessage showNotificationInViewController:self title:@"Success" subtitle:@"You have the 10th coffee for free!" type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
@@ -125,6 +144,44 @@
         i = 0;
     }
 }
+
+#pragma mark - STButton animation
+
++ (CAKeyframeAnimation*)dockBounceAnimationWithViewHeight:(CGFloat)viewHeight
+{
+    NSUInteger const kNumFactors    = 22;
+    CGFloat const kFactorsPerSec    = 30.0f;
+    CGFloat const kFactorsMaxValue  = 128.0f;
+    CGFloat factors[kNumFactors]    = {0,  60, 83, 100, 114, 124, 128, 128, 124, 114, 100, 83, 60, 32, 0, 0, 18, 28, 32, 28, 18, 0};
+    
+    NSMutableArray* transforms = [NSMutableArray array];
+    
+    for(NSUInteger i = 0; i < kNumFactors; i++)
+    {
+        CGFloat positionOffset  = factors[i] / kFactorsMaxValue * viewHeight;
+        CATransform3D transform = CATransform3DMakeTranslation(0.0f, -positionOffset, 0.0f);
+        
+        [transforms addObject:[NSValue valueWithCATransform3D:transform]];
+    }
+    
+    CAKeyframeAnimation* animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.repeatCount           = 1;
+    animation.duration              = kNumFactors * 1.0f/kFactorsPerSec;
+    animation.fillMode              = kCAFillModeForwards;
+    animation.values                = transforms;
+    animation.removedOnCompletion   = YES; // final stage is equal to starting stage
+    animation.autoreverses          = NO;
+    
+    return animation;
+}
+
+- (void)bounce:(float)bounceFactor image:(UIImageView *)img
+{
+    CGFloat midHeight = img.frame.size.height * bounceFactor;
+    CAKeyframeAnimation* animation = [[self class] dockBounceAnimationWithViewHeight:midHeight];
+    [img.layer addAnimation:animation forKey:@"bouncing"];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
