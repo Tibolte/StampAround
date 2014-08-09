@@ -34,7 +34,7 @@ extern NSString *const FBSessionStateChangedNotification;
 @property (strong, nonatomic) NSString *loggedInUserID;
 @property (strong, nonatomic) FBSession *loggedInSession;
 
-- (void)switchToScreen:(int)screen;
+-(void)switchToScreen:(int)screen;
 
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
 - (void)closeSession;

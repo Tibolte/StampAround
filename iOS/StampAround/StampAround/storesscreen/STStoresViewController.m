@@ -35,6 +35,8 @@
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
     [[self view] addGestureRecognizer:swipeGestureRecognizer];
     [swipeGestureRecognizer setDelegate:self];
+    
+    [[STNetworkManager managerWithDelegate:self] requestStoresByCategory:_categoryId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,6 +66,22 @@
 
 - (void)myCardsClicked
 {
+    
+}
+
+#pragma mark - Network Delegate
+
+
+-(void)downloadResponse:(id)responseObject message:(NSString *)message{
+    
+    NSLog(@"%@", responseObject);
+    NSLog(@"%@", message);
+    
+}
+
+-(void)downloadFailureCode:(int)errCode message:(NSString *)message{
+    
+    NSLog(@"error %@", message);
     
 }
 

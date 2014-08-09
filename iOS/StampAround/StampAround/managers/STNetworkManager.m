@@ -126,6 +126,18 @@
     [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
 }
 
+- (void)requestCategories
+{
+    [self unifiedRequest:URL_CATEGORIES method:METHOD_GET dict:nil];
+}
+
+- (void)requestStoresByCategory:(int)category
+{
+    NSString *restUrl       = [NSString stringWithFormat:URL_STORES,category];
+    
+    [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
+}
+
 #pragma mark - Error Messages
 
 -(void)showError:(NSError*)err{

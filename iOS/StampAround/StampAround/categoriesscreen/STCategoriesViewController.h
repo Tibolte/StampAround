@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "STBottomBar.h"
+#import "STNetworkManager.h"
+#import "STStoresViewController.h"
 
-@interface STCategoriesViewController : UIViewController<STBottomBarProtocol>
+@interface STCategoriesViewController : UIViewController<STBottomBarProtocol,STNetworkManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet STBottomBar *bottomBar;
 @end

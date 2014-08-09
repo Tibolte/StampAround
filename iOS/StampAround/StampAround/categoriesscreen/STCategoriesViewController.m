@@ -111,6 +111,8 @@
     
     [self.view bringSubviewToFront:_bottomBar];
     
+    
+    [[STNetworkManager managerWithDelegate:self] requestCategories];
 }
 
 - (void)didReceiveMemoryWarning
@@ -140,37 +142,55 @@
 
 - (void)showRestaurants
 {
-    //[MY_APP_DELEGATE switchToScreen:SCREEN_STAMP_CARD];
-    
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+    [self startStoresController:1];
 }
 
 - (void)showCafe
 {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+    [self startStoresController:3];
 }
 
 - (void)showDrinks
 {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+    [self startStoresController:2];
 }
 
 - (void)showGroom
 {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+    [self startStoresController:5];
 }
 
 - (void)showEntertainment
 {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+    [self startStoresController:4];
 }
 
 - (void)showOffers
 {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+    [self startStoresController:6];
 }
 
-- (IBAction)logout:(id)sender {
-    [MY_APP_DELEGATE logout];
+-(void)startStoresController:(int)category
+{
+    STStoresViewController *controller = [[STStoresViewController alloc] init];
+    controller.categoryId = category;
+    [self.navigationController pushViewController:controller animated:YES];
 }
+
+#pragma mark - Network Delegate
+
+
+-(void)downloadResponse:(id)responseObject message:(NSString *)message{
+    
+    NSLog(@"%@", responseObject);
+    NSLog(@"%@", message);
+    
+}
+
+-(void)downloadFailureCode:(int)errCode message:(NSString *)message{
+    
+    NSLog(@"error %@", message);
+    
+}
+
 @end

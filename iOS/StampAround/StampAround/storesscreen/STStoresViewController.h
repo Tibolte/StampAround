@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "STBottomBar.h"
+#import "STNetworkManager.h"
 
-@interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate>
+@interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet STBottomBar *bottomBar;
+@property(nonatomic) int categoryId;
+
 @end

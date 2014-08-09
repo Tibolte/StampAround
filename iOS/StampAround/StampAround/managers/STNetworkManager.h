@@ -28,6 +28,8 @@
 - (void)requestRegisterFacebook:(NSDictionary*)postDict;
 - (void)requestRegisterNormal:(NSDictionary*)postDict;
 - (void)requestSessionValid:(NSString *)token secret:(NSString *)secret;
+- (void)requestCategories;
+- (void)requestStoresByCategory:(int)category;
 
 @end
 
