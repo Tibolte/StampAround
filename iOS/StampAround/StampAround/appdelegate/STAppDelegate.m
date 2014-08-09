@@ -130,6 +130,20 @@ NSString *const FBSessionStateChangedNotification =
             }
             
             break;
+            
+        case SCREEN_STORES:
+            
+            if(!_storesViewController)
+            {
+                _storesViewController = [[STStoresViewController alloc] init];
+            }
+            
+            if(_navigationController)
+            {
+                [_navigationController pushViewController:_storesViewController animated:YES];
+            }
+            
+            break;
     }
 }
 

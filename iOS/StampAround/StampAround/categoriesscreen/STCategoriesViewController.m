@@ -68,25 +68,46 @@
     buttonCafe.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)/6.0f);
     [self.view addSubview:buttonCafe];
     
+    [buttonCafe addTarget:self
+                         action:@selector(showCafe)
+               forControlEvents:UIControlEventTouchUpInside];
+
+    
     STButton *buttonDrinks = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonDrinks initWithType:ST_BUTTON_TYPE_GRID string:@"drinks"];
     buttonDrinks.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)*(3.0f/6.0f));
     [self.view addSubview:buttonDrinks];
+    
+    [buttonDrinks addTarget:self
+                   action:@selector(showDrinks)
+         forControlEvents:UIControlEventTouchUpInside];
     
     STButton *buttonEntertainment = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonEntertainment initWithType:ST_BUTTON_TYPE_GRID string:@"entertainment"];
     buttonEntertainment.center = CGPointMake(screenFrame.size.width/4.0f, (screenFrame.size.height-_bottomBar.frame.size.height)*(5.0f/6.0f));
     [self.view addSubview:buttonEntertainment];
     
+    [buttonEntertainment addTarget:self
+                     action:@selector(showEntertainment)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     STButton *buttonGroom = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonGroom initWithType:ST_BUTTON_TYPE_GRID string:@"groom"];
     buttonGroom.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)*(3.0f/6.0f));
     [self.view addSubview:buttonGroom];
     
+    [buttonGroom addTarget:self
+                            action:@selector(showGroom)
+                  forControlEvents:UIControlEventTouchUpInside];
+    
     STButton *buttonOffers = [[STButton alloc] initWithFrame:btnGridFrame];
     [buttonOffers initWithType:ST_BUTTON_TYPE_GRID string:@"offers"];
     buttonOffers.center = CGPointMake(screenFrame.size.width*(3.0f/4.0f), (screenFrame.size.height-_bottomBar.frame.size.height)*(5.0f/6.0f));
     [self.view addSubview:buttonOffers];
+    
+    [buttonOffers addTarget:self
+                    action:@selector(showOffers)
+          forControlEvents:UIControlEventTouchUpInside];
     
     [self.view bringSubviewToFront:_bottomBar];
     
@@ -119,9 +140,34 @@
 
 - (void)showRestaurants
 {
-    [MY_APP_DELEGATE switchToScreen:SCREEN_STAMP_CARD];
+    //[MY_APP_DELEGATE switchToScreen:SCREEN_STAMP_CARD];
     
-    //[self bounce:0.5 button:_buttonRestaurant];
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+}
+
+- (void)showCafe
+{
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+}
+
+- (void)showDrinks
+{
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+}
+
+- (void)showGroom
+{
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+}
+
+- (void)showEntertainment
+{
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
+}
+
+- (void)showOffers
+{
+    [MY_APP_DELEGATE switchToScreen:SCREEN_STORES];
 }
 
 - (IBAction)logout:(id)sender {

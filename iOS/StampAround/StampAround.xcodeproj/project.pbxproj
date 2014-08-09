@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210C08D4199675BF00F38EEB /* STStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C08D2199675BF00F38EEB /* STStoresViewController.m */; };
+		210C08D5199675BF00F38EEB /* STStoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08D3199675BF00F38EEB /* STStoresViewController.xib */; };
 		8D96A18E243F450BB7E3FE19 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5574AE2FA0C34C55A8F962DA /* libPods.a */; };
 		AC0ED70519577CEA00D0A63E /* logo_login.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70319577CEA00D0A63E /* logo_login.png */; };
 		AC0ED70619577CEA00D0A63E /* logo_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70419577CEA00D0A63E /* logo_login@2x.png */; };
@@ -95,6 +97,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210C08D1199675BF00F38EEB /* STStoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStoresViewController.h; path = storesscreen/STStoresViewController.h; sourceTree = "<group>"; };
+		210C08D2199675BF00F38EEB /* STStoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStoresViewController.m; path = storesscreen/STStoresViewController.m; sourceTree = "<group>"; };
+		210C08D3199675BF00F38EEB /* STStoresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStoresViewController.xib; path = storesscreen/STStoresViewController.xib; sourceTree = "<group>"; };
 		5574AE2FA0C34C55A8F962DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBA073928054A5C9716E2E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AC0ED70319577CEA00D0A63E /* logo_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_login.png; path = resources/images/logo_login.png; sourceTree = "<group>"; };
@@ -217,6 +222,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210C08D01996755100F38EEB /* stores screen */ = {
+			isa = PBXGroup;
+			children = (
+				210C08D1199675BF00F38EEB /* STStoresViewController.h */,
+				210C08D2199675BF00F38EEB /* STStoresViewController.m */,
+				210C08D3199675BF00F38EEB /* STStoresViewController.xib */,
+			);
+			name = "stores screen";
+			sourceTree = "<group>";
+		};
 		AC300A701966070700BA8336 /* stamp card */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +426,7 @@
 		ACB76694194C801000925D2D /* StampAround */ = {
 			isa = PBXGroup;
 			children = (
+				210C08D01996755100F38EEB /* stores screen */,
 				AC300A701966070700BA8336 /* stamp card */,
 				ACB1CA60195AE7C100F18C24 /* main */,
 				ACD358DF195103F100D04B35 /* custom elements */,
@@ -604,6 +620,7 @@
 				AC48DC5B196369F20046659E /* icon_entertainment_blue@2x.png in Resources */,
 				AC48DC62196378FD0046659E /* icon_offers_blue.png in Resources */,
 				AC300A7C196614D100BA8336 /* icon_stamp.png in Resources */,
+				210C08D5199675BF00F38EEB /* STStoresViewController.xib in Resources */,
 				AC48DC66196379680046659E /* icon_offers_pink.png in Resources */,
 				ACB1CA8C195C66B500F18C24 /* icon_groom_blue.png in Resources */,
 				ACB1CA85195C5B7200F18C24 /* icon_drinks_blue@2x.png in Resources */,
@@ -685,6 +702,7 @@
 				ACB7669B194C801100925D2D /* main.m in Sources */,
 				ACD358E21951042600D04B35 /* STButton.m in Sources */,
 				AC6D3923194DD75600AE7590 /* STAppDelegate.m in Sources */,
+				210C08D4199675BF00F38EEB /* STStoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
