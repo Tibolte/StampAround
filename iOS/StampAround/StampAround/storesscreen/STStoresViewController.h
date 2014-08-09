@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "STBottomBar.h"
 #import "STNetworkManager.h"
+#import "STStoreCell.h"
 
-@interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate>
+@interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+//it's not necessary to list UICollectionViewDelegate 'cause UICollectionViewDelegateFlowLayout is actually a sub-protocol of UICollectionViewDelegate, so there is no need to list both.
 
 @property (strong, nonatomic) IBOutlet STBottomBar *bottomBar;
 @property(nonatomic) int categoryId;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
