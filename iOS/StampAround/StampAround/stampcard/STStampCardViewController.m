@@ -55,7 +55,13 @@
     [_imgArray addObject:_imgStamp7];
     [_imgArray addObject:_imgStamp8];
     [_imgArray addObject:_imgStamp9];
-
+    
+    // back gesture
+    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBackGesture:)];
+    [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
+    [[self view] addGestureRecognizer:swipeGestureRecognizer];
+    [swipeGestureRecognizer setDelegate:self];
+    
 }
 
 #pragma mark - ST Bottom bar delegate
@@ -143,6 +149,14 @@
         
         i = 0;
     }
+}
+
+#pragma mark - User Actions
+
+-(void)swipeBackGesture:(UIGestureRecognizer*)gesture{
+    
+    //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+    [self.navigationController popViewControllerAnimated:YES]; 
 }
 
 #pragma mark - STButton animation

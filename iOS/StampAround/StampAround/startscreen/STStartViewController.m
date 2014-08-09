@@ -56,8 +56,10 @@
     [_lblCity setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
     [_lblCity setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Regular" size:25.0f]];
 
-    [[self view] addSubview:_progressView];
-    [[self view] addSubview:lblLoading];
+    //tmp
+    //[[self view] addSubview:_progressView];
+    //[[self view] addSubview:lblLoading];
+    
 }
 
 - (void)viewDidUnload
