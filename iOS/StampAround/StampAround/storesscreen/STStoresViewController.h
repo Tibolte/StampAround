@@ -11,6 +11,7 @@
 #import "STNetworkManager.h"
 #import "STStoreCell.h"
 #import "STStore.h"
+#import "STStampCardViewController.h"
 
 @interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

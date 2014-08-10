@@ -111,6 +111,8 @@
     
     [self.view bringSubviewToFront:_bottomBar];
     
+    _bottomBar.delegate = self;
+    
     
     [[STNetworkManager managerWithDelegate:self] requestCategories];
 }
@@ -135,7 +137,8 @@
 
 - (void)myCardsClicked
 {
-    
+    STMyCardsViewController *controller = [[STMyCardsViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - ST Buttons click actions

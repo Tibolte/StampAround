@@ -10,8 +10,11 @@
 #import "STBottomBar.h"
 #import <CDZQRScanningViewController.h>
 #import <AudioToolbox/AudioServices.h>
+#import "STStore.h"
 
 @interface STStampCardViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate>
+
+@property(nonatomic,strong) STStore *store;
 
 @property (weak, nonatomic) IBOutlet STBottomBar *bottomBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

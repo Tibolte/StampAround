@@ -35,7 +35,7 @@
     _lblWebsite.textColor = MY_UICOLOR_FROM_HEX_RGB(0x02272e);
     
     //test
-    [_lblName setText:@"Te og kaffi"];
+    [_lblName setText:_store.name];
     [_lblAddress setText:@"laugavegur 100 101 Reykjavik"];
     [_lblPhone setText:@"+354 5563959"];
     [_lblWebsite setText:@"www.teogkaffi.is"];

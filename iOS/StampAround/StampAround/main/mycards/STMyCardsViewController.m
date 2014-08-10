@@ -1,19 +1,18 @@
 //
-//  STStoresViewController.m
+//  STMyCardsViewController.m
 //  StampAround
 //
-//  Created by Thibault on 09/08/14.
+//  Created by Thibault on 10/08/14.
 //  Copyright (c) 2014 StampAround. All rights reserved.
 //
 
-#import "STStoresViewController.h"
-#import <UIView+MTAnimation.h>
+#import "STMyCardsViewController.h"
 
-@interface STStoresViewController ()
+@interface STMyCardsViewController ()
 
 @end
 
-@implementation STStoresViewController
+@implementation STMyCardsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     [self.view setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
     
@@ -37,8 +35,6 @@
     [[self view] addGestureRecognizer:swipeGestureRecognizer];
     [swipeGestureRecognizer setDelegate:self];
     
-    [[STNetworkManager managerWithDelegate:self] requestStoresByCategory:_categoryId];
-    
     UINib *cellNib = [UINib nibWithNibName:@"STStoreCell" bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"STStoreCell"];
     
@@ -46,19 +42,14 @@
     self.collectionView.dataSource = self;
     
     [self.collectionView setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
+    
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - User Actions
-
--(void)swipeBackGesture:(UIGestureRecognizer*)gesture{
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - ST Bottom bar delegate
@@ -78,6 +69,13 @@
     
 }
 
+#pragma mark - User Actions
+
+-(void)swipeBackGesture:(UIGestureRecognizer*)gesture{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - UICollectionView Datasource
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
@@ -87,17 +85,7 @@
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
 {
-    int count = 0;
-    if([_arrStores count] % 2 == 0)
-    {
-        count = (int)[_arrStores count]/2;
-    }
-    else
-    {
-        count = (int)([_arrStores count]/2 + 1);
-    }
-    
-    return count;
+    return 8;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -114,6 +102,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    // TODO: Select Item
     
     cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
     
@@ -128,21 +117,12 @@
     [cell.layer addAnimation:bounceAnimation forKey:@"bounce"];
     
     cell.layer.transform = CATransform3DIdentity;
-    
-    STStampCardViewController *controller = [[STStampCardViewController alloc] init];
-    controller.store = _arrStores[2*indexPath.section + indexPath.row];
-    
-    MY_DELAY_MAIN_QUEUE(0.2, ^{ //delay for controller change
-        [self.navigationController pushViewController:controller animated:YES];
-    });
-    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // TODO: Deselect item
 }
-
 
 #pragma mark - Network Delegate
 
@@ -152,19 +132,6 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
-    NSArray *arrStoresAll = responseObject[@"results"];
-    NSMutableArray *arrTmpStores = [[NSMutableArray alloc] init];
-    for (int i=0; i<[arrStoresAll count]; i++)
-    {
-        NSDictionary *store = arrStoresAll[i];
-        STStore *storeObject = [[STStore alloc] initWithDict:store];
-        [arrTmpStores addObject:storeObject];
-    }
-    _arrStores = [NSArray arrayWithArray:arrTmpStores];
-    
-    [self.collectionView reloadData];
-    
-    NSLog(@"array of stores: %@", _arrStores);
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{

@@ -10,6 +10,7 @@
 #import "STBottomBar.h"
 #import "STNetworkManager.h"
 #import "STStoresViewController.h"
+#import "STMyCardsViewController.h"
 
 @interface STCategoriesViewController : UIViewController<STBottomBarProtocol,STNetworkManagerDelegate>
 
