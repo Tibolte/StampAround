@@ -11,6 +11,7 @@
 		210C08D5199675BF00F38EEB /* STStoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08D3199675BF00F38EEB /* STStoresViewController.xib */; };
 		210C08D91996984E00F38EEB /* STStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C08D81996984E00F38EEB /* STStoreCell.m */; };
 		210C08DB1996989900F38EEB /* STStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08DA1996989900F38EEB /* STStoreCell.xib */; };
+		2184D6951997CB5F00855B84 /* STStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2184D6941997CB5F00855B84 /* STStore.m */; };
 		8D96A18E243F450BB7E3FE19 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5574AE2FA0C34C55A8F962DA /* libPods.a */; };
 		AC0ED70519577CEA00D0A63E /* logo_login.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70319577CEA00D0A63E /* logo_login.png */; };
 		AC0ED70619577CEA00D0A63E /* logo_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70419577CEA00D0A63E /* logo_login@2x.png */; };
@@ -105,6 +106,8 @@
 		210C08D71996984E00F38EEB /* STStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStoreCell.h; path = storesscreen/cell/STStoreCell.h; sourceTree = "<group>"; };
 		210C08D81996984E00F38EEB /* STStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStoreCell.m; path = storesscreen/cell/STStoreCell.m; sourceTree = "<group>"; };
 		210C08DA1996989900F38EEB /* STStoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStoreCell.xib; path = storesscreen/cell/STStoreCell.xib; sourceTree = "<group>"; };
+		2184D6931997CB5F00855B84 /* STStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStore.h; path = model/STStore.h; sourceTree = "<group>"; };
+		2184D6941997CB5F00855B84 /* STStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStore.m; path = model/STStore.m; sourceTree = "<group>"; };
 		5574AE2FA0C34C55A8F962DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBA073928054A5C9716E2E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AC0ED70319577CEA00D0A63E /* logo_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_login.png; path = resources/images/logo_login.png; sourceTree = "<group>"; };
@@ -246,6 +249,15 @@
 				210C08DA1996989900F38EEB /* STStoreCell.xib */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		2184D6921997CB1500855B84 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2184D6931997CB5F00855B84 /* STStore.h */,
+				2184D6941997CB5F00855B84 /* STStore.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		AC300A701966070700BA8336 /* stamp card */ = {
@@ -442,6 +454,7 @@
 		ACB76694194C801000925D2D /* StampAround */ = {
 			isa = PBXGroup;
 			children = (
+				2184D6921997CB1500855B84 /* model */,
 				210C08D01996755100F38EEB /* stores screen */,
 				AC300A701966070700BA8336 /* stamp card */,
 				ACB1CA60195AE7C100F18C24 /* main */,
@@ -716,6 +729,7 @@
 				AC4D0B951950F23700A0ABF6 /* STUtilities.m in Sources */,
 				AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */,
 				210C08D91996984E00F38EEB /* STStoreCell.m in Sources */,
+				2184D6951997CB5F00855B84 /* STStore.m in Sources */,
 				AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */,
 				ACB7669B194C801100925D2D /* main.m in Sources */,
 				ACD358E21951042600D04B35 /* STButton.m in Sources */,
@@ -839,12 +853,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StampAround/StampAround-Prefix.pch";
 				INFOPLIST_FILE = "StampAround/StampAround-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "092F23F5-084F-4AC2-A60D-215D6C589FE6";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -856,12 +871,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StampAround/StampAround-Prefix.pch";
 				INFOPLIST_FILE = "StampAround/StampAround-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "092F23F5-084F-4AC2-A60D-215D6C589FE6";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

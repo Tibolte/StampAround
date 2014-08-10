@@ -10,6 +10,7 @@
 #import "STBottomBar.h"
 #import "STNetworkManager.h"
 #import "STStoreCell.h"
+#import "STStore.h"
 
 @interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -17,6 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet STBottomBar *bottomBar;
 @property(nonatomic) int categoryId;
+@property(nonatomic, strong) NSArray *arrStores;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

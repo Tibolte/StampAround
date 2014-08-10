@@ -7,6 +7,7 @@
 //
 
 #import "STStoresViewController.h"
+#import <UIView+MTAnimation.h>
 
 @interface STStoresViewController ()
 
@@ -46,8 +47,6 @@
     self.collectionView.dataSource = self;
     
     [self.collectionView setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
-    
-    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,7 +88,17 @@
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
 {
-    return 6;
+    int count = 0;
+    if([_arrStores count] % 2 == 0)
+    {
+        count = (int)[_arrStores count]/2;
+    }
+    else
+    {
+        count = (int)([_arrStores count]/2 + 1);
+    }
+    
+    return count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -105,8 +114,24 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     // TODO: Select Item
+    
+    cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+    
+    CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    bounceAnimation.values = [NSArray arrayWithObjects:
+                              [NSNumber numberWithFloat:1.0],
+                              [NSNumber numberWithFloat:1.1],
+                              [NSNumber numberWithFloat:0.9],
+                              [NSNumber numberWithFloat:1.0], nil];
+    bounceAnimation.duration = 0.3;
+    bounceAnimation.removedOnCompletion = NO;
+    [cell.layer addAnimation:bounceAnimation forKey:@"bounce"];
+    
+    cell.layer.transform = CATransform3DIdentity;
 }
+
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // TODO: Deselect item
@@ -121,6 +146,19 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
+    NSArray *arrStoresAll = responseObject[@"results"];
+    NSMutableArray *arrTmpStores = [[NSMutableArray alloc] init];
+    for (int i=0; i<[arrStoresAll count]; i++)
+    {
+        NSDictionary *store = arrStoresAll[i];
+        STStore *storeObject = [[STStore alloc] initWithDict:store];
+        [arrTmpStores addObject:storeObject];
+    }
+    _arrStores = [NSArray arrayWithArray:arrTmpStores];
+    
+    [self.collectionView reloadData];
+    
+    NSLog(@"array of stores: %@", _arrStores);
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
@@ -130,5 +168,6 @@
     [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
     
 }
+
 
 @end
