@@ -27,6 +27,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // back gesture
+    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownGesture:)];
+    [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionDown];
+    [_fakeView addGestureRecognizer:swipeGestureRecognizer];
+    [swipeGestureRecognizer setDelegate:self];
+}
+
+#pragma mark - User Actions
+
+-(void)swipeDownGesture:(UIGestureRecognizer*)gesture{
+    
+    //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

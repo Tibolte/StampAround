@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface STMapViewController : UIViewController
+@interface STMapViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *fakeView;
 @end
