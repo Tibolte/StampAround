@@ -11,6 +11,9 @@
 		210C08D5199675BF00F38EEB /* STStoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08D3199675BF00F38EEB /* STStoresViewController.xib */; };
 		210C08D91996984E00F38EEB /* STStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C08D81996984E00F38EEB /* STStoreCell.m */; };
 		210C08DB1996989900F38EEB /* STStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08DA1996989900F38EEB /* STStoreCell.xib */; };
+		215DCBAA199966A5003295CD /* STMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215DCBA8199966A5003295CD /* STMapViewController.m */; };
+		215DCBAB199966A5003295CD /* STMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215DCBA9199966A5003295CD /* STMapViewController.xib */; };
+		215DCBAD19996804003295CD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215DCBAC19996804003295CD /* MapKit.framework */; };
 		2184D6951997CB5F00855B84 /* STStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2184D6941997CB5F00855B84 /* STStore.m */; };
 		218D79641997E53500ADBE8E /* STMyCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218D79621997E53500ADBE8E /* STMyCardsViewController.m */; };
 		218D79651997E53600ADBE8E /* STMyCardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218D79631997E53500ADBE8E /* STMyCardsViewController.xib */; };
@@ -108,6 +111,10 @@
 		210C08D71996984E00F38EEB /* STStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStoreCell.h; path = storesscreen/cell/STStoreCell.h; sourceTree = "<group>"; };
 		210C08D81996984E00F38EEB /* STStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStoreCell.m; path = storesscreen/cell/STStoreCell.m; sourceTree = "<group>"; };
 		210C08DA1996989900F38EEB /* STStoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStoreCell.xib; path = storesscreen/cell/STStoreCell.xib; sourceTree = "<group>"; };
+		215DCBA7199966A5003295CD /* STMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMapViewController.h; path = main/map/STMapViewController.h; sourceTree = "<group>"; };
+		215DCBA8199966A5003295CD /* STMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STMapViewController.m; path = main/map/STMapViewController.m; sourceTree = "<group>"; };
+		215DCBA9199966A5003295CD /* STMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STMapViewController.xib; path = main/map/STMapViewController.xib; sourceTree = "<group>"; };
+		215DCBAC19996804003295CD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2184D6931997CB5F00855B84 /* STStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStore.h; path = model/STStore.h; sourceTree = "<group>"; };
 		2184D6941997CB5F00855B84 /* STStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStore.m; path = model/STStore.m; sourceTree = "<group>"; };
 		218D79611997E53500ADBE8E /* STMyCardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMyCardsViewController.h; path = main/mycards/STMyCardsViewController.h; sourceTree = "<group>"; };
@@ -212,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215DCBAD19996804003295CD /* MapKit.framework in Frameworks */,
 				AC0EE20119747DC400A14D48 /* AudioToolbox.framework in Frameworks */,
 				ACE7E80219510EA600CE87A8 /* QuartzCore.framework in Frameworks */,
 				AC6D3929194DFA3D00AE7590 /* AVFoundation.framework in Frameworks */,
@@ -410,6 +418,9 @@
 		ACB1CA61195AE7F200F18C24 /* map */ = {
 			isa = PBXGroup;
 			children = (
+				215DCBA7199966A5003295CD /* STMapViewController.h */,
+				215DCBA8199966A5003295CD /* STMapViewController.m */,
+				215DCBA9199966A5003295CD /* STMapViewController.xib */,
 			);
 			name = map;
 			sourceTree = "<group>";
@@ -447,6 +458,7 @@
 		ACB7668D194C801000925D2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				215DCBAC19996804003295CD /* MapKit.framework */,
 				AC0EE20019747DC400A14D48 /* AudioToolbox.framework */,
 				ACE7E80119510EA600CE87A8 /* QuartzCore.framework */,
 				AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */,
@@ -667,6 +679,7 @@
 				AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */,
 				AC0ED70A1957923F00D0A63E /* logo_start@2x.png in Resources */,
 				ACB1CA74195C4D1500F18C24 /* icon_restaurant_blue.png in Resources */,
+				215DCBAB199966A5003295CD /* STMapViewController.xib in Resources */,
 				AC0ED70519577CEA00D0A63E /* logo_login.png in Resources */,
 				ACB1CA87195C5B7200F18C24 /* icon_drinks_pink@2x.png in Resources */,
 				ACB1CA7E195C557600F18C24 /* icon_cafe_pink.png in Resources */,
@@ -740,6 +753,7 @@
 				210C08D91996984E00F38EEB /* STStoreCell.m in Sources */,
 				2184D6951997CB5F00855B84 /* STStore.m in Sources */,
 				AC6D391C194DCC2400AE7590 /* STLoginViewController.m in Sources */,
+				215DCBAA199966A5003295CD /* STMapViewController.m in Sources */,
 				ACB7669B194C801100925D2D /* main.m in Sources */,
 				ACD358E21951042600D04B35 /* STButton.m in Sources */,
 				218D79641997E53500ADBE8E /* STMyCardsViewController.m in Sources */,

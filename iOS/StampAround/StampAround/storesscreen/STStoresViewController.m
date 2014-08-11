@@ -70,7 +70,18 @@
 
 - (void)mapClicked
 {
+    STMapViewController *controller = [[STMapViewController alloc] init];
+    controller.modalPresentationStyle = UIModalPresentationCustom;
     
+    
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:controller];
+    
+    self.animator.dragable = YES;
+    [self.animator setContentScrollView:controller.scrollView];
+    self.animator.direction = ZFModalTransitonDirectionBottom;
+    
+    controller.transitioningDelegate = self.animator;
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)stampClicked
