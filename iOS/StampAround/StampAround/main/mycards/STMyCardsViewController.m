@@ -27,14 +27,6 @@
 {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
-    
-    // back gesture
-    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBackGesture:)];
-    [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
-    [[self view] addGestureRecognizer:swipeGestureRecognizer];
-    [swipeGestureRecognizer setDelegate:self];
-    
     UINib *cellNib = [UINib nibWithNibName:@"STStoreCell" bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"STStoreCell"];
     
@@ -43,37 +35,15 @@
     
     [self.collectionView setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
     
-    [self.collectionView reloadData];
+    [[STNetworkManager managerWithDelegate:self] requestCards:[[STSessionManager manager] token]];
+    
+    //[self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - ST Bottom bar delegate
-
-- (void)mapClicked
-{
-    
-}
-
-- (void)stampClicked
-{
-    
-}
-
-- (void)myCardsClicked
-{
-    
-}
-
-#pragma mark - User Actions
-
--(void)swipeBackGesture:(UIGestureRecognizer*)gesture{
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UICollectionView Datasource
@@ -132,6 +102,7 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
+    [self.collectionView reloadData];
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{

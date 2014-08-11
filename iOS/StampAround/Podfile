@@ -4,4 +4,5 @@ pod "Facebook-iOS-SDK"
 pod 'TSMessages'
 pod 'CDZQRScanningViewController'
 pod 'TGDrawSvgPathView'
-pod "MTAnimation" 
+pod "MTAnimation"
+pod "ZFDragableModalTransition" 

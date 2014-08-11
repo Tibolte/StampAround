@@ -17,6 +17,7 @@
 #define URL_REGISTER        @"user/register/normal"
 #define URL_CATEGORIES      @"categories/all"
 #define URL_STORES          @"stores/category/%d"
+#define URL_USER_CARDS      @"cards/usercards?accessToken=%@"
 
 #define APP_SECRET          @"3744a7b11dd1183658c2381c30617fcb"
 

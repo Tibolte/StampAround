@@ -138,6 +138,13 @@
     [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
 }
 
+- (void)requestCards:(NSString *)token
+{
+    NSString *restUrl       = [NSString stringWithFormat:URL_USER_CARDS,token];
+    
+    [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
+}
+
 #pragma mark - Error Messages
 
 -(void)showError:(NSError*)err{

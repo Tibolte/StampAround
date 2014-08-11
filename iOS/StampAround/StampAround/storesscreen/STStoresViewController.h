@@ -12,6 +12,8 @@
 #import "STStoreCell.h"
 #import "STStore.h"
 #import "STStampCardViewController.h"
+#import "STMyCardsViewController.h"
+#import <CDZQRScanningViewController.h>
 
 @interface STStoresViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

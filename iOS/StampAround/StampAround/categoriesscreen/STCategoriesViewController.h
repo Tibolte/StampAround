@@ -11,6 +11,7 @@
 #import "STNetworkManager.h"
 #import "STStoresViewController.h"
 #import "STMyCardsViewController.h"
+#import <CDZQRScanningViewController.h>
 
 @interface STCategoriesViewController : UIViewController<STBottomBarProtocol,STNetworkManagerDelegate>
 

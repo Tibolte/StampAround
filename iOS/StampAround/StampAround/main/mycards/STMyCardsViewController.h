@@ -12,7 +12,7 @@
 #import "STStoreCell.h"
 #import "STStore.h"
 
-@interface STMyCardsViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface STMyCardsViewController : UIViewController<UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet STBottomBar *bottomBar;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;

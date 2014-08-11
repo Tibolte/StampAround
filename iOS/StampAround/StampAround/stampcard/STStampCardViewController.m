@@ -7,10 +7,12 @@
 //
 
 #import "STStampCardViewController.h"
+#import <ZFModalTransitionAnimator.h>
 
 @interface STStampCardViewController ()
 
 @property(nonatomic, strong) NSMutableArray *imgArray;
+@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 
 @end
 
@@ -100,7 +102,18 @@
 
 - (void)myCardsClicked
 {
+    STMyCardsViewController *controller = [[STMyCardsViewController alloc] init];
+    controller.modalPresentationStyle = UIModalPresentationCustom;
     
+    
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:controller];
+    
+    self.animator.dragable = YES;
+    [self.animator setContentScrollView:controller.collectionView];
+    self.animator.direction = ZFModalTransitonDirectionBottom;
+    
+    controller.transitioningDelegate = self.animator;
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - Update stamps

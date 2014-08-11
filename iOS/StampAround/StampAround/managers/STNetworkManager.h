@@ -30,6 +30,7 @@
 - (void)requestSessionValid:(NSString *)token secret:(NSString *)secret;
 - (void)requestCategories;
 - (void)requestStoresByCategory:(int)category;
+- (void)requestCards:(NSString *)token;
 
 @end
 

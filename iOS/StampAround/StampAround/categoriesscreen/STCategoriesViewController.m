@@ -7,8 +7,11 @@
 //
 
 #import "STCategoriesViewController.h"
+#import <ZFModalTransitionAnimator.h>
 
 @interface STCategoriesViewController ()
+
+@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 
 @end
 
@@ -132,13 +135,46 @@
 
 - (void)stampClicked
 {
+    // create the scanning view controller and a navigation controller in which to present it:
+    CDZQRScanningViewController *scanningVC = [CDZQRScanningViewController new];
+    UINavigationController *scanningNavVC = [[UINavigationController alloc] initWithRootViewController:scanningVC];
     
+    // configure the scanning view controller:
+    scanningVC.resultBlock = ^(NSString *result) {
+        //field.text = result;
+        NSLog(@"Scanning result: %@", result);
+        [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
+    };
+    scanningVC.cancelBlock = ^() {
+        [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
+    };
+    scanningVC.errorBlock = ^(NSError *error) {
+        // todo: show a UIAlertView orNSLog the error
+        [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Failed to scan QR Code!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+        [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
+    };
+    
+    // present the view controller full-screen on iPhone; in a form sheet on iPad:
+    scanningNavVC.modalPresentationStyle = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? UIModalPresentationFullScreen : UIModalPresentationFormSheet;
+    [self presentViewController:scanningNavVC animated:YES completion:nil];
 }
 
 - (void)myCardsClicked
 {
     STMyCardsViewController *controller = [[STMyCardsViewController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+    controller.modalPresentationStyle = UIModalPresentationCustom;
+    
+    
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:controller];
+    
+    self.animator.dragable = YES;
+    [self.animator setContentScrollView:controller.collectionView];
+    self.animator.direction = ZFModalTransitonDirectionBottom;
+    
+    controller.transitioningDelegate = self.animator;
+    [self presentViewController:controller animated:YES completion:nil];
+    
+    //[self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - ST Buttons click actions

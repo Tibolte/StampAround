@@ -63,8 +63,8 @@
 // Facebook-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 3
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 16
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 2
+#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 17
+#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 0
 
 // HexColors
 #define COCOAPODS_POD_AVAILABLE_HexColors
@@ -95,4 +95,10 @@
 #define COCOAPODS_VERSION_MAJOR_TSMessages 0
 #define COCOAPODS_VERSION_MINOR_TSMessages 9
 #define COCOAPODS_VERSION_PATCH_TSMessages 9
+
+// ZFDragableModalTransition
+#define COCOAPODS_POD_AVAILABLE_ZFDragableModalTransition
+#define COCOAPODS_VERSION_MAJOR_ZFDragableModalTransition 0
+#define COCOAPODS_VERSION_MINOR_ZFDragableModalTransition 2
+#define COCOAPODS_VERSION_PATCH_ZFDragableModalTransition 0
 

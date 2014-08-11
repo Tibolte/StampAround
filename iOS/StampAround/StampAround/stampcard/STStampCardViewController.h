@@ -11,6 +11,7 @@
 #import <CDZQRScanningViewController.h>
 #import <AudioToolbox/AudioServices.h>
 #import "STStore.h"
+#import "STMyCardsViewController.h"
 
 @interface STStampCardViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate>
 
