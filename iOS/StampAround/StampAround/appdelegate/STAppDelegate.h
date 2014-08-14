@@ -15,6 +15,7 @@
 #import "STStampCardViewController.h"
 #import "STStoresViewController.h"
 #import "STSessionManager.h"
+#import "STSuccessViewController.h"
 #import <FacebookSDK.h>
 
 extern NSString *const FBSessionStateChangedNotification;

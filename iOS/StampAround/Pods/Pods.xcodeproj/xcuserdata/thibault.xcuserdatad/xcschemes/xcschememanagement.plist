@@ -29,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MTAnimation.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-OJFSegmentedProgressView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,57 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>01EE14BC48E042C3BFDE6AE5</key>
+		<key>108CB7E55FEE43CBBBED5D9C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0ED5A9E9B83E44178E7A4900</key>
+		<key>17CF1D31D1F54D11AC7F40C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>175E6C980BD147AA93453518</key>
+		<key>27B1E40582E04C30A9E686FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6BF0483A55944A2CB43810BB</key>
+		<key>41AFCD8305FD4726ADCA1789</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B5839174BBC4307BE16B73D</key>
+		<key>46813EB82690444A9F61E75C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEDB1E429D914CC0AF940E34</key>
+		<key>7CB4FBD0D30B41629827C14F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C29379609F9C4CAB8A269A27</key>
+		<key>9CFFF472702240C28C94D858</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4B5807101384F6F9CC93E8A</key>
+		<key>A9DC120E25F143D0BD8D1D83</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D321E56355E8472EB2A2A22C</key>
+		<key>CBF0339FC5A04DD7A14C666E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDF66AF45A7D4D1186ACB246</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE90532447884FDE98C79D7C</key>
+		<key>D6476985B0FD497C910A8068</key>
 		<dict>
 			<key>primary</key>
 			<true/>

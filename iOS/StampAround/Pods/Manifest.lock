@@ -25,7 +25,6 @@ PODS:
   - Facebook-iOS-SDK (3.17.0):
     - Bolts
   - HexColors (2.2.1)
-  - MTAnimation (1.2.0)
   - OJFSegmentedProgressView (0.0.1)
   - TGDrawSvgPathView (1.0.2)
   - TSMessages (0.9.9):
@@ -36,7 +35,6 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CDZQRScanningViewController
   - Facebook-iOS-SDK
-  - MTAnimation
   - OJFSegmentedProgressView (~> 0.0.1)
   - TGDrawSvgPathView
   - TSMessages
@@ -48,7 +46,6 @@ SPEC CHECKSUMS:
   CDZQRScanningViewController: 69cb48a4d02c483a8ee43da15b8fd23fc4e853f3
   Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
   HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
-  MTAnimation: 4b75612c0a81f38d421905ade5362435253ce8d4
   OJFSegmentedProgressView: 2b3605d7263900e6606ba17a191c50db47d58852
   TGDrawSvgPathView: a55a1c737be32cff0fc7eeb92aaf08c2df4c51d4
   TSMessages: 2999ef55e532378692e9d14d32da2bb60e285129

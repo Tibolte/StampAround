@@ -11,6 +11,12 @@
 		210C08D5199675BF00F38EEB /* STStoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08D3199675BF00F38EEB /* STStoresViewController.xib */; };
 		210C08D91996984E00F38EEB /* STStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C08D81996984E00F38EEB /* STStoreCell.m */; };
 		210C08DB1996989900F38EEB /* STStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210C08DA1996989900F38EEB /* STStoreCell.xib */; };
+		21544E5C199D2DF4001D8C54 /* STSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21544E5A199D2DF4001D8C54 /* STSuccessViewController.m */; };
+		21544E5D199D2DF4001D8C54 /* STSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21544E5B199D2DF4001D8C54 /* STSuccessViewController.xib */; };
+		21544E60199D3111001D8C54 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 21544E5E199D3111001D8C54 /* smiley.png */; };
+		21544E61199D3111001D8C54 /* smiley@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21544E5F199D3111001D8C54 /* smiley@2x.png */; };
+		21544E64199D3248001D8C54 /* beams.png in Resources */ = {isa = PBXBuildFile; fileRef = 21544E62199D3248001D8C54 /* beams.png */; };
+		21544E65199D3248001D8C54 /* beams@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21544E63199D3248001D8C54 /* beams@2x.png */; };
 		215DCBAA199966A5003295CD /* STMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215DCBA8199966A5003295CD /* STMapViewController.m */; };
 		215DCBAB199966A5003295CD /* STMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215DCBA9199966A5003295CD /* STMapViewController.xib */; };
 		215DCBAD19996804003295CD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215DCBAC19996804003295CD /* MapKit.framework */; };
@@ -111,6 +117,13 @@
 		210C08D71996984E00F38EEB /* STStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStoreCell.h; path = storesscreen/cell/STStoreCell.h; sourceTree = "<group>"; };
 		210C08D81996984E00F38EEB /* STStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStoreCell.m; path = storesscreen/cell/STStoreCell.m; sourceTree = "<group>"; };
 		210C08DA1996989900F38EEB /* STStoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStoreCell.xib; path = storesscreen/cell/STStoreCell.xib; sourceTree = "<group>"; };
+		21544E59199D2DF4001D8C54 /* STSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STSuccessViewController.h; path = successscreen/STSuccessViewController.h; sourceTree = "<group>"; };
+		21544E5A199D2DF4001D8C54 /* STSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STSuccessViewController.m; path = successscreen/STSuccessViewController.m; sourceTree = "<group>"; };
+		21544E5B199D2DF4001D8C54 /* STSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STSuccessViewController.xib; path = successscreen/STSuccessViewController.xib; sourceTree = "<group>"; };
+		21544E5E199D3111001D8C54 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smiley.png; path = resources/images/smiley.png; sourceTree = "<group>"; };
+		21544E5F199D3111001D8C54 /* smiley@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "smiley@2x.png"; path = "resources/images/smiley@2x.png"; sourceTree = "<group>"; };
+		21544E62199D3248001D8C54 /* beams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beams.png; path = resources/images/beams.png; sourceTree = "<group>"; };
+		21544E63199D3248001D8C54 /* beams@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "beams@2x.png"; path = "resources/images/beams@2x.png"; sourceTree = "<group>"; };
 		215DCBA7199966A5003295CD /* STMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMapViewController.h; path = main/map/STMapViewController.h; sourceTree = "<group>"; };
 		215DCBA8199966A5003295CD /* STMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STMapViewController.m; path = main/map/STMapViewController.m; sourceTree = "<group>"; };
 		215DCBA9199966A5003295CD /* STMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STMapViewController.xib; path = main/map/STMapViewController.xib; sourceTree = "<group>"; };
@@ -264,6 +277,16 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		21544E53199D2BA3001D8C54 /* success screen */ = {
+			isa = PBXGroup;
+			children = (
+				21544E59199D2DF4001D8C54 /* STSuccessViewController.h */,
+				21544E5A199D2DF4001D8C54 /* STSuccessViewController.m */,
+				21544E5B199D2DF4001D8C54 /* STSuccessViewController.xib */,
+			);
+			name = "success screen";
+			sourceTree = "<group>";
+		};
 		2184D6921997CB1500855B84 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +318,10 @@
 		AC3FB1A1194E491D00528258 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				21544E62199D3248001D8C54 /* beams.png */,
+				21544E63199D3248001D8C54 /* beams@2x.png */,
+				21544E5E199D3111001D8C54 /* smiley.png */,
+				21544E5F199D3111001D8C54 /* smiley@2x.png */,
 				AC300A7E1966291E00BA8336 /* icon_info.png */,
 				AC300A7F1966291E00BA8336 /* icon_info@2x.png */,
 				AC300A76196614D100BA8336 /* icon_stamp_transparent.png */,
@@ -474,6 +501,7 @@
 		ACB76694194C801000925D2D /* StampAround */ = {
 			isa = PBXGroup;
 			children = (
+				21544E53199D2BA3001D8C54 /* success screen */,
 				2184D6921997CB1500855B84 /* model */,
 				210C08D01996755100F38EEB /* stores screen */,
 				AC300A701966070700BA8336 /* stamp card */,
@@ -665,16 +693,20 @@
 				AC300A7A196614D100BA8336 /* icon_stamp_transparent.png in Resources */,
 				218D79651997E53600ADBE8E /* STMyCardsViewController.xib in Resources */,
 				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
+				21544E61199D3111001D8C54 /* smiley@2x.png in Resources */,
 				AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */,
 				AC48DC5A196369F20046659E /* icon_entertainment_blue.png in Resources */,
 				AC48DC5B196369F20046659E /* icon_entertainment_blue@2x.png in Resources */,
 				AC48DC62196378FD0046659E /* icon_offers_blue.png in Resources */,
 				AC300A7C196614D100BA8336 /* icon_stamp.png in Resources */,
 				210C08D5199675BF00F38EEB /* STStoresViewController.xib in Resources */,
+				21544E5D199D2DF4001D8C54 /* STSuccessViewController.xib in Resources */,
 				AC48DC66196379680046659E /* icon_offers_pink.png in Resources */,
 				ACB1CA8C195C66B500F18C24 /* icon_groom_blue.png in Resources */,
 				ACB1CA85195C5B7200F18C24 /* icon_drinks_blue@2x.png in Resources */,
 				AC48DC5F19636C180046659E /* icon_entertainment_pink@2x.png in Resources */,
+				21544E65199D3248001D8C54 /* beams@2x.png in Resources */,
+				21544E64199D3248001D8C54 /* beams.png in Resources */,
 				AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */,
 				AC6D391D194DCC2400AE7590 /* STLoginViewController.xib in Resources */,
 				AC0ED70A1957923F00D0A63E /* logo_start@2x.png in Resources */,
@@ -684,6 +716,7 @@
 				ACB1CA87195C5B7200F18C24 /* icon_drinks_pink@2x.png in Resources */,
 				ACB1CA7E195C557600F18C24 /* icon_cafe_pink.png in Resources */,
 				ACC172CA1959C54300279F41 /* DINNextRoundedLTPro-Regular.otf in Resources */,
+				21544E60199D3111001D8C54 /* smiley.png in Resources */,
 				ACB1CA86195C5B7200F18C24 /* icon_drinks_pink.png in Resources */,
 				210C08DB1996989900F38EEB /* STStoreCell.xib in Resources */,
 				ACB76699194C801100925D2D /* InfoPlist.strings in Resources */,
@@ -743,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4D0B911950D4AD00A0ABF6 /* STRegisterViewController.m in Sources */,
+				21544E5C199D2DF4001D8C54 /* STSuccessViewController.m in Sources */,
 				ACB1CA65195AF0C600F18C24 /* STBottomBar.m in Sources */,
 				AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */,
 				AC300A741966075E00BA8336 /* STStampCardViewController.m in Sources */,

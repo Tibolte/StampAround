@@ -7,7 +7,6 @@
 //
 
 #import "STStoresViewController.h"
-#import <UIView+MTAnimation.h>
 #import <ZFModalTransitionAnimator.h>
 
 @interface STStoresViewController ()

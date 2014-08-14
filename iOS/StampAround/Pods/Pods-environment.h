@@ -72,12 +72,6 @@
 #define COCOAPODS_VERSION_MINOR_HexColors 2
 #define COCOAPODS_VERSION_PATCH_HexColors 1
 
-// MTAnimation
-#define COCOAPODS_POD_AVAILABLE_MTAnimation
-#define COCOAPODS_VERSION_MAJOR_MTAnimation 1
-#define COCOAPODS_VERSION_MINOR_MTAnimation 2
-#define COCOAPODS_VERSION_PATCH_MTAnimation 0
-
 // OJFSegmentedProgressView
 #define COCOAPODS_POD_AVAILABLE_OJFSegmentedProgressView
 #define COCOAPODS_VERSION_MAJOR_OJFSegmentedProgressView 0
