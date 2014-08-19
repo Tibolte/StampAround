@@ -24,11 +24,18 @@
 		218D79641997E53500ADBE8E /* STMyCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218D79621997E53500ADBE8E /* STMyCardsViewController.m */; };
 		218D79651997E53600ADBE8E /* STMyCardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218D79631997E53500ADBE8E /* STMyCardsViewController.xib */; };
 		8D96A18E243F450BB7E3FE19 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5574AE2FA0C34C55A8F962DA /* libPods.a */; };
+		AC0399D919A411AB00B0E92F /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0399D819A411AB00B0E92F /* MyLocation.m */; };
+		AC0399DB19A412E400B0E92F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0399DA19A412E400B0E92F /* AddressBook.framework */; };
+		AC0399DE19A416AB00B0E92F /* icon_map_store.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0399DC19A416AB00B0E92F /* icon_map_store.png */; };
+		AC0399DF19A416AB00B0E92F /* icon_map_store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0399DD19A416AB00B0E92F /* icon_map_store@2x.png */; };
 		AC0ED70519577CEA00D0A63E /* logo_login.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70319577CEA00D0A63E /* logo_login.png */; };
 		AC0ED70619577CEA00D0A63E /* logo_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED70419577CEA00D0A63E /* logo_login@2x.png */; };
 		AC0ED7091957923F00D0A63E /* logo_start.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED7071957923F00D0A63E /* logo_start.png */; };
 		AC0ED70A1957923F00D0A63E /* logo_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0ED7081957923F00D0A63E /* logo_start@2x.png */; };
 		AC0EE20119747DC400A14D48 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0EE20019747DC400A14D48 /* AudioToolbox.framework */; };
+		AC16CD8219A3F5DB002B2FD9 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = AC16CD8019A3F5DB002B2FD9 /* heart.png */; };
+		AC16CD8319A3F5DB002B2FD9 /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC16CD8119A3F5DB002B2FD9 /* heart@2x.png */; };
+		AC16CD8519A3FB13002B2FD9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC16CD8419A3FB13002B2FD9 /* CoreLocation.framework */; };
 		AC300A741966075E00BA8336 /* STStampCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC300A721966075E00BA8336 /* STStampCardViewController.m */; };
 		AC300A751966075E00BA8336 /* STStampCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC300A731966075E00BA8336 /* STStampCardViewController.xib */; };
 		AC300A7A196614D100BA8336 /* icon_stamp_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AC300A76196614D100BA8336 /* icon_stamp_transparent.png */; };
@@ -135,11 +142,19 @@
 		218D79631997E53500ADBE8E /* STMyCardsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STMyCardsViewController.xib; path = main/mycards/STMyCardsViewController.xib; sourceTree = "<group>"; };
 		5574AE2FA0C34C55A8F962DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBA073928054A5C9716E2E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AC0399D719A411AB00B0E92F /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLocation.h; path = main/map/MyLocation.h; sourceTree = "<group>"; };
+		AC0399D819A411AB00B0E92F /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLocation.m; path = main/map/MyLocation.m; sourceTree = "<group>"; };
+		AC0399DA19A412E400B0E92F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		AC0399DC19A416AB00B0E92F /* icon_map_store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map_store.png; path = resources/images/icon_map_store.png; sourceTree = "<group>"; };
+		AC0399DD19A416AB00B0E92F /* icon_map_store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_map_store@2x.png"; path = "resources/images/icon_map_store@2x.png"; sourceTree = "<group>"; };
 		AC0ED70319577CEA00D0A63E /* logo_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_login.png; path = resources/images/logo_login.png; sourceTree = "<group>"; };
 		AC0ED70419577CEA00D0A63E /* logo_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_login@2x.png"; path = "resources/images/logo_login@2x.png"; sourceTree = "<group>"; };
 		AC0ED7071957923F00D0A63E /* logo_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_start.png; path = resources/images/logo_start.png; sourceTree = "<group>"; };
 		AC0ED7081957923F00D0A63E /* logo_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_start@2x.png"; path = "resources/images/logo_start@2x.png"; sourceTree = "<group>"; };
 		AC0EE20019747DC400A14D48 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AC16CD8019A3F5DB002B2FD9 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = resources/images/heart.png; sourceTree = "<group>"; };
+		AC16CD8119A3F5DB002B2FD9 /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart@2x.png"; path = "resources/images/heart@2x.png"; sourceTree = "<group>"; };
+		AC16CD8419A3FB13002B2FD9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC300A711966075E00BA8336 /* STStampCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStampCardViewController.h; path = stampcard/STStampCardViewController.h; sourceTree = "<group>"; };
 		AC300A721966075E00BA8336 /* STStampCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStampCardViewController.m; path = stampcard/STStampCardViewController.m; sourceTree = "<group>"; };
 		AC300A731966075E00BA8336 /* STStampCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STStampCardViewController.xib; path = stampcard/STStampCardViewController.xib; sourceTree = "<group>"; };
@@ -232,6 +247,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0399DB19A412E400B0E92F /* AddressBook.framework in Frameworks */,
+				AC16CD8519A3FB13002B2FD9 /* CoreLocation.framework in Frameworks */,
 				215DCBAD19996804003295CD /* MapKit.framework in Frameworks */,
 				AC0EE20119747DC400A14D48 /* AudioToolbox.framework in Frameworks */,
 				ACE7E80219510EA600CE87A8 /* QuartzCore.framework in Frameworks */,
@@ -318,6 +335,10 @@
 		AC3FB1A1194E491D00528258 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AC0399DC19A416AB00B0E92F /* icon_map_store.png */,
+				AC0399DD19A416AB00B0E92F /* icon_map_store@2x.png */,
+				AC16CD8019A3F5DB002B2FD9 /* heart.png */,
+				AC16CD8119A3F5DB002B2FD9 /* heart@2x.png */,
 				21544E62199D3248001D8C54 /* beams.png */,
 				21544E63199D3248001D8C54 /* beams@2x.png */,
 				21544E5E199D3111001D8C54 /* smiley.png */,
@@ -448,6 +469,8 @@
 				215DCBA7199966A5003295CD /* STMapViewController.h */,
 				215DCBA8199966A5003295CD /* STMapViewController.m */,
 				215DCBA9199966A5003295CD /* STMapViewController.xib */,
+				AC0399D719A411AB00B0E92F /* MyLocation.h */,
+				AC0399D819A411AB00B0E92F /* MyLocation.m */,
 			);
 			name = map;
 			sourceTree = "<group>";
@@ -485,6 +508,8 @@
 		ACB7668D194C801000925D2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC0399DA19A412E400B0E92F /* AddressBook.framework */,
+				AC16CD8419A3FB13002B2FD9 /* CoreLocation.framework */,
 				215DCBAC19996804003295CD /* MapKit.framework */,
 				AC0EE20019747DC400A14D48 /* AudioToolbox.framework */,
 				ACE7E80119510EA600CE87A8 /* QuartzCore.framework */,
@@ -668,12 +693,14 @@
 				ACB1CA67195AF0F000F18C24 /* STBottomBar.xib in Resources */,
 				ACB1CA77195C4D1500F18C24 /* icon_restaurant_pink@2x.png in Resources */,
 				AC3FB1A4194E496C00528258 /* fb_login.png in Resources */,
+				AC0399DF19A416AB00B0E92F /* icon_map_store@2x.png in Resources */,
 				AC48DC63196378FD0046659E /* icon_offers_blue@2x.png in Resources */,
 				ACB1CA7C195C557600F18C24 /* icon_cafe_blue.png in Resources */,
 				ACB1CA8E195C66B500F18C24 /* icon_groom_pink.png in Resources */,
 				ACC172C91959C54300279F41 /* DINNextRoundedLTPro-Medium.otf in Resources */,
 				ACB1CA7F195C557600F18C24 /* icon_cafe_pink@2x.png in Resources */,
 				AC300A811966291E00BA8336 /* icon_info@2x.png in Resources */,
+				AC0399DE19A416AB00B0E92F /* icon_map_store.png in Resources */,
 				AC300A7D196614D100BA8336 /* icon_stamp@2x.png in Resources */,
 				AC3FB1A5194E496C00528258 /* fb_login@2x.png in Resources */,
 				AC35C2CE1951207E00CD0828 /* facebook_logo@2x.png in Resources */,
@@ -695,6 +722,7 @@
 				AC3FB1B0194FB69E00528258 /* STCategoriesViewController.xib in Resources */,
 				21544E61199D3111001D8C54 /* smiley@2x.png in Resources */,
 				AC35C2CD1951207E00CD0828 /* facebook_logo.png in Resources */,
+				AC16CD8219A3F5DB002B2FD9 /* heart.png in Resources */,
 				AC48DC5A196369F20046659E /* icon_entertainment_blue.png in Resources */,
 				AC48DC5B196369F20046659E /* icon_entertainment_blue@2x.png in Resources */,
 				AC48DC62196378FD0046659E /* icon_offers_blue.png in Resources */,
@@ -704,6 +732,7 @@
 				AC48DC66196379680046659E /* icon_offers_pink.png in Resources */,
 				ACB1CA8C195C66B500F18C24 /* icon_groom_blue.png in Resources */,
 				ACB1CA85195C5B7200F18C24 /* icon_drinks_blue@2x.png in Resources */,
+				AC16CD8319A3F5DB002B2FD9 /* heart@2x.png in Resources */,
 				AC48DC5F19636C180046659E /* icon_entertainment_pink@2x.png in Resources */,
 				21544E65199D3248001D8C54 /* beams@2x.png in Resources */,
 				21544E64199D3248001D8C54 /* beams.png in Resources */,
@@ -781,6 +810,7 @@
 				AC3FB1AF194FB69E00528258 /* STCategoriesViewController.m in Sources */,
 				AC300A741966075E00BA8336 /* STStampCardViewController.m in Sources */,
 				ACB766C3194C8A3B00925D2D /* STStartViewController.m in Sources */,
+				AC0399D919A411AB00B0E92F /* MyLocation.m in Sources */,
 				AC3FB19F194E303A00528258 /* STSessionManager.m in Sources */,
 				AC4D0B951950F23700A0ABF6 /* STUtilities.m in Sources */,
 				AC6D3917194DBCB200AE7590 /* STNetworkManager.m in Sources */,

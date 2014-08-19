@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "STNetworkManager.h"
+#import "STStore.h"
+#import "MyLocation.h"
 
-@interface STMapViewController : UIViewController<UIGestureRecognizerDelegate>
+#import <CoreLocation/CoreLocation.h>
+
+@interface STMapViewController : UIViewController<UIGestureRecognizerDelegate, CLLocationManagerDelegate, STNetworkManagerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIView *fakeView;
+@property(nonatomic, strong) NSArray *arrStores;
+
 @end

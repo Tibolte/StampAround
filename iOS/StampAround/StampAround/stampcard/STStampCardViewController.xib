@@ -234,9 +234,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vMP-82-WKb">
-                            <rect key="frame" x="275" y="30" width="25" height="25"/>
+                            <rect key="frame" x="275" y="56" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="icon_info.png">
+                            <state key="normal" image="heart.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
@@ -255,7 +255,7 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_info.png" width="39" height="39"/>
+        <image name="heart.png" width="29" height="29"/>
         <image name="icon_stamp.png" width="77" height="89"/>
         <image name="icon_stamp_transparent.png" width="77" height="89"/>
     </resources>

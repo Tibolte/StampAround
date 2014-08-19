@@ -31,6 +31,8 @@
 - (void)requestCategories;
 - (void)requestStoresByCategory:(int)category;
 - (void)requestCards:(NSString *)token;
+- (void)requestStoresByLocation:(float)lat longitude:(float)lon radius:(int)radius;
+- (void)sendQRScanResultForValidation:(NSString *)code;
 
 @end
 

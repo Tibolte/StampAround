@@ -23,6 +23,9 @@
         _lat = dict[@"lat"];
         _lon = dict[@"lon"];
         _name = dict[@"name"];
+        _email = dict[@"company"][@"email"];
+        _address = dict[@"company"][@"address"];
+        _phone = dict[@"company"][@"phone"];
     }
     
     return self;

@@ -318,7 +318,7 @@
                                             @"lastName" : lastName,
                                             @"email" : email,
                                             @"imageUrl" : imageUrl,
-                                            @"secret" : @"3744a7b11dd1183658c2381c30617fcb"
+                                            @"secret" : APP_SECRET
                                         
                                           };
                  

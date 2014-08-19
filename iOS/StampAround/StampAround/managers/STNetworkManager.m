@@ -145,6 +145,22 @@
     [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
 }
 
+// radius in km
+- (void)requestStoresByLocation:(float)lat longitude:(float)lon radius:(int)radius
+{
+    NSString *restUrl = [NSString stringWithFormat:URL_STORES_LOC, radius, lat, lon];
+    
+    [self unifiedRequest:restUrl method:METHOD_GET dict:nil];
+}
+
+- (void)sendQRScanResultForValidation:(NSString *)code
+{
+    NSDictionary *postDict = @{@"secret": APP_SECRET,
+                               @"qrscan": code
+                               };
+    [self unifiedRequest:URL_CHECK_SCAN method:METHOD_POST dict:postDict];
+}
+
 #pragma mark - Error Messages
 
 -(void)showError:(NSError*)err{

@@ -20,12 +20,12 @@ NSString *const FBSessionStateChangedNotification =
 {
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    /*[self clearControllers];
-    [self switchToScreen:SCREEN_START];*/
+    [self clearControllers];
+    [self switchToScreen:SCREEN_START];
     
     //tmp
-    STSuccessViewController *controller = [[STSuccessViewController alloc] init];
-    [_window setRootViewController:controller];
+    //STSuccessViewController *controller = [[STSuccessViewController alloc] init];
+    //[_window setRootViewController:controller];
     
     [self.window makeKeyAndVisible];
     return YES;

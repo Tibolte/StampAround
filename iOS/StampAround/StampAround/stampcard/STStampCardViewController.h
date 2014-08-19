@@ -13,8 +13,9 @@
 #import "STStore.h"
 #import "STMyCardsViewController.h"
 #import "STMapViewController.h"
+#import "STNetworkManager.h"
 
-@interface STStampCardViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate>
+@interface STStampCardViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate>
 
 @property(nonatomic,strong) STStore *store;
 

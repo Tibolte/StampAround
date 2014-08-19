@@ -94,6 +94,7 @@
         //field.text = result;
         NSLog(@"Scanning result: %@", result);
         [self updateStamps];
+        [[STNetworkManager managerWithDelegate:self] sendQRScanResultForValidation:result];
         [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
     };
     scanningVC.cancelBlock = ^() {
@@ -186,6 +187,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Network Delegate
+
+
+-(void)downloadResponse:(id)responseObject message:(NSString *)message{
+    
+    NSLog(@"%@", responseObject);
+    NSLog(@"%@", message);
+}
+
+-(void)downloadFailureCode:(int)errCode message:(NSString *)message{
+    
+    //TODO: delete token??
+    
+    NSLog(@"error %@", message);
 }
 
 @end

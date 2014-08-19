@@ -18,6 +18,10 @@
 @property(nonatomic,strong) NSString *lat;
 @property(nonatomic,strong) NSString *lon;
 @property(nonatomic,strong) NSString *name;
+@property(nonatomic,strong) NSString *email;
+@property(nonatomic,strong) NSString *address;
+@property(nonatomic,strong) NSString *phone;
+
 
 -(id)initWithDict:(NSDictionary*)dict;
 
