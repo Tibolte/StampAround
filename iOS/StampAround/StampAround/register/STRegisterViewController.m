@@ -292,6 +292,8 @@
                                };
     
     [[STNetworkManager managerWithDelegate:self] requestRegisterNormal:postDict];
+    
+    [SVProgressHUD showWithStatus:@"Registering..." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 #pragma mark - Network Delegate
@@ -301,6 +303,8 @@
     
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
+    
+    [SVProgressHUD dismiss];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -314,6 +318,8 @@
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     NSLog(@"error %@", message);
+    
+    [SVProgressHUD dismiss];
     
     [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
 }

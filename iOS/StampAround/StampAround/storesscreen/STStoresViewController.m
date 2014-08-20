@@ -8,6 +8,7 @@
 
 #import "STStoresViewController.h"
 #import <ZFModalTransitionAnimator.h>
+#import "SVProgressHUD.h"
 
 @interface STStoresViewController ()
 
@@ -50,6 +51,8 @@
     _bottomBar.delegate = self;
     
     [self.collectionView setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
+    
+    [SVProgressHUD showWithStatus:@"Fetching stores..." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 - (void)didReceiveMemoryWarning
@@ -199,6 +202,8 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
+    [SVProgressHUD dismiss];
+    
     NSArray *arrStoresAll = responseObject[@"results"];
     NSMutableArray *arrTmpStores = [[NSMutableArray alloc] init];
     for (int i=0; i<[arrStoresAll count]; i++)
@@ -217,6 +222,8 @@
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     NSLog(@"error %@", message);
+    
+    [SVProgressHUD dismiss];
     
     [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
     

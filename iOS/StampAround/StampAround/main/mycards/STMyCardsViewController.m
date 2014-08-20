@@ -37,6 +37,8 @@
     
     [[STNetworkManager managerWithDelegate:self] requestCards:[[STSessionManager manager] token]];
     
+    [SVProgressHUD showWithStatus:@"Fetching cards..." maskType:SVProgressHUDMaskTypeGradient];
+    
     //[self.collectionView reloadData];
 }
 
@@ -102,6 +104,8 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
+    [SVProgressHUD dismiss];
+    
     [self.collectionView reloadData];
 }
 
@@ -109,8 +113,9 @@
     
     NSLog(@"error %@", message);
     
-    [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+    [SVProgressHUD dismiss];
     
+    [TSMessage showNotificationInViewController:self title:@"Error" subtitle:message type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];    
 }
 
 

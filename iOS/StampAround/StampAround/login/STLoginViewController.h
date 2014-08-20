@@ -12,6 +12,8 @@
 #import "STButton.h"
 #import "TSMessage.h"
 #import <FacebookSDK.h>
+#import <SVProgressHUD.h>
+#import "STSessionManager.h"
 
 @interface STLoginViewController : UIViewController<STNetworkManagerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 

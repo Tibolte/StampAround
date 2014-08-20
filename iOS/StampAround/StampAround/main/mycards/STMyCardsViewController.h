@@ -11,6 +11,7 @@
 #import "STNetworkManager.h"
 #import "STStoreCell.h"
 #import "STStore.h"
+#import "SVProgressHUD.h"
 
 @interface STMyCardsViewController : UIViewController<UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

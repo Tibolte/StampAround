@@ -5,3 +5,4 @@ pod 'TSMessages'
 pod 'CDZQRScanningViewController'
 pod 'TGDrawSvgPathView'
 pod "ZFDragableModalTransition" 
+pod "SVProgressHUD"

@@ -7,6 +7,7 @@
 //
 
 #import "STStartViewController.h"
+#import <SVProgressHUD.h>
 
 @interface STStartViewController ()
 
@@ -55,7 +56,7 @@
     
     [_lblCity setTextColor:MY_UICOLOR_FROM_HEX_RGB(0xff6a56)];
     [_lblCity setFont:[UIFont fontWithName:@"DINNextRoundedLTPro-Regular" size:25.0f]];
-
+    
     //tmp
     //[[self view] addSubview:_progressView];
     //[[self view] addSubview:lblLoading];
@@ -74,6 +75,12 @@
                                                     selector:@selector(animateProgress)
                                                     userInfo:nil
                                                      repeats:YES];
+    
+    
+    if([[[STSessionManager manager] token] length] != 0)
+    {
+        [SVProgressHUD showWithStatus:@"Logging in..." maskType:SVProgressHUDMaskTypeGradient];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,6 +118,8 @@
 
 -(void)downloadResponse:(id)responseObject message:(NSString *)message{
     
+    [SVProgressHUD dismiss];
+    
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
@@ -122,11 +131,9 @@
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
-    NSLog(@"error %@", message);
+    [SVProgressHUD dismiss];
     
-    /*if (FBSession.activeSession.isOpen) {
-        [MY_APP_DELEGATE closeSession];
-    }*/
+    NSLog(@"error %@", message);
     
     [[STSessionManager manager] saveCredentialsWithUsername:@"" token:@"" secret:@""];
     

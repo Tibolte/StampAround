@@ -7,6 +7,7 @@
 //
 
 #import "STMapViewController.h"
+#import <SVProgressHUD.h>
 
 @interface STMapViewController ()
 
@@ -70,6 +71,8 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
+    [SVProgressHUD dismiss];
+    
     NSArray *arrStoresAll = responseObject[@"results"];
     NSMutableArray *arrTmpStores = [[NSMutableArray alloc] init];
     for (int i=0; i<[arrStoresAll count]; i++)
@@ -88,6 +91,8 @@
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     NSLog(@"error %@", message);
+    
+    [SVProgressHUD dismiss];
 }
 
 #pragma mark - Location Manager Delegate
@@ -101,6 +106,8 @@
     [_locationManager stopUpdatingLocation];
     
     [[STNetworkManager managerWithDelegate:self] requestStoresByLocation:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude radius:10];
+    
+    [SVProgressHUD showWithStatus:@"Fetching stores..." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 #pragma mark - Map annotations drawing

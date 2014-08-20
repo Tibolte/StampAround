@@ -168,6 +168,8 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
+    [SVProgressHUD dismiss];
+    
     [[STSessionManager manager] saveCredentialsWithUsername:[responseObject objectForKey:@"email"] token:[responseObject objectForKey:@"accessToken"] secret:[responseObject objectForKey:@"accessSecret"]];
     
     [MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
@@ -176,6 +178,8 @@
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{
     
     //TODO: delete token??
+    
+    [SVProgressHUD dismiss];
     
     NSLog(@"error %@", message);
     
@@ -230,6 +234,8 @@
     
     //test: @"adam@hundaskra.is", @"1234"
     [[STNetworkManager managerWithDelegate:self] requestAuthenticate:[usernameTf text] password:[passwordTf text]];
+    
+    [SVProgressHUD showWithStatus:@"Logging in..." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 #pragma mark - UITextFieldDelegate
