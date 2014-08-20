@@ -64,6 +64,9 @@
     [[self view] addGestureRecognizer:swipeGestureRecognizer];
     [swipeGestureRecognizer setDelegate:self];
     
+    [_btnHeart addTarget:self
+                 action:@selector(addCardToUser)
+       forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - ST Bottom bar delegate
@@ -93,7 +96,7 @@
     scanningVC.resultBlock = ^(NSString *result) {
         //field.text = result;
         NSLog(@"Scanning result: %@", result);
-        [self updateStamps];
+        //[self updateStamps];
         [[STNetworkManager managerWithDelegate:self] sendQRScanResultForValidation:result];
         [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
     };
@@ -163,13 +166,17 @@
     
     if(i==9)
     {
-        for(UIImageView *img in _imgArray)
-        {
-            //[self setHiddenAnimated:NO view:img];
-            [img setAlpha:0];
-        }
-        
-        [TSMessage showNotificationInViewController:self title:@"Success" subtitle:@"You have the 10th coffee for free!" type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
+        MY_DELAY_MAIN_QUEUE(0.3,^{
+            STSuccessViewController *controller = [[STSuccessViewController alloc] init];
+            controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:controller animated:NO completion:nil];
+            
+            for(UIImageView *img in _imgArray)
+            {
+                //[self setHiddenAnimated:NO view:img];
+                [img setAlpha:0];
+            }
+        });
         
         i = 0;
     }
@@ -177,10 +184,26 @@
 
 #pragma mark - User Actions
 
--(void)swipeBackGesture:(UIGestureRecognizer*)gesture{
+- (void)swipeBackGesture:(UIGestureRecognizer*)gesture{
     
-    //[MY_APP_DELEGATE switchToScreen:SCREEN_CATEGORIES];
     [self.navigationController popViewControllerAnimated:YES]; 
+}
+
+- (void)addCardToUser
+{
+    _btnHeart.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+    
+    CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    bounceAnimation.values = [NSArray arrayWithObjects:
+                              [NSNumber numberWithFloat:0.5],
+                              [NSNumber numberWithFloat:1.1],
+                              [NSNumber numberWithFloat:0.8],
+                              [NSNumber numberWithFloat:1.0], nil];
+    bounceAnimation.duration = 0.3;
+    bounceAnimation.removedOnCompletion = NO;
+    [_btnHeart.layer addAnimation:bounceAnimation forKey:@"bounce"];
+    
+    _btnHeart.layer.transform = CATransform3DIdentity;
 }
 
 - (void)didReceiveMemoryWarning
@@ -196,6 +219,17 @@
     
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
+    
+    NSDictionary *dictScanResult = responseObject[@"results"];
+    switch ([dictScanResult[@"scanIsValid"] intValue]) {
+        case 0:
+            [self updateStamps];
+            break;
+            
+        case 1:
+            [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Failed to scan QR Code!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+            break;
+    }
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{

@@ -10,6 +10,8 @@
 
 @interface STSuccessViewController ()
 
+@property(nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation STSuccessViewController
@@ -52,6 +54,22 @@
     [_lblSuccess.layer addAnimation:bounceAnimation forKey:@"bounce"];
     
     _lblSuccess.layer.transform = CATransform3DIdentity;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0
+                                              target:self
+                                            selector:@selector(dismiss)
+                                            userInfo:nil
+                                             repeats:NO];
+}
+
+- (void)dismiss
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

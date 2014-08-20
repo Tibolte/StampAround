@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STStampCardViewController">
             <connections>
                 <outlet property="bottomBar" destination="2iP-Qa-RqB" id="Qml-tv-gGB"/>
+                <outlet property="btnHeart" destination="vMP-82-WKb" id="6Va-5C-lI3"/>
                 <outlet property="imgStamp1" destination="PAc-Rj-rr8" id="FaD-7p-Ug0"/>
                 <outlet property="imgStamp2" destination="CUO-Ip-Shf" id="gKC-8D-4Pp"/>
                 <outlet property="imgStamp3" destination="ID3-WC-Ils" id="Z6Z-gu-HYV"/>

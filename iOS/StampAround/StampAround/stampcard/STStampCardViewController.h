@@ -14,6 +14,7 @@
 #import "STMyCardsViewController.h"
 #import "STMapViewController.h"
 #import "STNetworkManager.h"
+#import "STSuccessViewController.h"
 
 @interface STStampCardViewController : UIViewController<STBottomBarProtocol,UIGestureRecognizerDelegate,STNetworkManagerDelegate>
 
@@ -38,4 +39,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgStamp8;
 @property (weak, nonatomic) IBOutlet UIImageView *imgStamp9;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnHeart;
 @end
