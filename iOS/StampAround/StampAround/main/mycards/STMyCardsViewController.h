@@ -10,11 +10,17 @@
 #import "STBottomBar.h"
 #import "STNetworkManager.h"
 #import "STStoreCell.h"
+#import "STEmptyCell.h"
 #import "STStore.h"
 #import "SVProgressHUD.h"
+#import "STCard.h"
 
 @interface STMyCardsViewController : UIViewController<UIGestureRecognizerDelegate,STNetworkManagerDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet STBottomBar *bottomBar;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *lblNoCards;
+
+@property(nonatomic, strong) NSArray *arrCards;
+
 @end

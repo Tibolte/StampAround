@@ -68,6 +68,9 @@
 		AC6D3923194DD75600AE7590 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3922194DD75600AE7590 /* STAppDelegate.m */; };
 		AC6D3927194DF9B900AE7590 /* demoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */; };
 		AC6D3929194DFA3D00AE7590 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */; };
+		AC962F0919A5239700B2D723 /* STCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AC962F0819A5239700B2D723 /* STCard.m */; };
+		AC962F0C19A52B8500B2D723 /* STEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC962F0B19A52B8500B2D723 /* STEmptyCell.m */; };
+		AC962F0E19A52BB100B2D723 /* STEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC962F0D19A52BB100B2D723 /* STEmptyCell.xib */; };
 		ACB1CA65195AF0C600F18C24 /* STBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1CA64195AF0C600F18C24 /* STBottomBar.m */; };
 		ACB1CA67195AF0F000F18C24 /* STBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1CA66195AF0F000F18C24 /* STBottomBar.xib */; };
 		ACB1CA74195C4D1500F18C24 /* icon_restaurant_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1CA70195C4D1500F18C24 /* icon_restaurant_blue.png */; };
@@ -197,6 +200,11 @@
 		AC6D3924194DD81200AE7590 /* STMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STMacros.h; path = extra/STMacros.h; sourceTree = "<group>"; };
 		AC6D3926194DF9B900AE7590 /* demoVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = demoVideo.mp4; path = assets/demoVideo.mp4; sourceTree = "<group>"; };
 		AC6D3928194DFA3D00AE7590 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC962F0719A5239700B2D723 /* STCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCard.h; path = model/STCard.h; sourceTree = "<group>"; };
+		AC962F0819A5239700B2D723 /* STCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCard.m; path = model/STCard.m; sourceTree = "<group>"; };
+		AC962F0A19A52B8500B2D723 /* STEmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STEmptyCell.h; path = storesscreen/cell/STEmptyCell.h; sourceTree = "<group>"; };
+		AC962F0B19A52B8500B2D723 /* STEmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STEmptyCell.m; path = storesscreen/cell/STEmptyCell.m; sourceTree = "<group>"; };
+		AC962F0D19A52BB100B2D723 /* STEmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STEmptyCell.xib; path = storesscreen/cell/STEmptyCell.xib; sourceTree = "<group>"; };
 		ACB1CA63195AF0C600F18C24 /* STBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBottomBar.h; path = customelements/STBottomBar.h; sourceTree = "<group>"; };
 		ACB1CA64195AF0C600F18C24 /* STBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBottomBar.m; path = customelements/STBottomBar.m; sourceTree = "<group>"; };
 		ACB1CA66195AF0F000F18C24 /* STBottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STBottomBar.xib; path = customelements/STBottomBar.xib; sourceTree = "<group>"; };
@@ -290,6 +298,9 @@
 				210C08D71996984E00F38EEB /* STStoreCell.h */,
 				210C08D81996984E00F38EEB /* STStoreCell.m */,
 				210C08DA1996989900F38EEB /* STStoreCell.xib */,
+				AC962F0A19A52B8500B2D723 /* STEmptyCell.h */,
+				AC962F0B19A52B8500B2D723 /* STEmptyCell.m */,
+				AC962F0D19A52BB100B2D723 /* STEmptyCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -309,6 +320,8 @@
 			children = (
 				2184D6931997CB5F00855B84 /* STStore.h */,
 				2184D6941997CB5F00855B84 /* STStore.m */,
+				AC962F0719A5239700B2D723 /* STCard.h */,
+				AC962F0819A5239700B2D723 /* STCard.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -743,6 +756,7 @@
 				215DCBAB199966A5003295CD /* STMapViewController.xib in Resources */,
 				AC0ED70519577CEA00D0A63E /* logo_login.png in Resources */,
 				ACB1CA87195C5B7200F18C24 /* icon_drinks_pink@2x.png in Resources */,
+				AC962F0E19A52BB100B2D723 /* STEmptyCell.xib in Resources */,
 				ACB1CA7E195C557600F18C24 /* icon_cafe_pink.png in Resources */,
 				ACC172CA1959C54300279F41 /* DINNextRoundedLTPro-Regular.otf in Resources */,
 				21544E60199D3111001D8C54 /* smiley.png in Resources */,
@@ -804,6 +818,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC962F0919A5239700B2D723 /* STCard.m in Sources */,
+				AC962F0C19A52B8500B2D723 /* STEmptyCell.m in Sources */,
 				AC4D0B911950D4AD00A0ABF6 /* STRegisterViewController.m in Sources */,
 				21544E5C199D2DF4001D8C54 /* STSuccessViewController.m in Sources */,
 				ACB1CA65195AF0C600F18C24 /* STBottomBar.m in Sources */,

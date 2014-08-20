@@ -28,18 +28,21 @@
     [super viewDidLoad];
     
     UINib *cellNib = [UINib nibWithNibName:@"STStoreCell" bundle:nil];
+    UINib *cellEmptyNib = [UINib nibWithNibName:@"STEmptyCell" bundle:nil];
+
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"STStoreCell"];
+    [self.collectionView registerNib:cellEmptyNib forCellWithReuseIdentifier:@"STEmptyCell"];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
     [self.collectionView setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
+    _lblNoCards.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Medium" size:15.0f];
+    _lblNoCards.hidden = YES;
     
     [[STNetworkManager managerWithDelegate:self] requestCards:[[STSessionManager manager] token]];
     
     [SVProgressHUD showWithStatus:@"Fetching cards..." maskType:SVProgressHUDMaskTypeGradient];
-    
-    //[self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,22 +55,55 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    int count = 2;
+    if([_arrCards count] == 0)
+    {
+        count = 1; //display placeholder, to add a card
+    }
+
+    return count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
 {
-    return 8;
+    int count = 0;
+    if([_arrCards count] == 0)
+    {
+        count = 1;
+    }
+    else if([_arrCards count] % 2 == 0)
+    {
+        count = (int)[_arrCards count]/2;
+    }
+    else
+    {
+        count = (int)([_arrCards count]/2 + 1);
+    }
+    
+    return count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    STStoreCell *storeCell = [cv dequeueReusableCellWithReuseIdentifier:@"STStoreCell" forIndexPath:indexPath];
-    if(!storeCell){
-        storeCell = [[STStoreCell alloc] init];
-    }
     
-    return storeCell;
+    if([_arrCards count] == 0)
+    {
+        STEmptyCell *emptyCell = [cv dequeueReusableCellWithReuseIdentifier:@"STEmptyCell" forIndexPath:indexPath];
+        if(!emptyCell){
+            emptyCell = [[STEmptyCell alloc] init];
+        }
+        
+        return emptyCell;
+    }
+    else
+    {
+        STStoreCell *storeCell = [cv dequeueReusableCellWithReuseIdentifier:@"STStoreCell" forIndexPath:indexPath];
+        if(!storeCell){
+            storeCell = [[STStoreCell alloc] init];
+        }
+        
+        return storeCell;
+    }
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -105,6 +141,22 @@
     NSLog(@"%@", message);
     
     [SVProgressHUD dismiss];
+    
+    NSArray *arrCardsAll = responseObject[@"results"];
+    NSMutableArray *arrTmpCards = [[NSMutableArray alloc] init];
+    
+    for (int i=0; i<[arrCardsAll count]; i++)
+    {
+        NSDictionary *card = arrCardsAll[i];
+        STCard *cardObject = [[STCard alloc] initWithDict:card];
+        [arrTmpCards addObject:cardObject];
+    }
+    _arrCards = [NSArray arrayWithArray:arrTmpCards];
+    
+    if([_arrCards count] == 0)
+    {
+        _lblNoCards.hidden = NO;
+    }
     
     [self.collectionView reloadData];
 }
