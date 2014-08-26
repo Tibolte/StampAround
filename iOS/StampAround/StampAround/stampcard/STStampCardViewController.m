@@ -59,10 +59,13 @@
     [_imgArray addObject:_imgStamp9];
     
     // back gesture
-    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBackGesture:)];
+    /*UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBackGesture:)];
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
     [[self view] addGestureRecognizer:swipeGestureRecognizer];
-    [swipeGestureRecognizer setDelegate:self];
+    [swipeGestureRecognizer setDelegate:self];*/
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    [self.navigationController.interactivePopGestureRecognizer setEnabled:YES];
     
     [_btnHeart addTarget:self
                  action:@selector(addCardToUser)

@@ -35,10 +35,15 @@
     [self.view setBackgroundColor:MY_UICOLOR_FROM_HEX_RGB(0xf4f6f0)];
     
     // back gesture
-    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBackGesture:)];
+    /*UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBackGesture:)];
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
     [[self view] addGestureRecognizer:swipeGestureRecognizer];
-    [swipeGestureRecognizer setDelegate:self];
+    [swipeGestureRecognizer setDelegate:self];*/
+    
+    //[self.navigationController.interactivePopGestureRecognizer addTarget:self action:@selector(handleGesture:)];
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    [self.navigationController.interactivePopGestureRecognizer setEnabled:YES];
     
     [[STNetworkManager managerWithDelegate:self] requestStoresByCategory:_categoryId];
     
