@@ -135,7 +135,7 @@
 
 #pragma mark - Update stamps
 
-- (void)updateStamps
+- (void)updateStamps:(int)currStamps isFinished:(BOOL)finished
 {
     int i = 0;
     for(UIImageView *img in _imgArray)
@@ -223,7 +223,20 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
-    NSDictionary *dictScanResult = responseObject[@"results"];
+    switch ([responseObject[@"status"] intValue]) {
+        case STNetworkManagerStatusSuccess:{
+            NSDictionary *dictScanResult = responseObject[@"results"];
+            NSDictionary *card = dictScanResult[@"card"];
+            [self updateStamps:[card[@"currentStamps"] intValue] isFinished:[card[@"finished"] boolValue]];
+            break;
+        }
+            
+        case STNetworkManagerUnauthorized:
+            [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Failed to scan QR Code!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
+            break;
+    }
+    
+    /*NSDictionary *dictScanResult = responseObject[@"results"];
     switch ([dictScanResult[@"scanIsValid"] intValue]) {
         case 0:
             [self updateStamps];
@@ -232,7 +245,7 @@
         case 1:
             [TSMessage showNotificationInViewController:self title:@"Error" subtitle:@"Failed to scan QR Code!" type:TSMessageNotificationTypeError duration:4.0 canBeDismissedByUser:YES];
             break;
-    }
+    }*/
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{

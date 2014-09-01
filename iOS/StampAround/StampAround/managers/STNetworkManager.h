@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 
+typedef enum : NSUInteger {
+    STNetworkManagerStatusSuccess           =    200,
+    STNetworkManagerBadRequest              =    400,
+    STNetworkManagerUnauthorized            =    401,
+    STNetworkManagerNotFound                =    404,
+    STNetworkManagerInternalError           =    500,
+} STNetworkManagerStatus;
+
+
 @protocol STNetworkManagerDelegate <NSObject>
 
 @required
@@ -35,5 +44,3 @@
 - (void)sendQRScanResultForValidation:(NSString *)code;
 
 @end
-
-#define STATUS_OK           200

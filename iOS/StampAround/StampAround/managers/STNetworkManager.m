@@ -7,6 +7,7 @@
 //
 
 #import "STNetworkManager.h"
+#import "STSessionManager.h"
 
 #define METHOD_GET  0
 #define METHOD_POST 1
@@ -61,7 +62,7 @@
     blckSuccess = ^(AFHTTPRequestOperation *operation, id responseObject) {
         
         //do stuff related to status code
-        if([[responseObject objectForKey:@"status"] intValue]==STATUS_OK)
+        if([[responseObject objectForKey:@"status"] intValue]==STNetworkManagerStatusSuccess)
         {
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:responseObject];
             [_delegate downloadResponse:[NSDictionary dictionaryWithDictionary:dict] message:[responseObject objectForKey:@"message"]];
@@ -84,7 +85,10 @@
         //connection error (no network) //freeze app?
     };
     
-    [manager setRequestSerializer:[AFJSONRequestSerializer serializer]];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    //manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    //manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
     NSString *fullUrl = [NSString stringWithFormat:@"%@%@",URL_BASE,restUrl];
     NSLog(@"url: %@",fullUrl);
@@ -156,7 +160,8 @@
 - (void)sendQRScanResultForValidation:(NSString *)code
 {
     NSDictionary *postDict = @{@"secret": APP_SECRET,
-                               @"qrscan": code
+                               @"qrscan": code,
+                               @"accessToken": [[STSessionManager manager] token]
                                };
     [self unifiedRequest:URL_CHECK_SCAN method:METHOD_POST dict:postDict];
 }

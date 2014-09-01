@@ -11,6 +11,8 @@
 #import <FacebookSDK.h>
 #import "STSessionManager.h"
 #import "STNetworkManager.h"
+#import "STCategoriesViewController.h"
+#import "STLoginViewController.h"
 
 @interface STStartViewController : UIViewController<STNetworkManagerDelegate>
 
