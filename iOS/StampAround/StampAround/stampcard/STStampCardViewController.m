@@ -137,7 +137,55 @@
 
 - (void)updateStamps:(int)currStamps isFinished:(BOOL)finished
 {
-    int i = 0;
+    if(finished)
+    {
+        //9 stamps should be displayed already (no 10th, we make success screen appear)
+        
+        MY_DELAY_MAIN_QUEUE(0.3,^{
+            STSuccessViewController *controller = [[STSuccessViewController alloc] init];
+            controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:controller animated:NO completion:nil];
+            
+            for(UIImageView *img in _imgArray)
+            {
+                //[self setHiddenAnimated:NO view:img];
+                [img setAlpha:0];
+            }
+        });
+    }
+    else
+    {
+        //update: make currStamps - 1 appear (others should be available)
+        for(UIImageView *img in _imgArray)
+        {
+            if([img alpha] == 0)
+            {
+                [UIView animateWithDuration:0.1 animations:^{img.alpha = 1.0;}];
+                
+                img.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+                
+                CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+                bounceAnimation.values = [NSArray arrayWithObjects:
+                                          [NSNumber numberWithFloat:0.5],
+                                          [NSNumber numberWithFloat:1.1],
+                                          [NSNumber numberWithFloat:0.8],
+                                          [NSNumber numberWithFloat:1.0], nil];
+                bounceAnimation.duration = 0.3;
+                bounceAnimation.removedOnCompletion = NO;
+                [img.layer addAnimation:bounceAnimation forKey:@"bounce"];
+                
+                img.layer.transform = CATransform3DIdentity;
+                
+                //vibrate
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                
+                break;
+            }
+        }
+    }
+    
+    
+    /*int i = 0;
     for(UIImageView *img in _imgArray)
     {
         i++;
@@ -182,7 +230,7 @@
         });
         
         i = 0;
-    }
+    }*/
 }
 
 #pragma mark - User Actions

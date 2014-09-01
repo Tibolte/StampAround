@@ -51,8 +51,8 @@
     _nameView.layer.mask = maskLayer;
     
     UIBezierPath *maskPathEmail = [UIBezierPath bezierPathWithRoundedRect:_mailView.bounds
-                                                           byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
-                                                                 cornerRadii:CGSizeMake(5.0f, 5.0f)];
+                                                        byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
+                                                              cornerRadii:CGSizeMake(5.0f, 5.0f)];
     
     CAShapeLayer *maskLayerEmail = [CAShapeLayer layer];
     maskLayerEmail.frame = _mailView.bounds;
@@ -60,8 +60,8 @@
     _mailView.layer.mask = maskLayerEmail;
     
     UIBezierPath *maskPathConfirmEmail = [UIBezierPath bezierPathWithRoundedRect:_confirmMailView.bounds
-                                                        byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
-                                                              cornerRadii:CGSizeMake(5.0f, 5.0f)];
+                                                               byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
+                                                                     cornerRadii:CGSizeMake(5.0f, 5.0f)];
     
     CAShapeLayer *maskLayerConfirmEmail = [CAShapeLayer layer];
     maskLayerConfirmEmail.frame = _confirmMailView.bounds;
@@ -69,8 +69,8 @@
     _confirmMailView.layer.mask = maskLayerConfirmEmail;
     
     UIBezierPath *maskPathPass = [UIBezierPath bezierPathWithRoundedRect:_passView.bounds
-                                                        byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
-                                                              cornerRadii:CGSizeMake(5.0f, 5.0f)];
+                                                       byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
+                                                             cornerRadii:CGSizeMake(5.0f, 5.0f)];
     
     CAShapeLayer *maskLayerPass = [CAShapeLayer layer];
     maskLayerPass.frame = _passView.bounds;
@@ -79,8 +79,8 @@
     
     
     UIBezierPath *maskPathConfirmPass = [UIBezierPath bezierPathWithRoundedRect:_confirmPassView.bounds
-                                                               byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
-                                                                     cornerRadii:CGSizeMake(5.0f, 5.0f)];
+                                                              byRoundingCorners:(UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerTopLeft)
+                                                                    cornerRadii:CGSizeMake(5.0f, 5.0f)];
     
     CAShapeLayer *maskLayerConfirmPass = [CAShapeLayer layer];
     maskLayerConfirmPass.frame = _confirmPassView.bounds;
@@ -116,8 +116,8 @@
     
     [_btnRegister initWithType:ST_BUTTON_TYPE_ORANGE string:@"REGISTER"];
     [_btnRegister addTarget:self
-                  action:@selector(doRegister)
-        forControlEvents:UIControlEventTouchUpInside];
+                     action:@selector(doRegister)
+           forControlEvents:UIControlEventTouchUpInside];
     
     _btnCancel.titleLabel.font = [UIFont fontWithName:@"DINNextRoundedLTPro-Light" size:20.0f];
     
@@ -162,7 +162,7 @@
         if(MY_IS_SCREENHEIGHT_568)
             [_scrollView setContentOffset:CGPointMake(0.0, 80.0) animated:YES];
         else
-             [_scrollView setContentOffset:CGPointMake(0.0, 100.0) animated:YES];
+            [_scrollView setContentOffset:CGPointMake(0.0, 100.0) animated:YES];
     }
     else if (textField == _nameEdit) {
         if(MY_IS_SCREENHEIGHT_568)
@@ -210,7 +210,7 @@
     [_confirmMailEdit resignFirstResponder];
     [_passEdit resignFirstResponder];
     [_confirmPassEdit resignFirstResponder];
-
+    
     [_scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
 }
 
@@ -219,7 +219,7 @@
 -(void)doRegister
 {
     [self dismissKeyboard];
-
+    
     if([[_nameEdit text] length] == 0)
     {
         NSLog(@"username empty");
@@ -249,7 +249,7 @@
         
         return;
     }
-
+    
     if(![STUtilities isMailAddressValid:[_mailEdit text]])
     {
         NSLog(@"email address invalid");
@@ -260,9 +260,9 @@
         
         return;
     }
-
+    
     //matches
-
+    
     if(![[_mailEdit text] isEqualToString:[_confirmMailEdit text] ])
     {
         NSLog(@"email addresses do not match");
@@ -304,15 +304,20 @@
     NSLog(@"%@", responseObject);
     NSLog(@"%@", message);
     
-    [SVProgressHUD dismiss];
+    //[SVProgressHUD dismiss];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
     MY_DELAY_MAIN_QUEUE(0.6, ^{ //delay for controller change
         
-            [TSMessage showNotificationInViewController:[MY_APP_DELEGATE loginViewController] title:@"Success" subtitle:@"Registration successful" type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
+        [TSMessage showNotificationInViewController:[MY_APP_DELEGATE loginViewController] title:@"Success" subtitle:@"Registration successful" type:TSMessageNotificationTypeSuccess duration:4.0 canBeDismissedByUser:YES];
+        
+        [[STNetworkManager managerWithDelegate:[MY_APP_DELEGATE loginViewController]] requestAuthenticate:[_mailEdit text] password:[_passEdit text]];
+        
+        [SVProgressHUD showWithStatus:@"Logging in..." maskType:SVProgressHUDMaskTypeGradient];
+        
     });
-
+    
 }
 
 -(void)downloadFailureCode:(int)errCode message:(NSString *)message{

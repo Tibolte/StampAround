@@ -69,7 +69,7 @@
     int count = 0;
     if([_arrCards count] == 0)
     {
-        count = 1;
+        count = 0; //display the user to press "heart" or scan any QR code
     }
     else if([_arrCards count] % 2 == 0)
     {
