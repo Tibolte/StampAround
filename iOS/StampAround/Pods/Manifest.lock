@@ -1,26 +1,26 @@
 PODS:
-  - AFNetworking (2.3.1):
+  - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.3.1):
+  - AFNetworking/NSURLConnection (2.4.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.3.1):
+  - AFNetworking/NSURLSession (2.4.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.3.1)
-  - AFNetworking/Security (2.3.1)
-  - AFNetworking/Serialization (2.3.1)
-  - AFNetworking/UIKit (2.3.1):
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Bolts (1.1.1)
+  - Bolts (1.1.2)
   - CDZQRScanningViewController (1.0.7)
   - Facebook-iOS-SDK (3.17.0):
     - Bolts
@@ -28,7 +28,7 @@ PODS:
   - OJFSegmentedProgressView (0.0.1)
   - SVProgressHUD (1.0)
   - TGDrawSvgPathView (1.0.2)
-  - TSMessages (0.9.9):
+  - TSMessages (0.9.10):
     - HexColors
   - ZFDragableModalTransition (0.2)
 
@@ -43,15 +43,15 @@ DEPENDENCIES:
   - ZFDragableModalTransition
 
 SPEC CHECKSUMS:
-  AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  Bolts: 0ca796081c3e7c139bd86d6903c27f1b83036a5d
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
   CDZQRScanningViewController: 69cb48a4d02c483a8ee43da15b8fd23fc4e853f3
   Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
   HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
   OJFSegmentedProgressView: 2b3605d7263900e6606ba17a191c50db47d58852
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
   TGDrawSvgPathView: a55a1c737be32cff0fc7eeb92aaf08c2df4c51d4
-  TSMessages: 2999ef55e532378692e9d14d32da2bb60e285129
+  TSMessages: 8598a0645e9d54847f6e5f3b070bef39c493bbf8
   ZFDragableModalTransition: 734279090d537b1f701b6efdccd41b0f78503de9
 
 COCOAPODS: 0.33.1

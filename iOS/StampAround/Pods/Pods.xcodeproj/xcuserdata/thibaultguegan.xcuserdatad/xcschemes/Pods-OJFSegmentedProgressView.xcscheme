@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE5BCAB98B92495DBFC05EFA"
+               BlueprintIdentifier = "29CFB0E2110F486082B9B033"
                BuildableName = "libPods-OJFSegmentedProgressView.a"
                BlueprintName = "Pods-OJFSegmentedProgressView"
                ReferencedContainer = "container:Pods.xcodeproj">

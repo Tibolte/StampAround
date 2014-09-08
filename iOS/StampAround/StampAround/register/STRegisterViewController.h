@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "STNetworkManager.h"
 #import "SVProgressHUD.h"
+#import <TSMessage.h>
 
 @interface STRegisterViewController : UIViewController<STNetworkManagerDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 
